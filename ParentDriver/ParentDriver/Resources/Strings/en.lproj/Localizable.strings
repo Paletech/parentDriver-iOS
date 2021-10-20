@@ -1,0 +1,19 @@
+/*
+ * Loco ios export: iOS Localizable.strings
+ * Project: ParentDriver-iOS
+ * Release: Working copy
+ * Locale: en-GB, English (UK)
+ * Exported by: pavelreva
+ */
+
+/* loco:617082a7b9fbf475430e1862 */
+"title_sign_in" = "Sign in";
+
+/* loco:6170840167c31d5e841eaa22 */
+"error_empty_field" = "This field can't be empty";
+
+/* loco:6170841fbef0ed67ca42c3d2 */
+"error_email" = "Double-check your email";
+
+/* loco:61708437709f3f148744b8b2 */
+"error_general" = "Something went wrong. Please, try again.";
