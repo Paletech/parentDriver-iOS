@@ -1,5 +1,6 @@
 import Foundation
 import Repository
+import KeychainSwift
 
 class DependencyProvider {
     
@@ -10,30 +11,33 @@ class DependencyProvider {
     }
     
     static private func configureCoreDependencies() {
-        let validationInteractor = ValidationInteractor()
+        let store: Store = KeychainSwift()
+        registerService(service: store)
         
-        registerService(service: validationInteractor)
-//        var loger: Log {
-//            switch API.current {
-//            case .development: return DEBUGLog()
-//            case .acceptance: return DEBUGLog()
-//            case .production: return RELEASELog()
-//            }
-//        }
-//
-//        let handler: BaseHandler = Handler(loger)
+        let tokenStore: KeycheinStore<Token> = KeycheinStore(store)
+        registerService(service: tokenStore)
+    
+        var loger: Log {
+            switch API.Configuration.current {
+            case .development: return DEBUGLog()
+            case .qa: return DEBUGLog()
+            case .production: return RELEASELog()
+            }
+        }
+
+        let handler: BaseHandler = Handler(loger)
+        
+        registerService(service: loger)
+        registerService(service: handler)
     }
 
     static private func configureInteractors() {
-//        register {
-//            UserInteractor(dependencies: UserInteractor.Dependencies(repository: inject(), user: inject()))
-//        }
+        let validationInteractor = ValidationInteractor()
+        registerService(service: validationInteractor)
     }
     
     static private func configureRepositories() {
-//        register {
-//            AuthRepository(auth: inject())
-//        }
+        
     }
     
     static private func registerService<T>(service: T, name: String? = nil) {

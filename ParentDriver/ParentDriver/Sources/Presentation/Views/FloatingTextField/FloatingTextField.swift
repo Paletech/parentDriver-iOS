@@ -17,7 +17,7 @@ final class FloatingTextField: UIView { //swiftlint:disable:this type_body_lengt
     
     var validator: ValidValueHandler?
     var returnAction: EmptyClosure?
-    var type: InputFieldType = .email
+    var type: InputFieldType = .schoolId
 
     var selectedValue: TitleIdble? {
         didSet {

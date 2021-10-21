@@ -89,24 +89,15 @@ struct R: Rswift.Validatable {
   }
 
   #if os(iOS) || os(tvOS)
-  /// This `R.storyboard` struct is generated, and contains static references to 2 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 1 storyboards.
   struct storyboard {
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
-    /// Storyboard `Main`.
-    static let main = _R.storyboard.main()
 
     #if os(iOS) || os(tvOS)
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
     static func launchScreen(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.launchScreen)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIStoryboard(name: "Main", bundle: ...)`
-    static func main(_: Void = ()) -> UIKit.UIStoryboard {
-      return UIKit.UIStoryboard(resource: R.storyboard.main)
     }
     #endif
 
@@ -139,12 +130,14 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 2 images.
+  /// This `R.image` struct is generated, and contains static references to 3 images.
   struct image {
     /// Image `ic_eye_off`.
     static let ic_eye_off = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_eye_off")
     /// Image `ic_eye_on`.
     static let ic_eye_on = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_eye_on")
+    /// Image `ic_logo`.
+    static let ic_logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_logo")
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "ic_eye_off", bundle: ..., traitCollection: ...)`
@@ -160,17 +153,40 @@ struct R: Rswift.Validatable {
     }
     #endif
 
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "ic_logo", bundle: ..., traitCollection: ...)`
+    static func ic_logo(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ic_logo, compatibleWith: traitCollection)
+    }
+    #endif
+
     fileprivate init() {}
   }
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 4 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 8 localization keys.
     struct localizable {
       /// en translation: Double-check your email
       ///
       /// Locales: en
       static let error_email = Rswift.StringResource(key: "error_email", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Driver Id
+      ///
+      /// Locales: en
+      static let placeholder_driver_id = Rswift.StringResource(key: "placeholder_driver_id", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Password
+      ///
+      /// Locales: en
+      static let placeholder_password = Rswift.StringResource(key: "placeholder_password", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: School Id
+      ///
+      /// Locales: en
+      static let placeholder_school_id = Rswift.StringResource(key: "placeholder_school_id", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Sign In
+      ///
+      /// Locales: en
+      static let button_sign_in = Rswift.StringResource(key: "button_sign_in", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Sign in
       ///
       /// Locales: en
@@ -197,6 +213,66 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("error_email", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Driver Id
+      ///
+      /// Locales: en
+      static func placeholder_driver_id(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("placeholder_driver_id", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "placeholder_driver_id"
+        }
+
+        return NSLocalizedString("placeholder_driver_id", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Password
+      ///
+      /// Locales: en
+      static func placeholder_password(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("placeholder_password", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "placeholder_password"
+        }
+
+        return NSLocalizedString("placeholder_password", bundle: bundle, comment: "")
+      }
+
+      /// en translation: School Id
+      ///
+      /// Locales: en
+      static func placeholder_school_id(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("placeholder_school_id", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "placeholder_school_id"
+        }
+
+        return NSLocalizedString("placeholder_school_id", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Sign In
+      ///
+      /// Locales: en
+      static func button_sign_in(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("button_sign_in", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "button_sign_in"
+        }
+
+        return NSLocalizedString("button_sign_in", bundle: bundle, comment: "")
       }
 
       /// en translation: Sign in
@@ -276,9 +352,6 @@ struct _R: Rswift.Validatable {
       #if os(iOS) || os(tvOS)
       try launchScreen.validate()
       #endif
-      #if os(iOS) || os(tvOS)
-      try main.validate()
-      #endif
     }
 
     #if os(iOS) || os(tvOS)
@@ -289,20 +362,7 @@ struct _R: Rswift.Validatable {
       let name = "LaunchScreen"
 
       static func validate() throws {
-        if #available(iOS 11.0, tvOS 11.0, *) {
-        }
-      }
-
-      fileprivate init() {}
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    struct main: Rswift.StoryboardResourceType, Rswift.Validatable {
-      let bundle = R.hostingBundle
-      let name = "Main"
-
-      static func validate() throws {
+        if UIKit.UIImage(named: "ic_logo", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ic_logo' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
       }

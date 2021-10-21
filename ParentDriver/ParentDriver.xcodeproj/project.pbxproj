@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		07C536E0DE68A89A22F85485 /* libPods-ParentDriver.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9571BF5AC97EA2851F683FB /* libPods-ParentDriver.a */; };
 		620C94142720A401001EA349 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C94132720A401001EA349 /* AppDelegate.swift */; };
-		620C941B2720A401001EA349 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 620C94192720A401001EA349 /* Main.storyboard */; };
 		620C941D2720A404001EA349 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 620C941C2720A404001EA349 /* Assets.xcassets */; };
 		620C94202720A404001EA349 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 620C941E2720A404001EA349 /* LaunchScreen.storyboard */; };
 		620C94352720A591001EA349 /* Defines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C94342720A591001EA349 /* Defines.swift */; };
@@ -74,13 +73,24 @@
 		620C94CF2720BC31001EA349 /* TextFieldWithPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C94CD2720BC31001EA349 /* TextFieldWithPicker.swift */; };
 		620C94D02720BC31001EA349 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C94CE2720BC31001EA349 /* TextField.swift */; };
 		620C94D22720BC7B001EA349 /* OvertouchButtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C94D12720BC7B001EA349 /* OvertouchButtom.swift */; };
+		620C94E52721A9B0001EA349 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C94E12721A9B0001EA349 /* SplashViewController.swift */; };
+		620C94E62721A9B0001EA349 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C94E22721A9B0001EA349 /* SplashViewModel.swift */; };
+		620C94E72721A9B0001EA349 /* SplashConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C94E32721A9B0001EA349 /* SplashConfigurator.swift */; };
+		620C94E82721A9B0001EA349 /* Splash+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C94E42721A9B0001EA349 /* Splash+Public.swift */; };
+		620C94EB2721AB5F001EA349 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C94EA2721AB5F001EA349 /* KeychainStore.swift */; };
+		620C94ED2721ADED001EA349 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C94EC2721ADED001EA349 /* Token.swift */; };
+		620C94EF2721B123001EA349 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C94EE2721B123001EA349 /* AuthCoordinator.swift */; };
+		620C94F62721B8C8001EA349 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C94F22721B8C8001EA349 /* SignInViewController.swift */; };
+		620C94F72721B8C8001EA349 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C94F32721B8C8001EA349 /* SignInViewModel.swift */; };
+		620C94F82721B8C8001EA349 /* SignInConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C94F42721B8C8001EA349 /* SignInConfigurator.swift */; };
+		620C94F92721B8C8001EA349 /* SignIn+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C94F52721B8C8001EA349 /* SignIn+Public.swift */; };
+		620C94FB2721B9FE001EA349 /* StateButtton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C94FA2721B9FE001EA349 /* StateButtton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		613FBD22746F2933B3AB93C9 /* Pods-ParentDriver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParentDriver.release.xcconfig"; path = "Target Support Files/Pods-ParentDriver/Pods-ParentDriver.release.xcconfig"; sourceTree = "<group>"; };
 		620C94102720A401001EA349 /* ParentDriver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParentDriver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		620C94132720A401001EA349 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		620C941A2720A401001EA349 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		620C941C2720A404001EA349 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		620C941F2720A404001EA349 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		620C94212720A404001EA349 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -142,6 +152,18 @@
 		620C94CD2720BC31001EA349 /* TextFieldWithPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldWithPicker.swift; sourceTree = "<group>"; };
 		620C94CE2720BC31001EA349 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		620C94D12720BC7B001EA349 /* OvertouchButtom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OvertouchButtom.swift; sourceTree = "<group>"; };
+		620C94E12721A9B0001EA349 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		620C94E22721A9B0001EA349 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		620C94E32721A9B0001EA349 /* SplashConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashConfigurator.swift; sourceTree = "<group>"; };
+		620C94E42721A9B0001EA349 /* Splash+Public.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Splash+Public.swift"; sourceTree = "<group>"; };
+		620C94EA2721AB5F001EA349 /* KeychainStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
+		620C94EC2721ADED001EA349 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		620C94EE2721B123001EA349 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		620C94F22721B8C8001EA349 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		620C94F32721B8C8001EA349 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		620C94F42721B8C8001EA349 /* SignInConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInConfigurator.swift; sourceTree = "<group>"; };
+		620C94F52721B8C8001EA349 /* SignIn+Public.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignIn+Public.swift"; sourceTree = "<group>"; };
+		620C94FA2721B9FE001EA349 /* StateButtton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateButtton.swift; sourceTree = "<group>"; };
 		A9571BF5AC97EA2851F683FB /* libPods-ParentDriver.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ParentDriver.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE443E0F431667697781C224 /* Pods-ParentDriver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParentDriver.debug.xcconfig"; path = "Target Support Files/Pods-ParentDriver/Pods-ParentDriver.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -260,7 +282,6 @@
 		620C942C2720A442001EA349 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				620C94192720A401001EA349 /* Main.storyboard */,
 				620C941E2720A404001EA349 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -307,6 +328,7 @@
 		620C942F2720A480001EA349 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				620C94E92721AB4B001EA349 /* KeychainStore */,
 				620C94472720A610001EA349 /* DI */,
 				620C94462720A609001EA349 /* Validation */,
 				620C94452720A604001EA349 /* Session */,
@@ -360,6 +382,7 @@
 			children = (
 				620C94922720AA2C001EA349 /* Core */,
 				620C949D2720AA6A001EA349 /* AppCoordinator.swift */,
+				620C94EE2721B123001EA349 /* AuthCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -369,6 +392,7 @@
 			children = (
 				620C94CC2720BC1E001EA349 /* TextField */,
 				620C94A72720ABDA001EA349 /* FloatingTextField */,
+				620C94FA2721B9FE001EA349 /* StateButtton.swift */,
 				620C94D12720BC7B001EA349 /* OvertouchButtom.swift */,
 				620C94A02720AB84001EA349 /* BaseView.swift */,
 				620C94A12720AB84001EA349 /* PrimaryButton.swift */,
@@ -381,6 +405,8 @@
 		620C943E2720A5C9001EA349 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				620C94E02721A9A3001EA349 /* Splash */,
+				620C94F02721B550001EA349 /* Auth */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -397,6 +423,7 @@
 		620C94402720A5D6001EA349 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				620C94EC2721ADED001EA349 /* Token.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -491,6 +518,44 @@
 			path = TextField;
 			sourceTree = "<group>";
 		};
+		620C94E02721A9A3001EA349 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				620C94E12721A9B0001EA349 /* SplashViewController.swift */,
+				620C94E22721A9B0001EA349 /* SplashViewModel.swift */,
+				620C94E32721A9B0001EA349 /* SplashConfigurator.swift */,
+				620C94E42721A9B0001EA349 /* Splash+Public.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		620C94E92721AB4B001EA349 /* KeychainStore */ = {
+			isa = PBXGroup;
+			children = (
+				620C94EA2721AB5F001EA349 /* KeychainStore.swift */,
+			);
+			path = KeychainStore;
+			sourceTree = "<group>";
+		};
+		620C94F02721B550001EA349 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				620C94F12721B55F001EA349 /* SignIn */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		620C94F12721B55F001EA349 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				620C94F22721B8C8001EA349 /* SignInViewController.swift */,
+				620C94F32721B8C8001EA349 /* SignInViewModel.swift */,
+				620C94F42721B8C8001EA349 /* SignInConfigurator.swift */,
+				620C94F52721B8C8001EA349 /* SignIn+Public.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -567,7 +632,6 @@
 				620C94202720A404001EA349 /* LaunchScreen.storyboard in Resources */,
 				620C94C32720B32E001EA349 /* Localizable.strings in Resources */,
 				620C941D2720A404001EA349 /* Assets.xcassets in Resources */,
-				620C941B2720A401001EA349 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -643,28 +707,35 @@
 			files = (
 				620C94832720A94A001EA349 /* Handler.swift in Sources */,
 				620C94792720A8FB001EA349 /* HapDay+NSTimeInterval.swift in Sources */,
+				620C94F82721B8C8001EA349 /* SignInConfigurator.swift in Sources */,
 				620C94142720A401001EA349 /* AppDelegate.swift in Sources */,
 				620C949B2720AA4F001EA349 /* ViewControllerCoordinator.swift in Sources */,
 				620C949C2720AA4F001EA349 /* NavigationCoordinator.swift in Sources */,
 				620C943B2720A5B2001EA349 /* AppTypealiases.swift in Sources */,
+				620C94E52721A9B0001EA349 /* SplashViewController.swift in Sources */,
 				620C94AE2720ABEC001EA349 /* FloatingTextField+Delegate.swift in Sources */,
 				620C94A32720AB84001EA349 /* SelectableButton.swift in Sources */,
 				620C94712720A8FB001EA349 /* Hapday+FloatingPoint.swift in Sources */,
 				620C94692720A8FB001EA349 /* MyHappyHabbits+UIButton.swift in Sources */,
 				620C94992720AA4F001EA349 /* TabBarCoordinator.swift in Sources */,
 				620C94842720A94A001EA349 /* MainRequestBuilder.swift in Sources */,
+				620C94FB2721B9FE001EA349 /* StateButtton.swift in Sources */,
 				620C94762720A8FB001EA349 /* Hapday+NotificationName.swift in Sources */,
 				620C946B2720A8FB001EA349 /* Hapday+CGPoint.swift in Sources */,
+				620C94E62721A9B0001EA349 /* SplashViewModel.swift in Sources */,
 				620C94722720A8FB001EA349 /* HapDay+View.swift in Sources */,
 				620C947E2720A922001EA349 /* UserDefaultsProperyWrapper.swift in Sources */,
+				620C94EB2721AB5F001EA349 /* KeychainStore.swift in Sources */,
 				620C94702720A8FB001EA349 /* HapDay+Collection.swift in Sources */,
 				620C94912720AA20001EA349 /* Interactor.swift in Sources */,
 				620C94D22720BC7B001EA349 /* OvertouchButtom.swift in Sources */,
+				620C94E82721A9B0001EA349 /* Splash+Public.swift in Sources */,
 				620C94622720A8FB001EA349 /* Hapday+UITableView+Init.swift in Sources */,
 				620C946C2720A8FB001EA349 /* Hapday+CGSize.swift in Sources */,
 				620C948D2720A9FA001EA349 /* API.swift in Sources */,
 				620C949A2720AA4F001EA349 /* Coordinator.swift in Sources */,
 				620C94872720A98F001EA349 /* Validator.swift in Sources */,
+				620C94F72721B8C8001EA349 /* SignInViewModel.swift in Sources */,
 				620C94662720A8FB001EA349 /* HapDay+ViewController.swift in Sources */,
 				620C94A52720AB84001EA349 /* PrimaryButton.swift in Sources */,
 				620C94742720A8FB001EA349 /* HapDay+TextView.swift in Sources */,
@@ -673,11 +744,15 @@
 				620C94782720A8FB001EA349 /* HapDay+Color.swift in Sources */,
 				620C94642720A8FB001EA349 /* Hapday+UIButton.swift in Sources */,
 				620C94D02720BC31001EA349 /* TextField.swift in Sources */,
+				620C94E72721A9B0001EA349 /* SplashConfigurator.swift in Sources */,
 				620C946F2720A8FB001EA349 /* Hapday+UIPangGetestureRecognizer.swift in Sources */,
 				620C94CF2720BC31001EA349 /* TextFieldWithPicker.swift in Sources */,
+				620C94ED2721ADED001EA349 /* Token.swift in Sources */,
+				620C94EF2721B123001EA349 /* AuthCoordinator.swift in Sources */,
 				620C94982720AA4F001EA349 /* WindowCoordinator.swift in Sources */,
 				620C946E2720A8FB001EA349 /* HapDay+ActivityIndicator.swift in Sources */,
 				620C948B2720A9AB001EA349 /* DependencyProvider.swift in Sources */,
+				620C94F62721B8C8001EA349 /* SignInViewController.swift in Sources */,
 				620C946A2720A8FB001EA349 /* HapDay+String.swift in Sources */,
 				620C94392720A5A6001EA349 /* AppConfig.swift in Sources */,
 				620C94A62720AB84001EA349 /* ShadowView.swift in Sources */,
@@ -698,6 +773,7 @@
 				620C94852720A94A001EA349 /* RemoteStore+Combine.swift in Sources */,
 				620C94AC2720ABEC001EA349 /* FloatingTextField+Type.swift in Sources */,
 				620C94652720A8FB001EA349 /* HapDay+View+Blur.swift in Sources */,
+				620C94F92721B8C8001EA349 /* SignIn+Public.swift in Sources */,
 				620C94682720A8FB001EA349 /* HappyHabits+MVVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -705,14 +781,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		620C94192720A401001EA349 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				620C941A2720A401001EA349 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		620C941E2720A404001EA349 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -861,7 +929,6 @@
 				INFOPLIST_FILE = ParentDriver/Resources/Plists/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -892,7 +959,6 @@
 				INFOPLIST_FILE = ParentDriver/Resources/Plists/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

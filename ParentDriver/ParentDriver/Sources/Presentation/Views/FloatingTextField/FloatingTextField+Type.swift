@@ -1,53 +1,52 @@
 import UIKit
 
 enum InputFieldType {
-
-    case email
     
-
+    case driverId
+    case password
+    case schoolId
+    
+    
     var placeHolder: String {
         switch self {
-        case .email:
-            return "eamil"
+        case .driverId:
+            return Localizable.placeholder_driver_id()
+        case .password:
+            return Localizable.placeholder_password()
+        case .schoolId:
+            return Localizable.placeholder_school_id()
         }
     }
-
+    
     var capitalization: UITextAutocapitalizationType {
-        switch self {
-        default:
-            return .none
-        }
+        return .none
     }
-
+    
     var contentType: UITextContentType? {
         switch self {
-        case .email:
-            return .emailAddress
-        default:
-            return nil
+        case .password:
+            return .password
+        default: return .none
         }
     }
-
+    
     var keyboardType: UIKeyboardType {
         switch self {
-        case .email:
-            return .emailAddress
-        default:
+        case .password:
             return .default
+        case .schoolId, .driverId:
+            return .decimalPad
         }
     }
-
+    
     var filter: String? {
-        switch self {
-        case .email:
-            return "[a-zA-z0-9@._-]"
-        default:
-            return nil
-        }
+        return nil
     }
-
+    
     var needEyeSecure: Bool {
         switch self {
+        case .password:
+            return true
         default:
             return false
         }

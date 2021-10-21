@@ -17,3 +17,15 @@
 
 /* loco:61708437709f3f148744b8b2 */
 "error_general" = "Something went wrong. Please, try again.";
+
+/* loco:617183d75425741e26043132 */
+"button_sign_in" = "Sign In";
+
+/* loco:61718438f244e4779c411fa2 */
+"placeholder_driver_id" = "Driver Id";
+
+/* loco:617184465425741e26043134 */
+"placeholder_password" = "Password";
+
+/* loco:61718452f35c162fbc7cf9f2 */
+"placeholder_school_id" = "School Id";
