@@ -10,13 +10,14 @@ import UIKit
 
 extension UIView {
 
-    func showActivityIndicator(style: UIActivityIndicatorView.Style = .medium) {
+    func showActivityIndicator(style: UIActivityIndicatorView.Style = .medium, tintColor: UIColor = .white) {
         removeActivityIndicator()
 
         let activityIndicatorView: UIActivityIndicatorView = UIActivityIndicatorView(style: style)
         activityIndicatorView.frame = bounds
         activityIndicatorView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         activityIndicatorView.isUserInteractionEnabled = false
+        activityIndicatorView.color = tintColor
 
         self.addSubview(activityIndicatorView)
         activityIndicatorView.startAnimating()

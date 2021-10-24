@@ -29,3 +29,15 @@
 
 /* loco:61718452f35c162fbc7cf9f2 */
 "placeholder_school_id" = "School Id";
+
+/* loco:6174f4917a6c6e3ee47607e2 */
+"button_sign_up" = "Sign up";
+
+/* loco:6175d4631f325b76fb69ab32 */
+"title_select_bus" = "Select bus";
+
+/* loco:6175d47213537121964f60d2 */
+"placeholder_search_bus" = "Search bus";
+
+/* loco:6175d49cfa7e49425f7b4fb2 */
+"error_empty_search" = "No items were found for this query";

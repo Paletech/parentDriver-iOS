@@ -85,6 +85,23 @@
 		620C94F82721B8C8001EA349 /* SignInConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C94F42721B8C8001EA349 /* SignInConfigurator.swift */; };
 		620C94F92721B8C8001EA349 /* SignIn+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C94F52721B8C8001EA349 /* SignIn+Public.swift */; };
 		620C94FB2721B9FE001EA349 /* StateButtton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C94FA2721B9FE001EA349 /* StateButtton.swift */; };
+		62C49EEF272527060008F239 /* AuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C49EEE272527060008F239 /* AuthInteractor.swift */; };
+		62DA6AA627252E660070C832 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62DA6AA527252E660070C832 /* GoogleService-Info.plist */; };
+		62DA6AA9272536620070C832 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AA8272536620070C832 /* AuthResponse.swift */; };
+		62DA6AAB272537090070C832 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AAA272537090070C832 /* User.swift */; };
+		62DA6AAF2725388E0070C832 /* MainSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AAD2725388E0070C832 /* MainSessionManager.swift */; };
+		62DA6AB02725388E0070C832 /* DefaultSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AAE2725388E0070C832 /* DefaultSessionManager.swift */; };
+		62DA6AB2272541D60070C832 /* AuthRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AB1272541D60070C832 /* AuthRequests.swift */; };
+		62DA6AB4272542C10070C832 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AB3272542C10070C832 /* AuthRepository.swift */; };
+		62DA6ABA27260A9C0070C832 /* SelectBusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AB627260A9C0070C832 /* SelectBusViewController.swift */; };
+		62DA6ABB27260A9C0070C832 /* SelectBusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AB727260A9C0070C832 /* SelectBusViewModel.swift */; };
+		62DA6ABC27260A9C0070C832 /* SelectBusConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AB827260A9C0070C832 /* SelectBusConfigurator.swift */; };
+		62DA6ABD27260A9C0070C832 /* SelectBus+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AB927260A9C0070C832 /* SelectBus+Public.swift */; };
+		62DA6ABF27260D350070C832 /* Bus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6ABE27260D350070C832 /* Bus.swift */; };
+		62DA6AC127260DC40070C832 /* BusRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AC027260DC40070C832 /* BusRequests.swift */; };
+		62DA6AC327260E140070C832 /* BusRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AC227260E140070C832 /* BusRepository.swift */; };
+		62DA6AC527260EEF0070C832 /* AppStateProvidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AC427260EEF0070C832 /* AppStateProvidable.swift */; };
+		62DA6AC7272611380070C832 /* BusInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AC6272611380070C832 /* BusInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -164,6 +181,23 @@
 		620C94F42721B8C8001EA349 /* SignInConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInConfigurator.swift; sourceTree = "<group>"; };
 		620C94F52721B8C8001EA349 /* SignIn+Public.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignIn+Public.swift"; sourceTree = "<group>"; };
 		620C94FA2721B9FE001EA349 /* StateButtton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateButtton.swift; sourceTree = "<group>"; };
+		62C49EEE272527060008F239 /* AuthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInteractor.swift; sourceTree = "<group>"; };
+		62DA6AA527252E660070C832 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		62DA6AA8272536620070C832 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		62DA6AAA272537090070C832 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		62DA6AAD2725388E0070C832 /* MainSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSessionManager.swift; sourceTree = "<group>"; };
+		62DA6AAE2725388E0070C832 /* DefaultSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultSessionManager.swift; sourceTree = "<group>"; };
+		62DA6AB1272541D60070C832 /* AuthRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequests.swift; sourceTree = "<group>"; };
+		62DA6AB3272542C10070C832 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		62DA6AB627260A9C0070C832 /* SelectBusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBusViewController.swift; sourceTree = "<group>"; };
+		62DA6AB727260A9C0070C832 /* SelectBusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBusViewModel.swift; sourceTree = "<group>"; };
+		62DA6AB827260A9C0070C832 /* SelectBusConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBusConfigurator.swift; sourceTree = "<group>"; };
+		62DA6AB927260A9C0070C832 /* SelectBus+Public.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectBus+Public.swift"; sourceTree = "<group>"; };
+		62DA6ABE27260D350070C832 /* Bus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bus.swift; sourceTree = "<group>"; };
+		62DA6AC027260DC40070C832 /* BusRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRequests.swift; sourceTree = "<group>"; };
+		62DA6AC227260E140070C832 /* BusRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRepository.swift; sourceTree = "<group>"; };
+		62DA6AC427260EEF0070C832 /* AppStateProvidable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateProvidable.swift; sourceTree = "<group>"; };
+		62DA6AC6272611380070C832 /* BusInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusInteractor.swift; sourceTree = "<group>"; };
 		A9571BF5AC97EA2851F683FB /* libPods-ParentDriver.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ParentDriver.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE443E0F431667697781C224 /* Pods-ParentDriver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParentDriver.debug.xcconfig"; path = "Target Support Files/Pods-ParentDriver/Pods-ParentDriver.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -222,6 +256,7 @@
 		620C94122720A401001EA349 /* ParentDriver */ = {
 			isa = PBXGroup;
 			children = (
+				62DA6AA527252E660070C832 /* GoogleService-Info.plist */,
 				620C94272720A41D001EA349 /* Sources */,
 				620C94282720A424001EA349 /* Resources */,
 			);
@@ -328,6 +363,7 @@
 		620C942F2720A480001EA349 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				62DA6AAC272538750070C832 /* SessionManager */,
 				620C94E92721AB4B001EA349 /* KeychainStore */,
 				620C94472720A610001EA349 /* DI */,
 				620C94462720A609001EA349 /* Validation */,
@@ -343,6 +379,7 @@
 				620C94432720A5EC001EA349 /* API */,
 				620C94422720A5E2001EA349 /* Requests */,
 				620C94412720A5DC001EA349 /* Repositories */,
+				62DA6AA7272536400070C832 /* Responses */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -407,6 +444,7 @@
 			children = (
 				620C94E02721A9A3001EA349 /* Splash */,
 				620C94F02721B550001EA349 /* Auth */,
+				62DA6AB527260A890070C832 /* SelectBus */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -414,8 +452,11 @@
 		620C943F2720A5D0001EA349 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				620C94C82720B858001EA349 /* ValidationInteractor.swift */,
 				620C948F2720AA20001EA349 /* Interactor.swift */,
+				62DA6AC427260EEF0070C832 /* AppStateProvidable.swift */,
+				620C94C82720B858001EA349 /* ValidationInteractor.swift */,
+				62C49EEE272527060008F239 /* AuthInteractor.swift */,
+				62DA6AC6272611380070C832 /* BusInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -424,6 +465,8 @@
 			isa = PBXGroup;
 			children = (
 				620C94EC2721ADED001EA349 /* Token.swift */,
+				62DA6AAA272537090070C832 /* User.swift */,
+				62DA6ABE27260D350070C832 /* Bus.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -431,6 +474,8 @@
 		620C94412720A5DC001EA349 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				62DA6AB3272542C10070C832 /* AuthRepository.swift */,
+				62DA6AC227260E140070C832 /* BusRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -438,6 +483,8 @@
 		620C94422720A5E2001EA349 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
+				62DA6AB1272541D60070C832 /* AuthRequests.swift */,
+				62DA6AC027260DC40070C832 /* BusRequests.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -556,6 +603,34 @@
 			path = SignIn;
 			sourceTree = "<group>";
 		};
+		62DA6AA7272536400070C832 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				62DA6AA8272536620070C832 /* AuthResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		62DA6AAC272538750070C832 /* SessionManager */ = {
+			isa = PBXGroup;
+			children = (
+				62DA6AAE2725388E0070C832 /* DefaultSessionManager.swift */,
+				62DA6AAD2725388E0070C832 /* MainSessionManager.swift */,
+			);
+			path = SessionManager;
+			sourceTree = "<group>";
+		};
+		62DA6AB527260A890070C832 /* SelectBus */ = {
+			isa = PBXGroup;
+			children = (
+				62DA6AB627260A9C0070C832 /* SelectBusViewController.swift */,
+				62DA6AB727260A9C0070C832 /* SelectBusViewModel.swift */,
+				62DA6AB827260A9C0070C832 /* SelectBusConfigurator.swift */,
+				62DA6AB927260A9C0070C832 /* SelectBus+Public.swift */,
+			);
+			path = SelectBus;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -630,6 +705,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				620C94202720A404001EA349 /* LaunchScreen.storyboard in Resources */,
+				62DA6AA627252E660070C832 /* GoogleService-Info.plist in Resources */,
 				620C94C32720B32E001EA349 /* Localizable.strings in Resources */,
 				620C941D2720A404001EA349 /* Assets.xcassets in Resources */,
 			);
@@ -708,7 +784,9 @@
 				620C94832720A94A001EA349 /* Handler.swift in Sources */,
 				620C94792720A8FB001EA349 /* HapDay+NSTimeInterval.swift in Sources */,
 				620C94F82721B8C8001EA349 /* SignInConfigurator.swift in Sources */,
+				62DA6ABC27260A9C0070C832 /* SelectBusConfigurator.swift in Sources */,
 				620C94142720A401001EA349 /* AppDelegate.swift in Sources */,
+				62DA6AC127260DC40070C832 /* BusRequests.swift in Sources */,
 				620C949B2720AA4F001EA349 /* ViewControllerCoordinator.swift in Sources */,
 				620C949C2720AA4F001EA349 /* NavigationCoordinator.swift in Sources */,
 				620C943B2720A5B2001EA349 /* AppTypealiases.swift in Sources */,
@@ -716,9 +794,11 @@
 				620C94AE2720ABEC001EA349 /* FloatingTextField+Delegate.swift in Sources */,
 				620C94A32720AB84001EA349 /* SelectableButton.swift in Sources */,
 				620C94712720A8FB001EA349 /* Hapday+FloatingPoint.swift in Sources */,
+				62DA6AC7272611380070C832 /* BusInteractor.swift in Sources */,
 				620C94692720A8FB001EA349 /* MyHappyHabbits+UIButton.swift in Sources */,
 				620C94992720AA4F001EA349 /* TabBarCoordinator.swift in Sources */,
 				620C94842720A94A001EA349 /* MainRequestBuilder.swift in Sources */,
+				62DA6AC527260EEF0070C832 /* AppStateProvidable.swift in Sources */,
 				620C94FB2721B9FE001EA349 /* StateButtton.swift in Sources */,
 				620C94762720A8FB001EA349 /* Hapday+NotificationName.swift in Sources */,
 				620C946B2720A8FB001EA349 /* Hapday+CGPoint.swift in Sources */,
@@ -726,13 +806,17 @@
 				620C94722720A8FB001EA349 /* HapDay+View.swift in Sources */,
 				620C947E2720A922001EA349 /* UserDefaultsProperyWrapper.swift in Sources */,
 				620C94EB2721AB5F001EA349 /* KeychainStore.swift in Sources */,
+				62DA6ABB27260A9C0070C832 /* SelectBusViewModel.swift in Sources */,
 				620C94702720A8FB001EA349 /* HapDay+Collection.swift in Sources */,
+				62DA6AA9272536620070C832 /* AuthResponse.swift in Sources */,
 				620C94912720AA20001EA349 /* Interactor.swift in Sources */,
 				620C94D22720BC7B001EA349 /* OvertouchButtom.swift in Sources */,
 				620C94E82721A9B0001EA349 /* Splash+Public.swift in Sources */,
 				620C94622720A8FB001EA349 /* Hapday+UITableView+Init.swift in Sources */,
 				620C946C2720A8FB001EA349 /* Hapday+CGSize.swift in Sources */,
 				620C948D2720A9FA001EA349 /* API.swift in Sources */,
+				62DA6AC327260E140070C832 /* BusRepository.swift in Sources */,
+				62DA6AB02725388E0070C832 /* DefaultSessionManager.swift in Sources */,
 				620C949A2720AA4F001EA349 /* Coordinator.swift in Sources */,
 				620C94872720A98F001EA349 /* Validator.swift in Sources */,
 				620C94F72721B8C8001EA349 /* SignInViewModel.swift in Sources */,
@@ -741,6 +825,7 @@
 				620C94742720A8FB001EA349 /* HapDay+TextView.swift in Sources */,
 				620C94372720A59E001EA349 /* CustomErrorCodes.swift in Sources */,
 				620C947F2720A922001EA349 /* UserDefaultValues.swift in Sources */,
+				62DA6AAF2725388E0070C832 /* MainSessionManager.swift in Sources */,
 				620C94782720A8FB001EA349 /* HapDay+Color.swift in Sources */,
 				620C94642720A8FB001EA349 /* Hapday+UIButton.swift in Sources */,
 				620C94D02720BC31001EA349 /* TextField.swift in Sources */,
@@ -757,15 +842,22 @@
 				620C94392720A5A6001EA349 /* AppConfig.swift in Sources */,
 				620C94A62720AB84001EA349 /* ShadowView.swift in Sources */,
 				620C94732720A8FB001EA349 /* Hapday+Optional.swift in Sources */,
+				62DA6ABD27260A9C0070C832 /* SelectBus+Public.swift in Sources */,
+				62DA6ABF27260D350070C832 /* Bus.swift in Sources */,
 				620C94AF2720ABEC001EA349 /* FloatingTextField.swift in Sources */,
 				620C947B2720A8FB001EA349 /* HapDay+View+Animation.swift in Sources */,
 				620C94A42720AB84001EA349 /* BaseView.swift in Sources */,
 				620C949E2720AA6A001EA349 /* AppCoordinator.swift in Sources */,
+				62DA6ABA27260A9C0070C832 /* SelectBusViewController.swift in Sources */,
 				620C94CB2720B860001EA349 /* R.generated.swift in Sources */,
 				620C94632720A8FB001EA349 /* HapDay+Loadable.swift in Sources */,
 				620C94772720A8FB001EA349 /* HapDay+Date.swift in Sources */,
 				620C947A2720A8FB001EA349 /* HapDay+UIDevice.swift in Sources */,
+				62DA6AB2272541D60070C832 /* AuthRequests.swift in Sources */,
+				62DA6AAB272537090070C832 /* User.swift in Sources */,
 				620C94352720A591001EA349 /* Defines.swift in Sources */,
+				62C49EEF272527060008F239 /* AuthInteractor.swift in Sources */,
+				62DA6AB4272542C10070C832 /* AuthRepository.swift in Sources */,
 				620C94AD2720ABEC001EA349 /* FloatingTextField+Extensions.swift in Sources */,
 				620C94C92720B858001EA349 /* ValidationInteractor.swift in Sources */,
 				620C946D2720A8FB001EA349 /* Hapday+Int.swift in Sources */,
@@ -924,7 +1016,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 975T2KP2L3;
+				DEVELOPMENT_TEAM = 67CX2SU34L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ParentDriver/Resources/Plists/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -938,7 +1030,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pavelReva.ParentDriver;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nft.driver.view.lt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -954,7 +1046,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 975T2KP2L3;
+				DEVELOPMENT_TEAM = 67CX2SU34L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ParentDriver/Resources/Plists/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -968,7 +1060,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pavelReva.ParentDriver;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nft.driver.view.lt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

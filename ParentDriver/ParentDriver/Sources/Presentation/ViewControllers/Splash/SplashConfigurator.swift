@@ -15,6 +15,7 @@ class SplashConfigurator {
     }
     
     private class func createDependencies() -> SplashViewModel.Dependencies {
-        return SplashViewModel.Dependencies(tokenStore: inject())
+        return SplashViewModel.Dependencies(tokenStore: inject(), authInteractor: inject())
+        
     }
 }

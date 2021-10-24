@@ -5,7 +5,7 @@ protocol SplashViewControllerOutput: ViewControllerOutput { }
 class SplashViewController: UIViewController {
 
     private struct Constants {
-        static let imageSize: CGFloat = 240
+        static let imageSize: CGFloat = 200
     }
     
     var output: SplashViewControllerOutput!

@@ -11,6 +11,8 @@ enum KeychainError: Error {
 
 enum KeychainKeys: String {
     case token
+    case user
+    case selectedBus
 }
 
 public protocol Store {

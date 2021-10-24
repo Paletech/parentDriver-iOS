@@ -16,28 +16,39 @@ class DependencyProvider {
         
         let tokenStore: KeycheinStore<Token> = KeycheinStore(store)
         registerService(service: tokenStore)
-    
-        var loger: Log {
-            switch API.Configuration.current {
-            case .development: return DEBUGLog()
-            case .qa: return DEBUGLog()
-            case .production: return RELEASELog()
-            }
-        }
+        
+        let userStore: KeycheinStore<User> = KeycheinStore(store)
+        registerService(service: userStore)
+        
+        let busStore: KeycheinStore<Bus> = KeycheinStore(store)
+        registerService(service: busStore)
 
-        let handler: BaseHandler = Handler(loger)
+        let loger: Log = DEBUGLog()
+        let handler: Handler = Handler(loger)
+        let sessionManager = MainSessionManager.default()
         
         registerService(service: loger)
         registerService(service: handler)
+        registerService(service: sessionManager)
+    }
+    
+    static private func configureRepositories() {
+        let authRepository = AuthRepository.default()
+        registerService(service: authRepository)
+        
+        let busRepository = BusRepository.default()
+        registerService(service: busRepository)
     }
 
     static private func configureInteractors() {
         let validationInteractor = ValidationInteractor()
         registerService(service: validationInteractor)
-    }
-    
-    static private func configureRepositories() {
         
+        let authInteractor = AuthInteractor(dp: AuthInteractor.Dependencies(repo: inject()))
+        registerService(service: authInteractor)
+        
+        let busInteractor = BusInteractor(dp: BusInteractor.Dependencies(repo: inject()))
+        registerService(service: busInteractor)
     }
     
     static private func registerService<T>(service: T, name: String? = nil) {

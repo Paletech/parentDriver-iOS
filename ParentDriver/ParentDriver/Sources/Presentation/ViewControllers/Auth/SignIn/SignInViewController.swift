@@ -2,7 +2,10 @@ import UIKit
 import SnapKit
 
 protocol SignInViewControllerOutput: ViewControllerOutput {
-    func signIn()
+    func signIn(driverID: String, password: String, schoolId: String)
+    func onSignUp()
+    func fetchSignUpVisibilityState()
+    func validate(_ field: FloatingTextField?) -> AuthInteractorError?
 }
 
 class SignInViewController: UIViewController {
@@ -17,10 +20,15 @@ class SignInViewController: UIViewController {
     var output: SignInViewControllerOutput!
     
     private let contentStackView = UIStackView()
+    
     private let driverIdInput = FloatingTextField()
     private let passwordInput = FloatingTextField()
     private let schoolIdInput = FloatingTextField()
+    
+    private let buttonsStackView = UIStackView()
+    
     private let signInButton = StateButtton(type: .system)
+    private let signUpButton = StateButtton(type: .system)
     
     private var inputs: [FloatingTextField] { [driverIdInput, passwordInput, schoolIdInput] }
     
@@ -39,7 +47,11 @@ class SignInViewController: UIViewController {
     private func configureUI() {
         configureStackView()
         configureTextFields()
+        configureButtonsStackView()
         configureSignInButton()
+        configureSignUpButton()
+        
+        output.fetchSignUpVisibilityState()
     }
     
     private func configureStackView() {
@@ -55,14 +67,40 @@ class SignInViewController: UIViewController {
         driverIdInput.setup(with: .driverId, nextInput: passwordInput)
         passwordInput.setup(with: .password, nextInput: schoolIdInput)
         schoolIdInput.setup(with: .schoolId)
+        
+        inputs.forEach { field in
+            field.validator = { [weak self] value -> Error? in
+                return self?.output.validate(field)
+            }
+        }
+    }
+    
+    private func configureButtonsStackView() {
+        view.addSubview(buttonsStackView)
+        
+        buttonsStackView.alignment = .fill
+        buttonsStackView.axis = .vertical
+        buttonsStackView.distribution = .fill
+        buttonsStackView.spacing = Constants.spacing
     }
     
     private func configureSignInButton() {
-        view.addSubview(signInButton)
-        
-        signInButton.setTitleColor(.white, for: .normal)
-        signInButton.layer.cornerRadius = Constants.buttonHeight / 2
+        configureDefaultButton(signInButton)
         signInButton.addTarget(self, action: #selector(onSignIn), for: .touchUpInside)
+    }
+    
+    private func configureSignUpButton() {
+        configureDefaultButton(signUpButton)
+        signUpButton.addTarget(self, action: #selector(onSignUp), for: .touchUpInside)
+        signUpButton.isHidden = true
+    }
+    
+    private func configureDefaultButton(_ button: UIButton) {
+        view.addSubview(button)
+        
+        button.setTitleColor(.white, for: .normal)
+        button.layer.cornerRadius = Constants.buttonHeight / 2
+        button.titleLabel?.font = .systemFont(ofSize: 16, weight: .semibold)
     }
     
     private func configureConstraints() {
@@ -72,11 +110,18 @@ class SignInViewController: UIViewController {
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(Constants.horizaontalOffset)
         }
         
-        signInButton.snp.makeConstraints { make in
+        buttonsStackView.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(Constants.horizaontalOffset)
             make.centerX.equalToSuperview()
-            make.height.equalTo(Constants.buttonHeight)
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-Constants.horizaontalOffset)
+        }
+        
+        signInButton.snp.makeConstraints { make in
+            make.height.equalTo(Constants.buttonHeight)
+        }
+        
+        signUpButton.snp.makeConstraints { make in
+            make.height.equalTo(Constants.buttonHeight)
         }
         
         inputs.forEach {
@@ -85,12 +130,18 @@ class SignInViewController: UIViewController {
             }
             contentStackView.addArrangedSubview($0)
         }
+        
+        [signInButton, signUpButton].forEach {
+            buttonsStackView.addArrangedSubview($0)
+        }
     }
     
     private func login() {
         inputs.forEach { $0.updateValueState() }
         guard inputs.first(where: { !$0.isValid }) == nil else { return }
-        output.signIn()
+        output.signIn(driverID: driverIdInput.value,
+                      password: passwordInput.value,
+                      schoolId: schoolIdInput.value)
     }
     
     // MARK: - Localisation
@@ -98,6 +149,7 @@ class SignInViewController: UIViewController {
     private func setupTitles() {
         title = Localizable.title_sign_in()
         signInButton.setTitle(Localizable.title_sign_in(), for: .normal)
+        signUpButton.setTitle(Localizable.button_sign_up(), for: .normal)
     }
     
     // MARK: - Actions
@@ -105,12 +157,27 @@ class SignInViewController: UIViewController {
     @objc private func onSignIn() {
         login()
     }
+    
+    @objc private func onSignUp() {
+        output.onSignUp()
+    }
 }
 
 // MARK: - Private SignInViewModelOutput
 extension SignInViewController: SignInViewModelOutput {
-
-    func dataDidUpdate() {
-
+    func updateSignUpVisibility(value: Bool) {
+        signUpButton.isHidden = !value
+    }
+    
+    func startActivity() {
+        signInButton.isUserInteractionEnabled = false
+        signInButton.setTitle(nil, for: .normal)
+        signInButton.showActivityIndicator()
+    }
+    
+    func stopActivity() {
+        signInButton.isUserInteractionEnabled = true
+        signInButton.setTitle(Localizable.button_sign_in(), for: .normal)
+        signInButton.removeActivityIndicator()
     }
 }

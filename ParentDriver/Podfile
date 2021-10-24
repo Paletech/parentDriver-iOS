@@ -4,5 +4,7 @@
 target 'ParentDriver' do
 
   pod 'R.swift'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/RemoteConfig'
 
 end

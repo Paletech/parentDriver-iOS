@@ -28,13 +28,17 @@ struct API {
         
         var baseURL: String {
             switch self {
-            default: return ""
+            default: return "https://hos.nationalfleettracking.com/busView/API/driverViewLT"
             }
         }
     }
 
     struct Auth {
-        private static let root = "/auth"
+        static let login = "/login.php"
+    }
+    
+    struct Bus {
+        static let get = "/getBusList.php"
     }
 
     struct Device {

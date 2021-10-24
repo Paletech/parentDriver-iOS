@@ -1,11 +1,9 @@
 import Foundation
 
-extension SplashViewModel {
+extension SelectBusViewModel {
 
     enum ModuleOutputAction {
-        case showMainFlow
-        case showAuthFlow
-        case showSelectBusFlow
+        case busSelected
     }
 
     struct ModuleInput {

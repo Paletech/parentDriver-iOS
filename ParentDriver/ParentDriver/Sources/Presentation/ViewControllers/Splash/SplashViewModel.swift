@@ -9,6 +9,7 @@ class SplashViewModel {
 
     struct Dependencies {
         let tokenStore: KeycheinStore<Token>
+        let authInteractor: AuthInteractor
     }
 
     let dependencies: Dependencies
@@ -28,10 +29,19 @@ class SplashViewModel {
 extension SplashViewModel: SplashViewControllerOutput {
 
     func start() {
-        if let _ = try? dependencies.tokenStore.get(from: KeychainKeys.token.rawValue) {
-            moduleOutput?.action(.mainFlow)
-        } else {
-            moduleOutput?.action(.authFlow)
+        dependencies.authInteractor.fetchAnActivateConfig { [weak self] _ in
+            self?.resolveAppState()
+        }
+    }
+    
+    private func resolveAppState() {
+        switch dependencies.authInteractor.provideAppState() {
+        case .unauthorized:
+            moduleOutput?.action(.showAuthFlow)
+        case .selectBus:
+            moduleOutput?.action(.showSelectBusFlow)
+        case .mainFlow:
+            moduleOutput?.action(.showMainFlow)
         }
     }
 }
