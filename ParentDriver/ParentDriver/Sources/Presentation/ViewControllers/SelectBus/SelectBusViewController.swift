@@ -63,7 +63,8 @@ class SelectBusViewController: UIViewController {
         [tableView, emptySearchLabel].forEach { view.addSubview($0) }
         
         tableView.snp.makeConstraints { make in
-            make.left.right.top.bottom.equalToSuperview()
+            make.left.right.top.equalToSuperview()
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
         }
         
         emptySearchLabel.snp.makeConstraints { make in
@@ -124,6 +125,7 @@ extension SelectBusViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        navigationItem.searchController?.searchBar.resignFirstResponder()
         output.selectItem(at: indexPath)
     }
 }

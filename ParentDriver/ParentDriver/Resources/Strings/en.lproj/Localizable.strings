@@ -41,3 +41,21 @@
 
 /* loco:6175d49cfa7e49425f7b4fb2 */
 "error_empty_search" = "No items were found for this query";
+
+/* loco:6176491ac6f1aa65485eb1c2 */
+"title_dashboard" = "Dashboard";
+
+/* loco:6176492ebc22587b1d2266e2 */
+"title_monitor_boarding" = "Monitor boarding";
+
+/* loco:617649afb686db0a375192b2 */
+"title_bus_inspection" = "Bus inspection";
+
+/* loco:617649c9aeaf544b2a63cc04 */
+"title_ridersheep_changes" = "Ridership changes";
+
+/* loco:61764a06aeaf544b2a63cc06 */
+"title_change_bus" = "Change bus";
+
+/* loco:61764a139f68ce12a96c81c2 */
+"title_logout" = "Logout";

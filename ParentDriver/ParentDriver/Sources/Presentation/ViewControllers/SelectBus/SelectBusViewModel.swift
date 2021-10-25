@@ -44,6 +44,7 @@ class SelectBusViewModel {
 extension SelectBusViewModel: SelectBusViewControllerOutput {
     
     func start() {
+        output.startActivity()
         dependencies.interactor.getAllBuses().sink(receiveCompletion: { [weak self] completion in
             if case let .failure(error) = completion {
                 self?.output.catchError(error)

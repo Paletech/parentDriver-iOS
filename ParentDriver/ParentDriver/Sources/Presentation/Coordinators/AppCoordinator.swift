@@ -39,13 +39,24 @@ class AppCoordinator: WindowCoordinator {
     private func showBusSelectionFlow() {
         removeAllChilds()
         
-        let busSelectionVc = SelectBusConfigurator.configure()
+        let busSelectionVc = SelectBusConfigurator.configure(output: SelectBusViewModel.ModuleOutput(action: { [weak self] in
+            switch $0 {
+            case .busSelected:
+                self?.showMainFlow()
+            }
+        }))
         let navigationVc = UINavigationController(rootViewController: busSelectionVc)
         
         setRoot(viewControler: navigationVc)
     }
     
     private func showMainFlow() {
+        removeAllChilds()
+
+        let menuCoordinator = MenuCoordinator(container: UIViewController())
+        addChild(menuCoordinator)
+        menuCoordinator.start()
         
+        setRoot(viewControler: menuCoordinator.container)
     }
 }

@@ -179,8 +179,20 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 12 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 18 localization keys.
     struct localizable {
+      /// en translation: Bus inspection
+      ///
+      /// Locales: en
+      static let title_bus_inspection = Rswift.StringResource(key: "title_bus_inspection", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Change bus
+      ///
+      /// Locales: en
+      static let title_change_bus = Rswift.StringResource(key: "title_change_bus", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Dashboard
+      ///
+      /// Locales: en
+      static let title_dashboard = Rswift.StringResource(key: "title_dashboard", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Double-check your email
       ///
       /// Locales: en
@@ -189,6 +201,14 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let placeholder_driver_id = Rswift.StringResource(key: "placeholder_driver_id", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Logout
+      ///
+      /// Locales: en
+      static let title_logout = Rswift.StringResource(key: "title_logout", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Monitor boarding
+      ///
+      /// Locales: en
+      static let title_monitor_boarding = Rswift.StringResource(key: "title_monitor_boarding", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: No items were found for this query
       ///
       /// Locales: en
@@ -197,6 +217,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let placeholder_password = Rswift.StringResource(key: "placeholder_password", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Ridership changes
+      ///
+      /// Locales: en
+      static let title_ridersheep_changes = Rswift.StringResource(key: "title_ridersheep_changes", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: School Id
       ///
       /// Locales: en
@@ -230,6 +254,51 @@ struct R: Rswift.Validatable {
       /// Locales: en
       static let error_empty_field = Rswift.StringResource(key: "error_empty_field", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
 
+      /// en translation: Bus inspection
+      ///
+      /// Locales: en
+      static func title_bus_inspection(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("title_bus_inspection", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "title_bus_inspection"
+        }
+
+        return NSLocalizedString("title_bus_inspection", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Change bus
+      ///
+      /// Locales: en
+      static func title_change_bus(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("title_change_bus", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "title_change_bus"
+        }
+
+        return NSLocalizedString("title_change_bus", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Dashboard
+      ///
+      /// Locales: en
+      static func title_dashboard(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("title_dashboard", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "title_dashboard"
+        }
+
+        return NSLocalizedString("title_dashboard", bundle: bundle, comment: "")
+      }
+
       /// en translation: Double-check your email
       ///
       /// Locales: en
@@ -260,6 +329,36 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("placeholder_driver_id", bundle: bundle, comment: "")
       }
 
+      /// en translation: Logout
+      ///
+      /// Locales: en
+      static func title_logout(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("title_logout", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "title_logout"
+        }
+
+        return NSLocalizedString("title_logout", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Monitor boarding
+      ///
+      /// Locales: en
+      static func title_monitor_boarding(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("title_monitor_boarding", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "title_monitor_boarding"
+        }
+
+        return NSLocalizedString("title_monitor_boarding", bundle: bundle, comment: "")
+      }
+
       /// en translation: No items were found for this query
       ///
       /// Locales: en
@@ -288,6 +387,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("placeholder_password", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Ridership changes
+      ///
+      /// Locales: en
+      static func title_ridersheep_changes(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("title_ridersheep_changes", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "title_ridersheep_changes"
+        }
+
+        return NSLocalizedString("title_ridersheep_changes", bundle: bundle, comment: "")
       }
 
       /// en translation: School Id
