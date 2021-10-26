@@ -1,9 +1,6 @@
 import Foundation
 
-protocol DashboardViewModelOutput: ViewModelOutput {
-
-    func dataDidUpdate()
-}
+protocol DashboardViewModelOutput: ViewModelOutput { }
 
 class DashboardViewModel: BusSelectionProvider, MenuHandler {
 
@@ -30,12 +27,7 @@ class DashboardViewModel: BusSelectionProvider, MenuHandler {
 
 // MARK: - DashboardViewControllerOutput
 extension DashboardViewModel: DashboardViewControllerOutput {
-
-    func start() {
-        
-    }
-
-    func update() {
-        output.dataDidUpdate()
+    func openMenuItem(_ item: MenuItem) {
+        moduleOutput?.action(.showMenuItem(item))
     }
 }

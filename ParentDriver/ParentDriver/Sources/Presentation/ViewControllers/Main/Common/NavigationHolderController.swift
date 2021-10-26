@@ -48,6 +48,7 @@ extension NavigationHolderController where Self: UIViewController {
         leftBarbuttonItem.actionClosure = { [weak self] in
             self?.menuHandler.onLeftMenuItemClick()
         }
+        leftBarbuttonItem.tintColor = .black
     
         navigationItem.leftBarButtonItem = leftBarbuttonItem
     }

@@ -53,7 +53,10 @@ class AppCoordinator: WindowCoordinator {
     private func showMainFlow() {
         removeAllChilds()
 
-        let menuCoordinator = MenuCoordinator(container: UIViewController())
+        let container = UIViewController()
+        container.view.backgroundColor = .white
+        
+        let menuCoordinator = MenuCoordinator(container: container)
         addChild(menuCoordinator)
         menuCoordinator.start()
         
