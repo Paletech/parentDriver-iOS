@@ -47,7 +47,7 @@ extension SignInViewModel: SignInViewControllerOutput {
             })
             .store(in: &cancellables)
     }
-    
+
     func onSignUp() {
         moduleOutput?.action(.onSignUp)
     }

@@ -102,6 +102,10 @@
 		62DA6AC327260E140070C832 /* BusRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AC227260E140070C832 /* BusRepository.swift */; };
 		62DA6AC527260EEF0070C832 /* AppStateProvidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AC427260EEF0070C832 /* AppStateProvidable.swift */; };
 		62DA6AC7272611380070C832 /* BusInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AC6272611380070C832 /* BusInteractor.swift */; };
+		C70D37792728A7E40080A49A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D37782728A7E40080A49A /* SignUpViewController.swift */; };
+		C70D377B2728A7F50080A49A /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D377A2728A7F50080A49A /* SignUpViewModel.swift */; };
+		C70D377D2728A8080080A49A /* SignUpConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D377C2728A8080080A49A /* SignUpConfigurator.swift */; };
+		C70D377F2728A8170080A49A /* SignUp+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D377E2728A8170080A49A /* SignUp+Public.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -199,6 +203,10 @@
 		62DA6AC427260EEF0070C832 /* AppStateProvidable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateProvidable.swift; sourceTree = "<group>"; };
 		62DA6AC6272611380070C832 /* BusInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusInteractor.swift; sourceTree = "<group>"; };
 		A9571BF5AC97EA2851F683FB /* libPods-ParentDriver.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ParentDriver.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C70D37782728A7E40080A49A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		C70D377A2728A7F50080A49A /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		C70D377C2728A8080080A49A /* SignUpConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpConfigurator.swift; sourceTree = "<group>"; };
+		C70D377E2728A8170080A49A /* SignUp+Public.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUp+Public.swift"; sourceTree = "<group>"; };
 		EE443E0F431667697781C224 /* Pods-ParentDriver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParentDriver.debug.xcconfig"; path = "Target Support Files/Pods-ParentDriver/Pods-ParentDriver.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -587,6 +595,7 @@
 		620C94F02721B550001EA349 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				C70D37772728A7690080A49A /* SignUp */,
 				620C94F12721B55F001EA349 /* SignIn */,
 			);
 			path = Auth;
@@ -629,6 +638,17 @@
 				62DA6AB927260A9C0070C832 /* SelectBus+Public.swift */,
 			);
 			path = SelectBus;
+			sourceTree = "<group>";
+		};
+		C70D37772728A7690080A49A /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				C70D37782728A7E40080A49A /* SignUpViewController.swift */,
+				C70D377A2728A7F50080A49A /* SignUpViewModel.swift */,
+				C70D377C2728A8080080A49A /* SignUpConfigurator.swift */,
+				C70D377E2728A8170080A49A /* SignUp+Public.swift */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -786,6 +806,7 @@
 				620C94F82721B8C8001EA349 /* SignInConfigurator.swift in Sources */,
 				62DA6ABC27260A9C0070C832 /* SelectBusConfigurator.swift in Sources */,
 				620C94142720A401001EA349 /* AppDelegate.swift in Sources */,
+				C70D377D2728A8080080A49A /* SignUpConfigurator.swift in Sources */,
 				62DA6AC127260DC40070C832 /* BusRequests.swift in Sources */,
 				620C949B2720AA4F001EA349 /* ViewControllerCoordinator.swift in Sources */,
 				620C949C2720AA4F001EA349 /* NavigationCoordinator.swift in Sources */,
@@ -823,9 +844,11 @@
 				620C94662720A8FB001EA349 /* HapDay+ViewController.swift in Sources */,
 				620C94A52720AB84001EA349 /* PrimaryButton.swift in Sources */,
 				620C94742720A8FB001EA349 /* HapDay+TextView.swift in Sources */,
+				C70D377B2728A7F50080A49A /* SignUpViewModel.swift in Sources */,
 				620C94372720A59E001EA349 /* CustomErrorCodes.swift in Sources */,
 				620C947F2720A922001EA349 /* UserDefaultValues.swift in Sources */,
 				62DA6AAF2725388E0070C832 /* MainSessionManager.swift in Sources */,
+				C70D37792728A7E40080A49A /* SignUpViewController.swift in Sources */,
 				620C94782720A8FB001EA349 /* HapDay+Color.swift in Sources */,
 				620C94642720A8FB001EA349 /* Hapday+UIButton.swift in Sources */,
 				620C94D02720BC31001EA349 /* TextField.swift in Sources */,
@@ -848,6 +871,7 @@
 				620C947B2720A8FB001EA349 /* HapDay+View+Animation.swift in Sources */,
 				620C94A42720AB84001EA349 /* BaseView.swift in Sources */,
 				620C949E2720AA6A001EA349 /* AppCoordinator.swift in Sources */,
+				C70D377F2728A8170080A49A /* SignUp+Public.swift in Sources */,
 				62DA6ABA27260A9C0070C832 /* SelectBusViewController.swift in Sources */,
 				620C94CB2720B860001EA349 /* R.generated.swift in Sources */,
 				620C94632720A8FB001EA349 /* HapDay+Loadable.swift in Sources */,

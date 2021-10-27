@@ -41,3 +41,42 @@
 
 /* loco:6175d49cfa7e49425f7b4fb2 */
 "error_empty_search" = "No items were found for this query";
+
+/* loco:6176491ac6f1aa65485eb1c2 */
+"title_dashboard" = "Dashboard";
+
+/* loco:6176492ebc22587b1d2266e2 */
+"title_monitor_boarding" = "Monitor boarding";
+
+/* loco:617649afb686db0a375192b2 */
+"title_bus_inspection" = "Bus inspection";
+
+/* loco:617649c9aeaf544b2a63cc04 */
+"title_ridersheep_changes" = "Ridership changes";
+
+/* loco:61764a06aeaf544b2a63cc06 */
+"title_change_bus" = "Change bus";
+
+/* loco:61764a139f68ce12a96c81c2 */
+"title_logout" = "Logout";
+
+/* loco:61786025eb3ce309e46479e2 */
+"label_student" = "Student:";
+
+/* loco:617860320c487c193f4bdc32 */
+"label_time" = "Time:";
+
+/* loco:617860410cec1743b800b902 */
+"label_status" = "Status:";
+
+/* loco:61788103546f8a47d72b61a2 */
+"title_sign_up" = "Sign up";
+
+/* loco:617999a0be2e183c332e77f2 */
+"sign_up_alert_message" = "You account will be verified within 72 hours";
+
+/* loco:617999c94be2337395022092 */
+"sign_up_alert_button" = "Ok";
+
+/* loco:61799eabd360ca02125c1c82 */
+"sign_up_alert_error_message" = "Please fill in all fields";

@@ -3,6 +3,7 @@ import SnapKit
 
 protocol SignInViewControllerOutput: ViewControllerOutput {
     func signIn(driverID: String, password: String, schoolId: String)
+
     func onSignUp()
     func fetchSignUpVisibilityState()
     func validate(_ field: FloatingTextField?) -> AuthInteractorError?
@@ -42,7 +43,17 @@ class SignInViewController: UIViewController {
         setupTitles()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        resetTextFields()
+    }
+
     // MARK: - Private
+
+    private func resetTextFields() {
+        driverIdInput.value = ""
+        passwordInput.value = ""
+        schoolIdInput.value = ""
+    }
 
     private func configureUI() {
         configureStackView()

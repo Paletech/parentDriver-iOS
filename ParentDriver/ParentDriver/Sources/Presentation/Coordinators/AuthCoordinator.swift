@@ -44,6 +44,7 @@ class AuthCoordinator: NavigationCoordinator {
     }
     
     private func showSignUp() {
-        // TODO: push signUp vc here
+        let signUpVc = SignUpConfigurator.configure()
+        self.push(signUpVc, animated: true)
     }
 }
