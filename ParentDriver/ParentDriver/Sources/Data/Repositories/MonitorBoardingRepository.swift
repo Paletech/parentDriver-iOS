@@ -17,15 +17,13 @@ struct MonitorBoardingRepository: Repository, Syncable {
     }
     
     let remote: RemoteStoreMappable<MonitorBoarding>
-    let local: KeycheinStore<MonitorBoarding>
 
     // MARK: - Fabric method
     
     static func `default`() -> MonitorBoardingRepository {
         let session: MainSessionManager = inject()
         let handler: Handler = inject()
-        return MonitorBoardingRepository(remote: RemoteStoreMappable(session: session, handler: handler),
-                              local: inject())
+        return MonitorBoardingRepository(remote: RemoteStoreMappable(session: session, handler: handler))
     }
 
     // MARK: - Network

@@ -38,6 +38,9 @@ class DependencyProvider {
         
         let busRepository = BusRepository.default()
         registerService(service: busRepository)
+        
+        let monitorBoardingRepository = MonitorBoardingRepository.default()
+        registerService(service: monitorBoardingRepository)
     }
 
     static private func configureInteractors() {
@@ -49,10 +52,14 @@ class DependencyProvider {
         
         let busInteractor = BusInteractor(dp: BusInteractor.Dependencies(repo: inject()))
         registerService(service: busInteractor)
+        
+        let monitorBoardingInteractor = MonitorBoardingInteractor(dp: MonitorBoardingInteractor.Dependencies(repo: inject(),
+                                                                                                             busStore: inject()))
+        registerService(service: monitorBoardingInteractor)
     }
     
     static private func registerService<T>(service: T, name: String? = nil) {
-       ServiceLocator.shared.register(service: service)
+        ServiceLocator.shared.register(service: service)
    }
     
     static private  func register<T>(service: @escaping () -> T, name: String? = nil) {

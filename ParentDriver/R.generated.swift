@@ -144,7 +144,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 3 images.
+  /// This `R.image` struct is generated, and contains static references to 6 images.
   struct image {
     /// Image `ic_eye_off`.
     static let ic_eye_off = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_eye_off")
@@ -152,6 +152,12 @@ struct R: Rswift.Validatable {
     static let ic_eye_on = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_eye_on")
     /// Image `ic_logo`.
     static let ic_logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_logo")
+    /// Image `ic_status_bad`.
+    static let ic_status_bad = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_status_bad")
+    /// Image `ic_status_good`.
+    static let ic_status_good = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_status_good")
+    /// Image `ic_status_processing`.
+    static let ic_status_processing = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_status_processing")
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "ic_eye_off", bundle: ..., traitCollection: ...)`
@@ -171,6 +177,27 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "ic_logo", bundle: ..., traitCollection: ...)`
     static func ic_logo(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.ic_logo, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "ic_status_bad", bundle: ..., traitCollection: ...)`
+    static func ic_status_bad(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ic_status_bad, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "ic_status_good", bundle: ..., traitCollection: ...)`
+    static func ic_status_good(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ic_status_good, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "ic_status_processing", bundle: ..., traitCollection: ...)`
+    static func ic_status_processing(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ic_status_processing, compatibleWith: traitCollection)
     }
     #endif
 

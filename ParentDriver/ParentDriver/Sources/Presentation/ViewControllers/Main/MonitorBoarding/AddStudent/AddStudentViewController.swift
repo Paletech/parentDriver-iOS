@@ -1,12 +1,12 @@
 import UIKit
 
-protocol MonitorBoardingViewControllerOutput: ViewControllerOutput {
+protocol AddStudentViewControllerOutput: ViewControllerOutput {
 
 }
 
-class MonitorBoardingViewController: UIViewController {
+class AddStudentViewController: UIViewController {
 
-    var output: MonitorBoardingViewControllerOutput!
+    var output: AddStudentViewControllerOutput!
     
     // MARK: - View lifecycle
 
@@ -14,8 +14,6 @@ class MonitorBoardingViewController: UIViewController {
         super.viewDidLoad()
         output.start()
         configureUI()
-        
-        title = Localizable.title_monitor_boarding()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -29,8 +27,8 @@ class MonitorBoardingViewController: UIViewController {
     }
 }
 
-// MARK: - Private MonitorBoardingViewModelOutput
-extension MonitorBoardingViewController: MonitorBoardingViewModelOutput {
+// MARK: - Private AddStudentViewModelOutput
+extension AddStudentViewController: AddStudentViewModelOutput {
 
     func dataDidUpdate() {
 

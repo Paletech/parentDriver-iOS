@@ -9,9 +9,7 @@ import SideMenu
 import UIKit
 
 class MenuCoordinator: ViewControllerCoordinator {
-    
-    private var currentChild: UIViewController?
-    
+        
     override func start() {
         setDashboard()
     }
@@ -40,7 +38,16 @@ class MenuCoordinator: ViewControllerCoordinator {
     }
     
     private func setMonitorBoarding() {
+        let monitorBoardingVc = MonitorBoardingConfigurator.configure(output: MonitorBoardingViewModel.ModuleOutput(action: { [weak self] in
+            switch $0 {
+            case .onShowMenu:
+                self?.showMenu()
+            case .onAdd:
+                print("add")
+            }
+        }))
         
+        setController(monitorBoardingVc)
     }
     
     private func setChangeBus() {
@@ -59,16 +66,14 @@ class MenuCoordinator: ViewControllerCoordinator {
     }
     
     private func setController(_ controller: UIViewController) {
-        removeCurrentChild()
-        if currentChild != controller {
-            let navigation = UINavigationController(rootViewController: controller)
-            add(navigation)
-        }
-        currentChild = controller
+        removeChildren()
+        
+        let navigation = UINavigationController(rootViewController: controller)
+        add(navigation)
     }
     
-    private func removeCurrentChild() {
-        currentChild.flatMap { remove($0) }
+    private func removeChildren() {
+        container.children.forEach { remove($0) }
     }
     
     // MARK: - SideMenu

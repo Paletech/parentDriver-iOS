@@ -89,6 +89,13 @@
 		62130687272898E100FD5220 /* MonitorBoardingRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62130686272898E100FD5220 /* MonitorBoardingRequests.swift */; };
 		62130689272899A800FD5220 /* MonitorBoardingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62130688272899A800FD5220 /* MonitorBoardingRepository.swift */; };
 		6213068B27289A2F00FD5220 /* MonitorBoardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213068A27289A2F00FD5220 /* MonitorBoardingInteractor.swift */; };
+		62130693272931A200FD5220 /* AddStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213068F272931A200FD5220 /* AddStudentViewController.swift */; };
+		62130694272931A200FD5220 /* AddStudentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62130690272931A200FD5220 /* AddStudentViewModel.swift */; };
+		62130695272931A200FD5220 /* AddStudentConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62130691272931A200FD5220 /* AddStudentConfigurator.swift */; };
+		62130696272931A200FD5220 /* AddStudent+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62130692272931A200FD5220 /* AddStudent+Public.swift */; };
+		6213069927295BF500FD5220 /* MonitorBoardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213069827295BF500FD5220 /* MonitorBoardingCell.swift */; };
+		6213069C27295CF700FD5220 /* MonitorBoardingUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213069B27295CF700FD5220 /* MonitorBoardingUIModel.swift */; };
+		6213069E27297F1B00FD5220 /* TitleValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213069D27297F1B00FD5220 /* TitleValueView.swift */; };
 		62C49EEF272527060008F239 /* AuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C49EEE272527060008F239 /* AuthInteractor.swift */; };
 		62DA6AA627252E660070C832 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62DA6AA527252E660070C832 /* GoogleService-Info.plist */; };
 		62DA6AA9272536620070C832 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AA8272536620070C832 /* AuthResponse.swift */; };
@@ -214,6 +221,13 @@
 		62130686272898E100FD5220 /* MonitorBoardingRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorBoardingRequests.swift; sourceTree = "<group>"; };
 		62130688272899A800FD5220 /* MonitorBoardingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorBoardingRepository.swift; sourceTree = "<group>"; };
 		6213068A27289A2F00FD5220 /* MonitorBoardingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorBoardingInteractor.swift; sourceTree = "<group>"; };
+		6213068F272931A200FD5220 /* AddStudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStudentViewController.swift; sourceTree = "<group>"; };
+		62130690272931A200FD5220 /* AddStudentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStudentViewModel.swift; sourceTree = "<group>"; };
+		62130691272931A200FD5220 /* AddStudentConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStudentConfigurator.swift; sourceTree = "<group>"; };
+		62130692272931A200FD5220 /* AddStudent+Public.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddStudent+Public.swift"; sourceTree = "<group>"; };
+		6213069827295BF500FD5220 /* MonitorBoardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorBoardingCell.swift; sourceTree = "<group>"; };
+		6213069B27295CF700FD5220 /* MonitorBoardingUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorBoardingUIModel.swift; sourceTree = "<group>"; };
+		6213069D27297F1B00FD5220 /* TitleValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleValueView.swift; sourceTree = "<group>"; };
 		62C49EEE272527060008F239 /* AuthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInteractor.swift; sourceTree = "<group>"; };
 		62DA6AA527252E660070C832 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		62DA6AA8272536620070C832 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
@@ -495,6 +509,7 @@
 				620C94A12720AB84001EA349 /* PrimaryButton.swift */,
 				620C949F2720AB84001EA349 /* SelectableButton.swift */,
 				620C94A22720AB84001EA349 /* ShadowView.swift */,
+				6213069D27297F1B00FD5220 /* TitleValueView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -668,6 +683,46 @@
 			path = SignIn;
 			sourceTree = "<group>";
 		};
+		6213068D2729317600FD5220 /* MonitorBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				6213069A27295CE400FD5220 /* Models */,
+				6213069727295BE800FD5220 /* Cells */,
+				62DA6AF6272694090070C832 /* MonitorBoardingViewController.swift */,
+				62DA6AF7272694090070C832 /* MonitorBoardingViewModel.swift */,
+				62DA6AF8272694090070C832 /* MonitorBoardingConfigurator.swift */,
+				62DA6AF9272694090070C832 /* MonitorBoarding+Public.swift */,
+			);
+			path = MonitorBoarding;
+			sourceTree = "<group>";
+		};
+		6213068E2729318100FD5220 /* AddStudent */ = {
+			isa = PBXGroup;
+			children = (
+				6213068F272931A200FD5220 /* AddStudentViewController.swift */,
+				62130690272931A200FD5220 /* AddStudentViewModel.swift */,
+				62130691272931A200FD5220 /* AddStudentConfigurator.swift */,
+				62130692272931A200FD5220 /* AddStudent+Public.swift */,
+			);
+			path = AddStudent;
+			sourceTree = "<group>";
+		};
+		6213069727295BE800FD5220 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6213069827295BF500FD5220 /* MonitorBoardingCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		6213069A27295CE400FD5220 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6213069B27295CF700FD5220 /* MonitorBoardingUIModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		62DA6AA7272536400070C832 /* Responses */ = {
 			isa = PBXGroup;
 			children = (
@@ -723,10 +778,8 @@
 		62DA6ACD27267EDC0070C832 /* MonitorBoarding */ = {
 			isa = PBXGroup;
 			children = (
-				62DA6AF6272694090070C832 /* MonitorBoardingViewController.swift */,
-				62DA6AF7272694090070C832 /* MonitorBoardingViewModel.swift */,
-				62DA6AF8272694090070C832 /* MonitorBoardingConfigurator.swift */,
-				62DA6AF9272694090070C832 /* MonitorBoarding+Public.swift */,
+				6213068E2729318100FD5220 /* AddStudent */,
+				6213068D2729317600FD5220 /* MonitorBoarding */,
 			);
 			path = MonitorBoarding;
 			sourceTree = "<group>";
@@ -934,6 +987,7 @@
 				62DA6AC127260DC40070C832 /* BusRequests.swift in Sources */,
 				620C949B2720AA4F001EA349 /* ViewControllerCoordinator.swift in Sources */,
 				62DA6AD8272681F90070C832 /* Menu+Public.swift in Sources */,
+				62130695272931A200FD5220 /* AddStudentConfigurator.swift in Sources */,
 				620C949C2720AA4F001EA349 /* NavigationCoordinator.swift in Sources */,
 				62DA6AE027268F660070C832 /* MenuCoordinator.swift in Sources */,
 				621306852728986400FD5220 /* MonitorBoarding.swift in Sources */,
@@ -953,6 +1007,7 @@
 				620C94762720A8FB001EA349 /* Hapday+NotificationName.swift in Sources */,
 				620C946B2720A8FB001EA349 /* Hapday+CGPoint.swift in Sources */,
 				620C94E62721A9B0001EA349 /* SplashViewModel.swift in Sources */,
+				6213069927295BF500FD5220 /* MonitorBoardingCell.swift in Sources */,
 				620C94722720A8FB001EA349 /* HapDay+View.swift in Sources */,
 				620C947E2720A922001EA349 /* UserDefaultsProperyWrapper.swift in Sources */,
 				62DA6AFB272694090070C832 /* MonitorBoardingViewModel.swift in Sources */,
@@ -974,6 +1029,7 @@
 				620C94F72721B8C8001EA349 /* SignInViewModel.swift in Sources */,
 				620C94662720A8FB001EA349 /* HapDay+ViewController.swift in Sources */,
 				62DA6B032726941F0070C832 /* RidersheepChangesViewModel.swift in Sources */,
+				62130696272931A200FD5220 /* AddStudent+Public.swift in Sources */,
 				62DA6B052726941F0070C832 /* RidersheepChanges+Public.swift in Sources */,
 				620C94A52720AB84001EA349 /* PrimaryButton.swift in Sources */,
 				62130689272899A800FD5220 /* MonitorBoardingRepository.swift in Sources */,
@@ -981,6 +1037,8 @@
 				62DA6AF1272693DD0070C832 /* BusInspectionViewModel.swift in Sources */,
 				620C94742720A8FB001EA349 /* HapDay+TextView.swift in Sources */,
 				620C94372720A59E001EA349 /* CustomErrorCodes.swift in Sources */,
+				6213069E27297F1B00FD5220 /* TitleValueView.swift in Sources */,
+				62130694272931A200FD5220 /* AddStudentViewModel.swift in Sources */,
 				62DA6ADE27268D410070C832 /* ParentDriver+UIBarButtonItem.swift in Sources */,
 				62DA6AF0272693DD0070C832 /* BusInspectionViewController.swift in Sources */,
 				620C947F2720A922001EA349 /* UserDefaultValues.swift in Sources */,
@@ -989,6 +1047,7 @@
 				620C94642720A8FB001EA349 /* Hapday+UIButton.swift in Sources */,
 				620C94D02720BC31001EA349 /* TextField.swift in Sources */,
 				620C94E72721A9B0001EA349 /* SplashConfigurator.swift in Sources */,
+				6213069C27295CF700FD5220 /* MonitorBoardingUIModel.swift in Sources */,
 				620C946F2720A8FB001EA349 /* Hapday+UIPangGetestureRecognizer.swift in Sources */,
 				620C94CF2720BC31001EA349 /* TextFieldWithPicker.swift in Sources */,
 				620C94ED2721ADED001EA349 /* Token.swift in Sources */,
@@ -1001,6 +1060,7 @@
 				62DA6AF2272693DD0070C832 /* BusInspectionConfigurator.swift in Sources */,
 				62DA6AD7272681F90070C832 /* MenuConfigurator.swift in Sources */,
 				620C94F62721B8C8001EA349 /* SignInViewController.swift in Sources */,
+				62130693272931A200FD5220 /* AddStudentViewController.swift in Sources */,
 				620C946A2720A8FB001EA349 /* HapDay+String.swift in Sources */,
 				620C94392720A5A6001EA349 /* AppConfig.swift in Sources */,
 				620C94A62720AB84001EA349 /* ShadowView.swift in Sources */,

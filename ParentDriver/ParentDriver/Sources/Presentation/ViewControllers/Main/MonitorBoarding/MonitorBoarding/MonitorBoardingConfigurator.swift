@@ -16,6 +16,6 @@ class MonitorBoardingConfigurator {
     }
     
     private class func createDependencies() -> MonitorBoardingViewModel.Dependencies {
-        return MonitorBoardingViewModel.Dependencies()
+        return MonitorBoardingViewModel.Dependencies(interactor: inject())
     }
 }

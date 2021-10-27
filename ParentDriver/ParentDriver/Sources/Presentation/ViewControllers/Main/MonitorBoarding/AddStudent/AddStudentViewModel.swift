@@ -1,11 +1,11 @@
 import Foundation
 
-protocol MonitorBoardingViewModelOutput: ViewModelOutput {
+protocol AddStudentViewModelOutput: ViewModelOutput {
 
     func dataDidUpdate()
 }
 
-class MonitorBoardingViewModel {
+class AddStudentViewModel {
 
     struct Dependencies { }
 
@@ -14,7 +14,7 @@ class MonitorBoardingViewModel {
     let moduleInput: ModuleInput
     var moduleOutput: ModuleOutput?
     
-    weak var output: MonitorBoardingViewModelOutput!
+    weak var output: AddStudentViewModelOutput!
 
     init(dependencies: Dependencies, data: ModuleInput) {
         self.dependencies = dependencies
@@ -22,8 +22,8 @@ class MonitorBoardingViewModel {
     }
 }
 
-// MARK: - MonitorBoardingViewControllerOutput
-extension MonitorBoardingViewModel: MonitorBoardingViewControllerOutput {
+// MARK: - AddStudentViewControllerOutput
+extension AddStudentViewModel: AddStudentViewControllerOutput {
 
     func start() {
         
