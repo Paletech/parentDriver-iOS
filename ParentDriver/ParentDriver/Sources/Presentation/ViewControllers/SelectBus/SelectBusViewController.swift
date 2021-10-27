@@ -23,6 +23,8 @@ class SelectBusViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addObservers()
+
         output.start()
         
         configureUI()
@@ -33,7 +35,18 @@ class SelectBusViewController: UIViewController {
         setupTitles()
     }
     
+    // MARK: - Init/Deinit
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     // MARK: - Private
+    
+    private func addObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
     
     private func configureUI() {
         configureEmptySearchLabel()
@@ -84,6 +97,18 @@ class SelectBusViewController: UIViewController {
         navigationItem.hidesSearchBarWhenScrolling = false
         
         navigationItem.searchController = searchController
+    }
+    
+    // MARK: - Keyboard
+    
+    @objc private func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height + tableView.rowHeight, right: 0)
+        }
+    }
+    
+    @objc private func keyboardWillHide(notification: NSNotification) {
+        tableView.contentInset = .zero
     }
     
     // MARK: - Localisation

@@ -85,6 +85,10 @@
 		620C94F82721B8C8001EA349 /* SignInConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C94F42721B8C8001EA349 /* SignInConfigurator.swift */; };
 		620C94F92721B8C8001EA349 /* SignIn+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C94F52721B8C8001EA349 /* SignIn+Public.swift */; };
 		620C94FB2721B9FE001EA349 /* StateButtton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C94FA2721B9FE001EA349 /* StateButtton.swift */; };
+		621306852728986400FD5220 /* MonitorBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621306842728986400FD5220 /* MonitorBoarding.swift */; };
+		62130687272898E100FD5220 /* MonitorBoardingRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62130686272898E100FD5220 /* MonitorBoardingRequests.swift */; };
+		62130689272899A800FD5220 /* MonitorBoardingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62130688272899A800FD5220 /* MonitorBoardingRepository.swift */; };
+		6213068B27289A2F00FD5220 /* MonitorBoardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213068A27289A2F00FD5220 /* MonitorBoardingInteractor.swift */; };
 		62C49EEF272527060008F239 /* AuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C49EEE272527060008F239 /* AuthInteractor.swift */; };
 		62DA6AA627252E660070C832 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62DA6AA527252E660070C832 /* GoogleService-Info.plist */; };
 		62DA6AA9272536620070C832 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AA8272536620070C832 /* AuthResponse.swift */; };
@@ -206,6 +210,10 @@
 		620C94F42721B8C8001EA349 /* SignInConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInConfigurator.swift; sourceTree = "<group>"; };
 		620C94F52721B8C8001EA349 /* SignIn+Public.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignIn+Public.swift"; sourceTree = "<group>"; };
 		620C94FA2721B9FE001EA349 /* StateButtton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateButtton.swift; sourceTree = "<group>"; };
+		621306842728986400FD5220 /* MonitorBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorBoarding.swift; sourceTree = "<group>"; };
+		62130686272898E100FD5220 /* MonitorBoardingRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorBoardingRequests.swift; sourceTree = "<group>"; };
+		62130688272899A800FD5220 /* MonitorBoardingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorBoardingRepository.swift; sourceTree = "<group>"; };
+		6213068A27289A2F00FD5220 /* MonitorBoardingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorBoardingInteractor.swift; sourceTree = "<group>"; };
 		62C49EEE272527060008F239 /* AuthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInteractor.swift; sourceTree = "<group>"; };
 		62DA6AA527252E660070C832 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		62DA6AA8272536620070C832 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
@@ -510,6 +518,7 @@
 				620C94C82720B858001EA349 /* ValidationInteractor.swift */,
 				62C49EEE272527060008F239 /* AuthInteractor.swift */,
 				62DA6AC6272611380070C832 /* BusInteractor.swift */,
+				6213068A27289A2F00FD5220 /* MonitorBoardingInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -520,6 +529,7 @@
 				620C94EC2721ADED001EA349 /* Token.swift */,
 				62DA6AAA272537090070C832 /* User.swift */,
 				62DA6ABE27260D350070C832 /* Bus.swift */,
+				621306842728986400FD5220 /* MonitorBoarding.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -529,6 +539,7 @@
 			children = (
 				62DA6AB3272542C10070C832 /* AuthRepository.swift */,
 				62DA6AC227260E140070C832 /* BusRepository.swift */,
+				62130688272899A800FD5220 /* MonitorBoardingRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -538,6 +549,7 @@
 			children = (
 				62DA6AB1272541D60070C832 /* AuthRequests.swift */,
 				62DA6AC027260DC40070C832 /* BusRequests.swift */,
+				62130686272898E100FD5220 /* MonitorBoardingRequests.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -924,6 +936,7 @@
 				62DA6AD8272681F90070C832 /* Menu+Public.swift in Sources */,
 				620C949C2720AA4F001EA349 /* NavigationCoordinator.swift in Sources */,
 				62DA6AE027268F660070C832 /* MenuCoordinator.swift in Sources */,
+				621306852728986400FD5220 /* MonitorBoarding.swift in Sources */,
 				620C943B2720A5B2001EA349 /* AppTypealiases.swift in Sources */,
 				620C94E52721A9B0001EA349 /* SplashViewController.swift in Sources */,
 				620C94AE2720ABEC001EA349 /* FloatingTextField+Delegate.swift in Sources */,
@@ -935,6 +948,7 @@
 				620C94992720AA4F001EA349 /* TabBarCoordinator.swift in Sources */,
 				620C94842720A94A001EA349 /* MainRequestBuilder.swift in Sources */,
 				62DA6AC527260EEF0070C832 /* AppStateProvidable.swift in Sources */,
+				6213068B27289A2F00FD5220 /* MonitorBoardingInteractor.swift in Sources */,
 				620C94FB2721B9FE001EA349 /* StateButtton.swift in Sources */,
 				620C94762720A8FB001EA349 /* Hapday+NotificationName.swift in Sources */,
 				620C946B2720A8FB001EA349 /* Hapday+CGPoint.swift in Sources */,
@@ -962,6 +976,7 @@
 				62DA6B032726941F0070C832 /* RidersheepChangesViewModel.swift in Sources */,
 				62DA6B052726941F0070C832 /* RidersheepChanges+Public.swift in Sources */,
 				620C94A52720AB84001EA349 /* PrimaryButton.swift in Sources */,
+				62130689272899A800FD5220 /* MonitorBoardingRepository.swift in Sources */,
 				62DA6AEA272693B70070C832 /* DashboardConfigurator.swift in Sources */,
 				62DA6AF1272693DD0070C832 /* BusInspectionViewModel.swift in Sources */,
 				620C94742720A8FB001EA349 /* HapDay+TextView.swift in Sources */,
@@ -994,6 +1009,7 @@
 				62DA6ABF27260D350070C832 /* Bus.swift in Sources */,
 				620C94AF2720ABEC001EA349 /* FloatingTextField.swift in Sources */,
 				620C947B2720A8FB001EA349 /* HapDay+View+Animation.swift in Sources */,
+				62130687272898E100FD5220 /* MonitorBoardingRequests.swift in Sources */,
 				620C94A42720AB84001EA349 /* BaseView.swift in Sources */,
 				620C949E2720AA6A001EA349 /* AppCoordinator.swift in Sources */,
 				62DA6AD5272681F90070C832 /* MenuViewController.swift in Sources */,

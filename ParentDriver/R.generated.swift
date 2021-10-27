@@ -179,7 +179,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 18 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 22 localization keys.
     struct localizable {
       /// en translation: Bus inspection
       ///
@@ -245,14 +245,30 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let button_sign_up = Rswift.StringResource(key: "button_sign_up", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Sign up
+      ///
+      /// Locales: en
+      static let title_sign_up = Rswift.StringResource(key: "title_sign_up", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Something went wrong. Please, try again.
       ///
       /// Locales: en
       static let error_general = Rswift.StringResource(key: "error_general", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Status:
+      ///
+      /// Locales: en
+      static let label_status = Rswift.StringResource(key: "label_status", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Student:
+      ///
+      /// Locales: en
+      static let label_student = Rswift.StringResource(key: "label_student", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: This field can't be empty
       ///
       /// Locales: en
       static let error_empty_field = Rswift.StringResource(key: "error_empty_field", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Time:
+      ///
+      /// Locales: en
+      static let label_time = Rswift.StringResource(key: "label_time", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
 
       /// en translation: Bus inspection
       ///
@@ -494,6 +510,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("button_sign_up", bundle: bundle, comment: "")
       }
 
+      /// en translation: Sign up
+      ///
+      /// Locales: en
+      static func title_sign_up(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("title_sign_up", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "title_sign_up"
+        }
+
+        return NSLocalizedString("title_sign_up", bundle: bundle, comment: "")
+      }
+
       /// en translation: Something went wrong. Please, try again.
       ///
       /// Locales: en
@@ -509,6 +540,36 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("error_general", bundle: bundle, comment: "")
       }
 
+      /// en translation: Status:
+      ///
+      /// Locales: en
+      static func label_status(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("label_status", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "label_status"
+        }
+
+        return NSLocalizedString("label_status", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Student:
+      ///
+      /// Locales: en
+      static func label_student(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("label_student", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "label_student"
+        }
+
+        return NSLocalizedString("label_student", bundle: bundle, comment: "")
+      }
+
       /// en translation: This field can't be empty
       ///
       /// Locales: en
@@ -522,6 +583,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("error_empty_field", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Time:
+      ///
+      /// Locales: en
+      static func label_time(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("label_time", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "label_time"
+        }
+
+        return NSLocalizedString("label_time", bundle: bundle, comment: "")
       }
 
       fileprivate init() {}

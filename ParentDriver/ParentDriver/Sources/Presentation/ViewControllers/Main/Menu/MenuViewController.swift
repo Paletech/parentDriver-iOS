@@ -8,8 +8,14 @@ protocol MenuViewControllerOutput: ViewControllerOutput {
 
 class MenuViewController: UIViewController {
 
+    private struct Constants {
+        static let imageSize: CGFloat = 100
+        static let offset: CGFloat = 24
+    }
+    
     var output: MenuViewControllerOutput!
     
+    private let titleImageView = UIImageView()
     private let tableView = UITableView()
     
     // MARK: - View lifecycle
@@ -25,21 +31,37 @@ class MenuViewController: UIViewController {
 
     private func configureUI() {
         view.backgroundColor = .white
+        [titleImageView, tableView].forEach { view.addSubview($0) }
         
-        view.addSubview(tableView)
-        
+        configureImageView()
+        configureTalbeView()
+    }
+    
+    private func configureImageView() {
+        titleImageView.contentMode = .scaleAspectFit
+        titleImageView.image = R.image.ic_logo()
+    }
+    
+    private func configureTalbeView() {
         tableView.dataSource = self
         tableView.delegate = self
         
+        tableView.isScrollEnabled = false
         tableView.separatorStyle = .singleLine
         tableView.tableFooterView = UIView(frame: .zero)
     }
     
     private func configureConstraints() {
+        titleImageView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(Constants.offset)
+            make.centerX.equalToSuperview()
+            make.height.width.equalTo(Constants.imageSize)
+        }
+        
         tableView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.left.equalToSuperview()
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            make.top.equalTo(titleImageView.snp.bottom).offset(Constants.offset)
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
         }
     }

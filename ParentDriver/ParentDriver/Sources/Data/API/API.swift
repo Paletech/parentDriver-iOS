@@ -40,6 +40,10 @@ struct API {
     struct Bus {
         static let get = "/getBusList.php"
     }
+    
+    struct MonitorBoarding {
+        static let get = "/boarding.php"
+    }
 
     struct Device {
         private static let root = "/device"
