@@ -206,7 +206,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 22 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 25 localization keys.
     struct localizable {
       /// en translation: Bus inspection
       ///
@@ -240,10 +240,18 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let error_empty_search = Rswift.StringResource(key: "error_empty_search", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Ok
+      ///
+      /// Locales: en
+      static let sign_up_alert_button = Rswift.StringResource(key: "sign_up_alert_button", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Password
       ///
       /// Locales: en
       static let placeholder_password = Rswift.StringResource(key: "placeholder_password", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Please fill in all fields
+      ///
+      /// Locales: en
+      static let sign_up_alert_error_message = Rswift.StringResource(key: "sign_up_alert_error_message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Ridership changes
       ///
       /// Locales: en
@@ -296,6 +304,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let label_time = Rswift.StringResource(key: "label_time", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: You account will be verified within 72 hours
+      ///
+      /// Locales: en
+      static let sign_up_alert_message = Rswift.StringResource(key: "sign_up_alert_message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
 
       /// en translation: Bus inspection
       ///
@@ -417,6 +429,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("error_empty_search", bundle: bundle, comment: "")
       }
 
+      /// en translation: Ok
+      ///
+      /// Locales: en
+      static func sign_up_alert_button(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("sign_up_alert_button", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "sign_up_alert_button"
+        }
+
+        return NSLocalizedString("sign_up_alert_button", bundle: bundle, comment: "")
+      }
+
       /// en translation: Password
       ///
       /// Locales: en
@@ -430,6 +457,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("placeholder_password", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Please fill in all fields
+      ///
+      /// Locales: en
+      static func sign_up_alert_error_message(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("sign_up_alert_error_message", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "sign_up_alert_error_message"
+        }
+
+        return NSLocalizedString("sign_up_alert_error_message", bundle: bundle, comment: "")
       }
 
       /// en translation: Ridership changes
@@ -625,6 +667,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("label_time", bundle: bundle, comment: "")
+      }
+
+      /// en translation: You account will be verified within 72 hours
+      ///
+      /// Locales: en
+      static func sign_up_alert_message(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("sign_up_alert_message", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "sign_up_alert_message"
+        }
+
+        return NSLocalizedString("sign_up_alert_message", bundle: bundle, comment: "")
       }
 
       fileprivate init() {}

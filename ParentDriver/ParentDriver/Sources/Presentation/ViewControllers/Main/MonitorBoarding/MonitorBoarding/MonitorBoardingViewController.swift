@@ -140,15 +140,13 @@ extension MonitorBoardingViewController: MonitorBoardingViewModelOutput {
     }
     
     func catchError(_ error: Error) {
-        tableView.isHidden = false
-        tableView.reloadData()
-//        if error is ServerError {
-//            errorLabel.isHidden = false
-//            tableView.isHidden = true
-//            errorLabel.text = error.localizedDescription
-//        } else {
-//            showAlert(error.localizedDescription)
-//        }
+        if error is ServerError {
+            errorLabel.isHidden = false
+            tableView.isHidden = true
+            errorLabel.text = error.localizedDescription
+        } else {
+            showAlert(error.localizedDescription)
+        }
     }
     
     func startActivity() {

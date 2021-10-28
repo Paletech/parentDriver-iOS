@@ -11,7 +11,7 @@ class TitleValueView: UIView {
     
     private struct Constants {
         static let offset: CGFloat = 16
-        static let imageSize: CGFloat = 16
+        static let imageSize: CGFloat = 24
         static let stackViewOffset: CGFloat = 16
         static let fontSize: CGFloat = 16
         static let labelWidth: CGFloat = 70
@@ -56,7 +56,6 @@ class TitleValueView: UIView {
 
         stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(valueStackView)
-
     }
     
     private func configureStackView() {
@@ -98,6 +97,7 @@ class TitleValueView: UIView {
         }
         
         titleLabel.snp.makeConstraints { make in
+            make.height.greaterThanOrEqualTo(Constants.offset)
             make.width.equalTo(Constants.labelWidth)
         }
         
@@ -108,12 +108,6 @@ class TitleValueView: UIView {
         imageView.snp.makeConstraints { make in
             make.width.equalTo(Constants.imageSize)
         }
-        
-        valueLabel.setContentHuggingPriority(.required, for: .vertical)
-        valueLabel.setContentCompressionResistancePriority(.required, for: .vertical)
-        
-        valueLabel.setContentHuggingPriority(.required, for: .horizontal)
-        valueLabel.setContentCompressionResistancePriority(.required, for: .horizontal)
     }
     
     // MARK: - Logic

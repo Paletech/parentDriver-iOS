@@ -52,15 +52,15 @@ extension MonitorBoardingViewModel: MonitorBoardingViewControllerOutput {
     }
     
     func numberOfImtes() -> Int {
-        return 1
-        //items.count
+        //return 3
+        items.count
     }
     func item(for indexPath: IndexPath) -> MonitorBoardingUIModel {
-        let jsonString = "{\"studentName\":\"LOCKE, Patrick\",\"alert\":\"Tag read 0.58 miles from Dad's Work and 0.83 miles from NFT High School.\", \"time\":\"9:49 am - 9:48 am\"}"
-        let item = MonitorBoarding(JSONString: jsonString, context: nil)
-        let mockResult = MonitorBoardingUIModel(status: item!)
-        return mockResult
-        //return items[indexPath.row]
+//        let jsonString = "{\"studentName\":\"LOCKE, Patrick\",\"alert\":\"\", \"time\":\"9:49 am - 9:48 am\"}"
+//        let item = MonitorBoarding(JSONString: jsonString, context: nil)
+//        let mockResult = MonitorBoardingUIModel(status: item!)
+//        return mockResult
+        return items[indexPath.row]
     }
     
     func onAdd() {

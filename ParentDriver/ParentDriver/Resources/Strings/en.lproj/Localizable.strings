@@ -71,3 +71,12 @@
 
 /* loco:61788103546f8a47d72b61a2 */
 "title_sign_up" = "Sign up";
+
+/* loco:617999a0be2e183c332e77f2 */
+"sign_up_alert_message" = "You account will be verified within 72 hours";
+
+/* loco:617999c94be2337395022092 */
+"sign_up_alert_button" = "Ok";
+
+/* loco:61799eabd360ca02125c1c82 */
+"sign_up_alert_error_message" = "Please fill in all fields";

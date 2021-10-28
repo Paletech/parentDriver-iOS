@@ -56,7 +56,7 @@ class MonitorBoardingCell: UITableViewCell {
     
     private func configureConstraints() {
         containerView.snp.makeConstraints { make in
-            make.top.equalToSuperview()
+            make.top.equalTo(Constants.spacing)
             make.left.equalTo(Constants.spacing * 4)
             make.center.equalToSuperview()
         }
