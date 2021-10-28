@@ -80,3 +80,9 @@
 
 /* loco:61799eabd360ca02125c1c82 */
 "sign_up_alert_error_message" = "Please fill in all fields";
+
+/* loco:617ac3fcbb9c614a0c310b02 */
+"title_add_student" = "Add Student";
+
+/* loco:617ac422b5e8e168e93aa052 */
+"placeholder_search_student" = "Search student";

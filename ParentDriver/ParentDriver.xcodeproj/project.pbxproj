@@ -106,6 +106,7 @@
 		C70D377B2728A7F50080A49A /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D377A2728A7F50080A49A /* SignUpViewModel.swift */; };
 		C70D377D2728A8080080A49A /* SignUpConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D377C2728A8080080A49A /* SignUpConfigurator.swift */; };
 		C70D377F2728A8170080A49A /* SignUp+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D377E2728A8170080A49A /* SignUp+Public.swift */; };
+		C70D3783272B2E260080A49A /* AuthViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D3782272B2E260080A49A /* AuthViewProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -207,6 +208,7 @@
 		C70D377A2728A7F50080A49A /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		C70D377C2728A8080080A49A /* SignUpConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpConfigurator.swift; sourceTree = "<group>"; };
 		C70D377E2728A8170080A49A /* SignUp+Public.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUp+Public.swift"; sourceTree = "<group>"; };
+		C70D3782272B2E260080A49A /* AuthViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewProtocol.swift; sourceTree = "<group>"; };
 		EE443E0F431667697781C224 /* Pods-ParentDriver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParentDriver.debug.xcconfig"; path = "Target Support Files/Pods-ParentDriver/Pods-ParentDriver.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -597,6 +599,7 @@
 			children = (
 				C70D37772728A7690080A49A /* SignUp */,
 				620C94F12721B55F001EA349 /* SignIn */,
+				C70D3782272B2E260080A49A /* AuthViewProtocol.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -817,6 +820,7 @@
 				620C94712720A8FB001EA349 /* Hapday+FloatingPoint.swift in Sources */,
 				62DA6AC7272611380070C832 /* BusInteractor.swift in Sources */,
 				620C94692720A8FB001EA349 /* MyHappyHabbits+UIButton.swift in Sources */,
+				C70D3783272B2E260080A49A /* AuthViewProtocol.swift in Sources */,
 				620C94992720AA4F001EA349 /* TabBarCoordinator.swift in Sources */,
 				620C94842720A94A001EA349 /* MainRequestBuilder.swift in Sources */,
 				62DA6AC527260EEF0070C832 /* AppStateProvidable.swift in Sources */,

@@ -1,7 +1,7 @@
 import UIKit
 import SnapKit
 
-protocol SignInViewControllerOutput: ViewControllerOutput {
+protocol SignInViewControllerOutput: ViewControllerOutput, TextFieldValidator {
     func signIn(driverID: String, password: String, schoolId: String)
 
     func onSignUp()
@@ -9,51 +9,47 @@ protocol SignInViewControllerOutput: ViewControllerOutput {
     func validate(_ field: FloatingTextField?) -> AuthInteractorError?
 }
 
-class SignInViewController: UIViewController {
+class SignInViewController: UIViewController, AuthView {
+    var output: SignInViewControllerOutput
+    var authViewOutput: TextFieldValidator
 
-    private struct Constants {
-        static let horizaontalOffset: CGFloat = 24
-        static let spacing: CGFloat = 12
-        static let textFieldHeight: CGFloat = 70
-        static let buttonHeight: CGFloat = 60
+    var driverIdInput = FloatingTextField()
+    var passwordInput = FloatingTextField()
+    var schoolIdInput = FloatingTextField()
+    var contentStackView = UIStackView()
+    var inputs: [FloatingTextField]
+
+    private var buttonsStackView = UIStackView()
+    
+    private var signInButton = StateButtton(type: .system)
+    private var signUpButton = StateButtton(type: .system)
+
+    init(output: SignInViewControllerOutput) {
+        self.output = output
+        self.authViewOutput = output
+        inputs =  [driverIdInput, passwordInput, schoolIdInput]
+
+        super.init(nibName: nil, bundle: nil)
     }
-    
-    var output: SignInViewControllerOutput!
-    
-    private let contentStackView = UIStackView()
-    
-    private let driverIdInput = FloatingTextField()
-    private let passwordInput = FloatingTextField()
-    private let schoolIdInput = FloatingTextField()
-    
-    private let buttonsStackView = UIStackView()
-    
-    private let signInButton = StateButtton(type: .system)
-    private let signUpButton = StateButtton(type: .system)
-    
-    private var inputs: [FloatingTextField] { [driverIdInput, passwordInput, schoolIdInput] }
-    
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     // MARK: - View lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         configureUI()
         configureConstraints()
         setupTitles()
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        resetTextFields()
+        resetFields()
     }
 
     // MARK: - Private
-
-    private func resetTextFields() {
-        driverIdInput.value = ""
-        passwordInput.value = ""
-        schoolIdInput.value = ""
-    }
 
     private func configureUI() {
         configureStackView()
@@ -65,34 +61,13 @@ class SignInViewController: UIViewController {
         output.fetchSignUpVisibilityState()
     }
     
-    private func configureStackView() {
-        view.addSubview(contentStackView)
-        
-        contentStackView.alignment = .fill
-        contentStackView.axis = .vertical
-        contentStackView.distribution = .fill
-        contentStackView.spacing = Constants.spacing
-    }
-    
-    private func configureTextFields() {
-        driverIdInput.setup(with: .driverId, nextInput: passwordInput)
-        passwordInput.setup(with: .password, nextInput: schoolIdInput)
-        schoolIdInput.setup(with: .schoolId)
-        
-        inputs.forEach { field in
-            field.validator = { [weak self] value -> Error? in
-                return self?.output.validate(field)
-            }
-        }
-    }
-    
     private func configureButtonsStackView() {
         view.addSubview(buttonsStackView)
         
         buttonsStackView.alignment = .fill
         buttonsStackView.axis = .vertical
         buttonsStackView.distribution = .fill
-        buttonsStackView.spacing = Constants.spacing
+        buttonsStackView.spacing = spacing
     }
     
     private func configureSignInButton() {
@@ -106,40 +81,21 @@ class SignInViewController: UIViewController {
         signUpButton.isHidden = true
     }
     
-    private func configureDefaultButton(_ button: UIButton) {
-        view.addSubview(button)
-        
-        button.setTitleColor(.white, for: .normal)
-        button.layer.cornerRadius = Constants.buttonHeight / 2
-        button.titleLabel?.font = .systemFont(ofSize: 16, weight: .semibold)
-    }
-    
     private func configureConstraints() {
-        contentStackView.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(Constants.horizaontalOffset)
-            make.centerX.equalToSuperview()
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(Constants.horizaontalOffset)
-        }
-        
+        configureTextFieldsConstraints()
+
         buttonsStackView.snp.makeConstraints { make in
-            make.left.equalToSuperview().offset(Constants.horizaontalOffset)
+            make.left.equalToSuperview().offset(horizontalOffset)
             make.centerX.equalToSuperview()
-            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-Constants.horizaontalOffset)
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-horizontalOffset)
         }
         
         signInButton.snp.makeConstraints { make in
-            make.height.equalTo(Constants.buttonHeight)
+            make.height.equalTo(buttonHeight)
         }
         
         signUpButton.snp.makeConstraints { make in
-            make.height.equalTo(Constants.buttonHeight)
-        }
-        
-        inputs.forEach {
-            $0.snp.makeConstraints { make in
-                make.height.equalTo(Constants.textFieldHeight)
-            }
-            contentStackView.addArrangedSubview($0)
+            make.height.equalTo(buttonHeight)
         }
         
         [signInButton, signUpButton].forEach {

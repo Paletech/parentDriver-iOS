@@ -1,36 +1,36 @@
 import UIKit
 import SnapKit
 
-protocol SignUpViewControllerOutput: ViewControllerOutput {
+protocol SignUpViewControllerOutput: ViewControllerOutput, TextFieldValidator {
     func validate(_ field: FloatingTextField?) -> AuthInteractorError?
 }
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, AuthView {
+    var authViewOutput: TextFieldValidator
 
-    private struct Constants {
-        static let horizaontalOffset: CGFloat = 24
-        static let spacing: CGFloat = 12
-        static let textFieldHeight: CGFloat = 70
-        static let buttonHeight: CGFloat = 60
+    var driverIdInput = FloatingTextField()
+    var passwordInput = FloatingTextField()
+    var schoolIdInput = FloatingTextField()
+    var contentStackView = UIStackView()
+    var inputs: [FloatingTextField]
+
+    private var signUpButton = StateButtton(type: .system)
+
+    init(output: SignUpViewControllerOutput) {
+        self.authViewOutput = output
+        inputs =  [driverIdInput, passwordInput, schoolIdInput]
+
+        super.init(nibName: nil, bundle: nil)
     }
 
-    var output: SignUpViewControllerOutput!
-
-    private let contentStackView = UIStackView()
-
-    private let driverIdInput = FloatingTextField()
-    private let passwordInput = FloatingTextField()
-    private let schoolIdInput = FloatingTextField()
-
-    private let signUpButton = StateButtton(type: .system)
-
-    private var inputs: [FloatingTextField] { [driverIdInput, passwordInput, schoolIdInput] }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     // MARK: - View lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         configureUI()
         configureConstraints()
         setupTitles()
@@ -44,59 +44,19 @@ class SignUpViewController: UIViewController {
         configureSignUpButton()
     }
 
-    private func configureStackView() {
-        view.addSubview(contentStackView)
-
-        contentStackView.alignment = .fill
-        contentStackView.axis = .vertical
-        contentStackView.distribution = .fill
-        contentStackView.spacing = Constants.spacing
-    }
-
-    private func configureTextFields() {
-        driverIdInput.setup(with: .driverId, nextInput: passwordInput)
-        passwordInput.setup(with: .password, nextInput: schoolIdInput)
-        schoolIdInput.setup(with: .schoolId)
-
-        inputs.forEach { field in
-            field.validator = { [weak self] value -> Error? in
-                return self?.output.validate(field)
-            }
-        }
-    }
-
     private func configureSignUpButton() {
         configureDefaultButton(signUpButton)
         signUpButton.addTarget(self, action: #selector(signUp), for: .touchUpInside)
     }
 
-    private func configureDefaultButton(_ button: UIButton) {
-        view.addSubview(button)
-
-        button.setTitleColor(.white, for: .normal)
-        button.layer.cornerRadius = Constants.buttonHeight / 2
-        button.titleLabel?.font = .systemFont(ofSize: 16, weight: .semibold)
-    }
-
     private func configureConstraints() {
-        contentStackView.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(Constants.horizaontalOffset)
-            make.centerX.equalToSuperview()
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(Constants.horizaontalOffset)
-        }
+        configureTextFieldsConstraints()
 
         signUpButton.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(Constants.horizaontalOffset)
+            make.leading.equalToSuperview().offset(horizontalOffset)
             make.centerX.equalToSuperview()
-            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-Constants.horizaontalOffset)
-            make.height.equalTo(Constants.buttonHeight)
-        }
-
-        inputs.forEach {
-            $0.snp.makeConstraints { make in
-                make.height.equalTo(Constants.textFieldHeight)
-            }
-            contentStackView.addArrangedSubview($0)
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-horizontalOffset)
+            make.height.equalTo(buttonHeight)
         }
     }
 
@@ -105,12 +65,6 @@ class SignUpViewController: UIViewController {
         alert.addAction(UIAlertAction(title: buttonText, style: .default, handler: nil))
 
         self.present(alert, animated: true)
-    }
-
-    private func resetFields() {
-        driverIdInput.value = ""
-        passwordInput.value = ""
-        schoolIdInput.value = ""
     }
 
     // MARK: - Localisation

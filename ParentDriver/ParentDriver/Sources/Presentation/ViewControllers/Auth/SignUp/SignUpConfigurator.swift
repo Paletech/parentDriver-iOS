@@ -4,10 +4,9 @@ class SignUpConfigurator {
     
     class func configure(data: SignUpViewModel.ModuleInput = SignUpViewModel.ModuleInput(),
                          output: SignUpViewModel.ModuleOutput? = nil) -> UIViewController {
-        let viewController = SignUpViewController()
         let viewModel = SignUpViewModel(dependencies: createDependencies(), data: data)
-        
-        viewController.output = viewModel
+        let viewController = SignUpViewController(output: viewModel)
+
         viewModel.output = viewController
         viewModel.moduleOutput = output
         
