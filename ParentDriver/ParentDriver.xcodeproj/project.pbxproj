@@ -106,6 +106,7 @@
 		C70D377B2728A7F50080A49A /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D377A2728A7F50080A49A /* SignUpViewModel.swift */; };
 		C70D377D2728A8080080A49A /* SignUpConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D377C2728A8080080A49A /* SignUpConfigurator.swift */; };
 		C70D377F2728A8170080A49A /* SignUp+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D377E2728A8170080A49A /* SignUp+Public.swift */; };
+		C70D37812729DEEA0080A49A /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D37802729DEEA0080A49A /* AuthView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -207,6 +208,7 @@
 		C70D377A2728A7F50080A49A /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		C70D377C2728A8080080A49A /* SignUpConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpConfigurator.swift; sourceTree = "<group>"; };
 		C70D377E2728A8170080A49A /* SignUp+Public.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUp+Public.swift"; sourceTree = "<group>"; };
+		C70D37802729DEEA0080A49A /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		EE443E0F431667697781C224 /* Pods-ParentDriver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParentDriver.debug.xcconfig"; path = "Target Support Files/Pods-ParentDriver/Pods-ParentDriver.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -443,6 +445,7 @@
 				620C94A12720AB84001EA349 /* PrimaryButton.swift */,
 				620C949F2720AB84001EA349 /* SelectableButton.swift */,
 				620C94A22720AB84001EA349 /* ShadowView.swift */,
+				C70D37802729DEEA0080A49A /* AuthView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -843,6 +846,7 @@
 				620C94F72721B8C8001EA349 /* SignInViewModel.swift in Sources */,
 				620C94662720A8FB001EA349 /* HapDay+ViewController.swift in Sources */,
 				620C94A52720AB84001EA349 /* PrimaryButton.swift in Sources */,
+				C70D37812729DEEA0080A49A /* AuthView.swift in Sources */,
 				620C94742720A8FB001EA349 /* HapDay+TextView.swift in Sources */,
 				C70D377B2728A7F50080A49A /* SignUpViewModel.swift in Sources */,
 				620C94372720A59E001EA349 /* CustomErrorCodes.swift in Sources */,

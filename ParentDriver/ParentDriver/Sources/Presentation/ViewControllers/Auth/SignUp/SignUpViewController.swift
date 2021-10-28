@@ -1,7 +1,7 @@
 import UIKit
 import SnapKit
 
-protocol SignUpViewControllerOutput: ViewControllerOutput {
+protocol SignUpViewControllerOutput: ViewControllerOutput, TextFieldValidator {
     func validate(_ field: FloatingTextField?) -> AuthInteractorError?
 }
 
@@ -16,15 +16,9 @@ class SignUpViewController: UIViewController {
 
     var output: SignUpViewControllerOutput!
 
-    private let contentStackView = UIStackView()
-
-    private let driverIdInput = FloatingTextField()
-    private let passwordInput = FloatingTextField()
-    private let schoolIdInput = FloatingTextField()
+    private lazy var authView: AuthView = { AuthView(output: output) } ()
 
     private let signUpButton = StateButtton(type: .system)
-
-    private var inputs: [FloatingTextField] { [driverIdInput, passwordInput, schoolIdInput] }
 
     // MARK: - View lifecycle
 
@@ -39,30 +33,12 @@ class SignUpViewController: UIViewController {
     // MARK: - Private
 
     private func configureUI() {
-        configureStackView()
-        configureTextFields()
+        configureAuthView()
         configureSignUpButton()
     }
 
-    private func configureStackView() {
-        view.addSubview(contentStackView)
-
-        contentStackView.alignment = .fill
-        contentStackView.axis = .vertical
-        contentStackView.distribution = .fill
-        contentStackView.spacing = Constants.spacing
-    }
-
-    private func configureTextFields() {
-        driverIdInput.setup(with: .driverId, nextInput: passwordInput)
-        passwordInput.setup(with: .password, nextInput: schoolIdInput)
-        schoolIdInput.setup(with: .schoolId)
-
-        inputs.forEach { field in
-            field.validator = { [weak self] value -> Error? in
-                return self?.output.validate(field)
-            }
-        }
+    private func configureAuthView() {
+        view.addSubview(authView)
     }
 
     private func configureSignUpButton() {
@@ -79,10 +55,10 @@ class SignUpViewController: UIViewController {
     }
 
     private func configureConstraints() {
-        contentStackView.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(Constants.horizaontalOffset)
-            make.centerX.equalToSuperview()
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(Constants.horizaontalOffset)
+        authView.snp.makeConstraints { make in
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.top.equalToSuperview()
         }
 
         signUpButton.snp.makeConstraints { make in
@@ -91,13 +67,6 @@ class SignUpViewController: UIViewController {
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-Constants.horizaontalOffset)
             make.height.equalTo(Constants.buttonHeight)
         }
-
-        inputs.forEach {
-            $0.snp.makeConstraints { make in
-                make.height.equalTo(Constants.textFieldHeight)
-            }
-            contentStackView.addArrangedSubview($0)
-        }
     }
 
     private func showAlert(messageText: String, buttonText: String) {
@@ -105,12 +74,6 @@ class SignUpViewController: UIViewController {
         alert.addAction(UIAlertAction(title: buttonText, style: .default, handler: nil))
 
         self.present(alert, animated: true)
-    }
-
-    private func resetFields() {
-        driverIdInput.value = ""
-        passwordInput.value = ""
-        schoolIdInput.value = ""
     }
 
     // MARK: - Localisation
@@ -123,12 +86,11 @@ class SignUpViewController: UIViewController {
     // MARK: - Actions
 
     @objc private func signUp() {
-        inputs.forEach { $0.updateValueState() }
-        guard inputs.first(where: { !$0.isValid }) == nil else {
+        guard authView.checkTextFieldsState() else {
             showAlert(messageText: Localizable.sign_up_alert_error_message(), buttonText: Localizable.sign_up_alert_button())
             return }
         showAlert(messageText: Localizable.sign_up_alert_message(), buttonText: Localizable.sign_up_alert_button())
-        resetFields()
+        authView.resetTextFields()
     }
 
 }

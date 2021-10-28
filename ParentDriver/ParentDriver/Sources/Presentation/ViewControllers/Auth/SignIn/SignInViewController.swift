@@ -1,11 +1,14 @@
 import UIKit
 import SnapKit
 
-protocol SignInViewControllerOutput: ViewControllerOutput {
+protocol SignInViewControllerOutput: ViewControllerOutput, TextFieldValidator {
     func signIn(driverID: String, password: String, schoolId: String)
-
     func onSignUp()
     func fetchSignUpVisibilityState()
+    func validate(_ field: FloatingTextField?) -> AuthInteractorError?
+}
+
+protocol TextFieldValidator {
     func validate(_ field: FloatingTextField?) -> AuthInteractorError?
 }
 
