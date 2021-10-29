@@ -47,6 +47,7 @@ struct API {
     
     struct Student {
         static let findStudent = "/findStudent.php"
+        static let addStudent = "/addStudent.php"
     }
 
     struct Device {

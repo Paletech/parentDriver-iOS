@@ -32,5 +32,13 @@ struct StudentRepository: Repository {
         remote.requestArray(request: StudentRequests.findStudent(studentName: studentName),
                             keyPath: Keys.studentsKey)
     }
+    
+    func addStudent(studentId: String,
+                    busId: String,
+                    coordinates: String) -> AnyPublisher<Any, Error> {
+        remote.requestJSON(request: StudentRequests.addStudent(studentId: studentId,
+                                                               busId: busId,
+                                                               coordinates: coordinates))
+    }
 }
 
