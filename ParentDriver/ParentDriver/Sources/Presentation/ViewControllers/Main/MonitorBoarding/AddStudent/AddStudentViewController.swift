@@ -15,15 +15,11 @@ class AddStudentViewController: UIViewController {
         output.start()
         configureUI()
     }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        output.updateData()
-    }
-
+    
     // MARK: - Private
 
     private func configureUI() {
+        view.backgroundColor = .white
     }
 }
 

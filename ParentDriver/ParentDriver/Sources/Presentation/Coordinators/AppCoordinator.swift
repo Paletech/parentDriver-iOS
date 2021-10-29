@@ -9,19 +9,18 @@ class AppCoordinator: WindowCoordinator {
     private func configure() {
         removeAllChilds()
         
-//        let splashVc = SplashConfigurator.configure(output: SplashViewModel.ModuleOutput(action: { [weak self] in
-//            switch $0 {
-//            case .showAuthFlow:
-//                self?.showAuthFlow()
-//            case .showSelectBusFlow:
-//                self?.showBusSelectionFlow()
-//            case .showMainFlow:
-//                self?.showMainFlow()
-//            }
-//        }))
-//
-//        setRoot(viewControler: splashVc)
-        showAuthFlow()
+        let splashVc = SplashConfigurator.configure(output: SplashViewModel.ModuleOutput(action: { [weak self] in
+            switch $0 {
+            case .showAuthFlow:
+                self?.showAuthFlow()
+            case .showSelectBusFlow:
+                self?.showBusSelectionFlow()
+            case .showMainFlow:
+                self?.showMainFlow()
+            }
+        }))
+
+        setRoot(viewControler: splashVc)
     }
     
     private func showAuthFlow() {
