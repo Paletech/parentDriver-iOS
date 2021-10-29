@@ -96,6 +96,8 @@
 		6213069927295BF500FD5220 /* MonitorBoardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213069827295BF500FD5220 /* MonitorBoardingCell.swift */; };
 		6213069C27295CF700FD5220 /* MonitorBoardingUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213069B27295CF700FD5220 /* MonitorBoardingUIModel.swift */; };
 		6213069E27297F1B00FD5220 /* TitleValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213069D27297F1B00FD5220 /* TitleValueView.swift */; };
+		621306A0272AF66400FD5220 /* MonitorBoardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213069F272AF66400FD5220 /* MonitorBoardingCoordinator.swift */; };
+		621306A4272AFC2D00FD5220 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621306A3272AFC2D00FD5220 /* SearchView.swift */; };
 		62C49EEF272527060008F239 /* AuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C49EEE272527060008F239 /* AuthInteractor.swift */; };
 		62DA6AA627252E660070C832 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62DA6AA527252E660070C832 /* GoogleService-Info.plist */; };
 		62DA6AA9272536620070C832 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AA8272536620070C832 /* AuthResponse.swift */; };
@@ -228,6 +230,8 @@
 		6213069827295BF500FD5220 /* MonitorBoardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorBoardingCell.swift; sourceTree = "<group>"; };
 		6213069B27295CF700FD5220 /* MonitorBoardingUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorBoardingUIModel.swift; sourceTree = "<group>"; };
 		6213069D27297F1B00FD5220 /* TitleValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleValueView.swift; sourceTree = "<group>"; };
+		6213069F272AF66400FD5220 /* MonitorBoardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorBoardingCoordinator.swift; sourceTree = "<group>"; };
+		621306A3272AFC2D00FD5220 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		62C49EEE272527060008F239 /* AuthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInteractor.swift; sourceTree = "<group>"; };
 		62DA6AA527252E660070C832 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		62DA6AA8272536620070C832 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
@@ -494,6 +498,7 @@
 				620C949D2720AA6A001EA349 /* AppCoordinator.swift */,
 				620C94EE2721B123001EA349 /* AuthCoordinator.swift */,
 				62DA6ADF27268F660070C832 /* MenuCoordinator.swift */,
+				6213069F272AF66400FD5220 /* MonitorBoardingCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -723,6 +728,22 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		621306A1272AFC0E00FD5220 /* NavigationHolder */ = {
+			isa = PBXGroup;
+			children = (
+				62DA6ADB2726884B0070C832 /* NavigationHolderController.swift */,
+			);
+			path = NavigationHolder;
+			sourceTree = "<group>";
+		};
+		621306A2272AFC1F00FD5220 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				621306A3272AFC2D00FD5220 /* SearchView.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		62DA6AA7272536400070C832 /* Responses */ = {
 			isa = PBXGroup;
 			children = (
@@ -798,7 +819,8 @@
 		62DA6ACF27267EF10070C832 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				62DA6ADB2726884B0070C832 /* NavigationHolderController.swift */,
+				621306A2272AFC1F00FD5220 /* Search */,
+				621306A1272AFC0E00FD5220 /* NavigationHolder */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -988,6 +1010,7 @@
 				620C949B2720AA4F001EA349 /* ViewControllerCoordinator.swift in Sources */,
 				62DA6AD8272681F90070C832 /* Menu+Public.swift in Sources */,
 				62130695272931A200FD5220 /* AddStudentConfigurator.swift in Sources */,
+				621306A4272AFC2D00FD5220 /* SearchView.swift in Sources */,
 				620C949C2720AA4F001EA349 /* NavigationCoordinator.swift in Sources */,
 				62DA6AE027268F660070C832 /* MenuCoordinator.swift in Sources */,
 				621306852728986400FD5220 /* MonitorBoarding.swift in Sources */,
@@ -998,6 +1021,7 @@
 				620C94712720A8FB001EA349 /* Hapday+FloatingPoint.swift in Sources */,
 				62DA6AC7272611380070C832 /* BusInteractor.swift in Sources */,
 				620C94692720A8FB001EA349 /* MyHappyHabbits+UIButton.swift in Sources */,
+				621306A0272AF66400FD5220 /* MonitorBoardingCoordinator.swift in Sources */,
 				62DA6AFC272694090070C832 /* MonitorBoardingConfigurator.swift in Sources */,
 				620C94992720AA4F001EA349 /* TabBarCoordinator.swift in Sources */,
 				620C94842720A94A001EA349 /* MainRequestBuilder.swift in Sources */,

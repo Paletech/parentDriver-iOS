@@ -206,8 +206,12 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 25 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 27 localization keys.
     struct localizable {
+      /// en translation: Add Student
+      ///
+      /// Locales: en
+      static let title_add_student = Rswift.StringResource(key: "title_add_student", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Bus inspection
       ///
       /// Locales: en
@@ -264,6 +268,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let placeholder_search_bus = Rswift.StringResource(key: "placeholder_search_bus", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Search student
+      ///
+      /// Locales: en
+      static let placeholder_search_student = Rswift.StringResource(key: "placeholder_search_student", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Select bus
       ///
       /// Locales: en
@@ -308,6 +316,21 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let sign_up_alert_message = Rswift.StringResource(key: "sign_up_alert_message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+
+      /// en translation: Add Student
+      ///
+      /// Locales: en
+      static func title_add_student(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("title_add_student", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "title_add_student"
+        }
+
+        return NSLocalizedString("title_add_student", bundle: bundle, comment: "")
+      }
 
       /// en translation: Bus inspection
       ///
@@ -517,6 +540,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("placeholder_search_bus", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Search student
+      ///
+      /// Locales: en
+      static func placeholder_search_student(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("placeholder_search_student", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "placeholder_search_student"
+        }
+
+        return NSLocalizedString("placeholder_search_student", bundle: bundle, comment: "")
       }
 
       /// en translation: Select bus

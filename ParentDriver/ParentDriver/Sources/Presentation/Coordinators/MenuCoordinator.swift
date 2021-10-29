@@ -17,6 +17,8 @@ class MenuCoordinator: ViewControllerCoordinator {
     // MARK: - Navigation
     
     private func setDashboard() {
+        childs.removeAll()
+
         let dashboardVc = DashboardConfigurator.configure(output: DashboardViewModel.ModuleOutput(action: { [weak self] in
             switch $0 {
             case .showMenu:
@@ -38,19 +40,20 @@ class MenuCoordinator: ViewControllerCoordinator {
     }
     
     private func setMonitorBoarding() {
-        let monitorBoardingVc = MonitorBoardingConfigurator.configure(output: MonitorBoardingViewModel.ModuleOutput(action: { [weak self] in
-            switch $0 {
-            case .onShowMenu:
-                self?.showMenu()
-            case .onAdd:
-                print("add")
-            }
+        childs.removeAll()
+
+        let monitorBoardingCoordinator = MonitorBoardingCoordinator(container: UINavigationController(), output: MonitorBoardingCoordinator.Output(showMenu: { [weak self] in
+            self?.showMenu()
         }))
+        addChild(monitorBoardingCoordinator)
         
-        setController(monitorBoardingVc)
+        monitorBoardingCoordinator.start()
+        setController(monitorBoardingCoordinator.container)
     }
     
     private func setChangeBus() {
+        childs.removeAll()
+
         let selectBusVc = SelectBusConfigurator.configure(output: SelectBusViewModel.ModuleOutput(action: { [weak self] in
             switch $0 {
             case .busSelected:
@@ -68,7 +71,14 @@ class MenuCoordinator: ViewControllerCoordinator {
     private func setController(_ controller: UIViewController) {
         removeChildren()
         
-        let navigation = UINavigationController(rootViewController: controller)
+        let navigation: UINavigationController
+        
+        if let nc = controller as? UINavigationController {
+            navigation = nc
+        } else {
+            navigation = UINavigationController(rootViewController: controller)
+        }
+        
         add(navigation)
     }
     
