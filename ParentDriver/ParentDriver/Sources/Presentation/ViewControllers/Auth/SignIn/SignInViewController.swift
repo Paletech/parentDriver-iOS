@@ -6,7 +6,6 @@ protocol SignInViewControllerOutput: ViewControllerOutput, TextFieldValidator {
 
     func onSignUp()
     func fetchSignUpVisibilityState()
-    func validate(_ field: FloatingTextField?) -> AuthInteractorError?
 }
 
 class SignInViewController: UIViewController, AuthView {
@@ -104,8 +103,7 @@ class SignInViewController: UIViewController, AuthView {
     }
     
     private func login() {
-        inputs.forEach { $0.updateValueState() }
-        guard inputs.first(where: { !$0.isValid }) == nil else { return }
+        
         output.signIn(driverID: driverIdInput.value,
                       password: passwordInput.value,
                       schoolId: schoolIdInput.value)

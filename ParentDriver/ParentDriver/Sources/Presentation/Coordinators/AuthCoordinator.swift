@@ -44,7 +44,23 @@ class AuthCoordinator: NavigationCoordinator {
     }
     
     private func showSignUp() {
-        let signUpVc = SignUpConfigurator.configure()
+        let output = SignUpViewModel.ModuleOutput { [weak self] in
+            switch $0 {
+            case .onSignedUp:
+                self?.showSignedUpAlert()
+            }
+        }
+        
+        let signUpVc = SignUpConfigurator.configure(output: output)
         self.push(signUpVc, animated: true)
+    }
+    
+    private func showSignedUpAlert() {
+        let alert = UIAlertController(title: Localizable.sign_up_alert_message(), message: "", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: Localizable.sign_up_alert_button(), style: .default, handler: { [weak self] _  in
+            self?.pop()
+        }))
+
+        container.present(alert, animated: true)
     }
 }

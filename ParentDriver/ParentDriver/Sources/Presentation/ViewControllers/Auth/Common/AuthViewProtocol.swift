@@ -18,7 +18,7 @@ protocol AuthView {
     var contentStackView: UIStackView { get set }
     var inputs: [FloatingTextField] { get set }
 
-    var authViewOutput: TextFieldValidator { get set }
+    var authViewOutput: TextFieldValidator { get }
     
     func configureStackView()
     func configureTextFields()

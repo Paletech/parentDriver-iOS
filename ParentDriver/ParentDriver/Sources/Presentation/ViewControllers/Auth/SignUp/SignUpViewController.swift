@@ -2,22 +2,26 @@ import UIKit
 import SnapKit
 
 protocol SignUpViewControllerOutput: ViewControllerOutput, TextFieldValidator {
-    func validate(_ field: FloatingTextField?) -> AuthInteractorError?
+    func onSignUp()
 }
 
 class SignUpViewController: UIViewController, AuthView {
-    var authViewOutput: TextFieldValidator
+    
+    var output: SignUpViewControllerOutput
+    var authViewOutput: TextFieldValidator { output }
 
     var driverIdInput = FloatingTextField()
     var passwordInput = FloatingTextField()
     var schoolIdInput = FloatingTextField()
+    
     var contentStackView = UIStackView()
+    
+    private var signUpButton = StateButtton(type: .system)
+    
     var inputs: [FloatingTextField]
 
-    private var signUpButton = StateButtton(type: .system)
-
     init(output: SignUpViewControllerOutput) {
-        self.authViewOutput = output
+        self.output = output
         inputs =  [driverIdInput, passwordInput, schoolIdInput]
 
         super.init(nibName: nil, bundle: nil)
@@ -31,6 +35,7 @@ class SignUpViewController: UIViewController, AuthView {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         configureUI()
         configureConstraints()
         setupTitles()
@@ -39,6 +44,8 @@ class SignUpViewController: UIViewController, AuthView {
     // MARK: - Private
 
     private func configureUI() {
+        view.backgroundColor = .white
+        
         configureStackView()
         configureTextFields()
         configureSignUpButton()
@@ -60,13 +67,6 @@ class SignUpViewController: UIViewController, AuthView {
         }
     }
 
-    private func showAlert(messageText: String, buttonText: String) {
-        let alert = UIAlertController(title: messageText, message: "", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: buttonText, style: .default, handler: nil))
-
-        self.present(alert, animated: true)
-    }
-
     // MARK: - Localisation
 
     private func setupTitles() {
@@ -78,13 +78,9 @@ class SignUpViewController: UIViewController, AuthView {
 
     @objc private func signUp() {
         inputs.forEach { $0.updateValueState() }
-        guard inputs.first(where: { !$0.isValid }) == nil else {
-            showAlert(messageText: Localizable.sign_up_alert_error_message(), buttonText: Localizable.sign_up_alert_button())
-            return }
-        showAlert(messageText: Localizable.sign_up_alert_message(), buttonText: Localizable.sign_up_alert_button())
-        resetFields()
+        guard inputs.first(where: { !$0.isValid }) == nil else { return }
+        output.onSignUp()
     }
-
 }
 
 // MARK: - Private SignUpViewModelOutput

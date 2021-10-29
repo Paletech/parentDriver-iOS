@@ -115,11 +115,6 @@
 		62DA6AC327260E140070C832 /* BusRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AC227260E140070C832 /* BusRepository.swift */; };
 		62DA6AC527260EEF0070C832 /* AppStateProvidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AC427260EEF0070C832 /* AppStateProvidable.swift */; };
 		62DA6AC7272611380070C832 /* BusInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AC6272611380070C832 /* BusInteractor.swift */; };
-		C70D37792728A7E40080A49A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D37782728A7E40080A49A /* SignUpViewController.swift */; };
-		C70D377B2728A7F50080A49A /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D377A2728A7F50080A49A /* SignUpViewModel.swift */; };
-		C70D377D2728A8080080A49A /* SignUpConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D377C2728A8080080A49A /* SignUpConfigurator.swift */; };
-		C70D377F2728A8170080A49A /* SignUp+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D377E2728A8170080A49A /* SignUp+Public.swift */; };
-		C70D3783272B2E260080A49A /* AuthViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D3782272B2E260080A49A /* AuthViewProtocol.swift */; };
 		62DA6ACA27267EA90070C832 /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 62DA6AC927267EA90070C832 /* SideMenu */; };
 		62DA6AD5272681F90070C832 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AD1272681F90070C832 /* MenuViewController.swift */; };
 		62DA6AD6272681F90070C832 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AD2272681F90070C832 /* MenuViewModel.swift */; };
@@ -145,6 +140,11 @@
 		62DA6B032726941F0070C832 /* RidersheepChangesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AFF2726941F0070C832 /* RidersheepChangesViewModel.swift */; };
 		62DA6B042726941F0070C832 /* RidersheepChangesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6B002726941F0070C832 /* RidersheepChangesConfigurator.swift */; };
 		62DA6B052726941F0070C832 /* RidersheepChanges+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6B012726941F0070C832 /* RidersheepChanges+Public.swift */; };
+		C70D37792728A7E40080A49A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D37782728A7E40080A49A /* SignUpViewController.swift */; };
+		C70D377B2728A7F50080A49A /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D377A2728A7F50080A49A /* SignUpViewModel.swift */; };
+		C70D377D2728A8080080A49A /* SignUpConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D377C2728A8080080A49A /* SignUpConfigurator.swift */; };
+		C70D377F2728A8170080A49A /* SignUp+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D377E2728A8170080A49A /* SignUp+Public.swift */; };
+		C70D3783272B2E260080A49A /* AuthViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D3782272B2E260080A49A /* AuthViewProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -682,9 +682,9 @@
 		620C94F02721B550001EA349 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				621306A5272BC99000FD5220 /* Common */,
 				C70D37772728A7690080A49A /* SignUp */,
 				620C94F12721B55F001EA349 /* SignIn */,
-				C70D3782272B2E260080A49A /* AuthViewProtocol.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -756,6 +756,14 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		621306A5272BC99000FD5220 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C70D3782272B2E260080A49A /* AuthViewProtocol.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		62DA6AA7272536400070C832 /* Responses */ = {
 			isa = PBXGroup;
 			children = (
@@ -784,17 +792,6 @@
 			path = SelectBus;
 			sourceTree = "<group>";
 		};
-		C70D37772728A7690080A49A /* SignUp */ = {
-			isa = PBXGroup;
-			children = (
-				C70D37782728A7E40080A49A /* SignUpViewController.swift */,
-				C70D377A2728A7F50080A49A /* SignUpViewModel.swift */,
-				C70D377C2728A8080080A49A /* SignUpConfigurator.swift */,
-				C70D377E2728A8170080A49A /* SignUp+Public.swift */,
-			);
-			path = SignUp;
-            sourceTree = "<group>";
-        };
 		62DA6ACB27267EB20070C832 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -869,6 +866,17 @@
 				62DA6AE7272693B70070C832 /* Dashboard+Public.swift */,
 			);
 			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		C70D37772728A7690080A49A /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				C70D37782728A7E40080A49A /* SignUpViewController.swift */,
+				C70D377A2728A7F50080A49A /* SignUpViewModel.swift */,
+				C70D377C2728A8080080A49A /* SignUpConfigurator.swift */,
+				C70D377E2728A8170080A49A /* SignUp+Public.swift */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

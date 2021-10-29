@@ -3,8 +3,7 @@ import Foundation
 extension SignUpViewModel {
 
     enum ModuleOutputAction {
-        case onSignedIn
-        case onSignUp
+        case onSignedUp
     }
 
     struct ModuleInput {

@@ -26,8 +26,13 @@ class SignUpViewModel {
 }
 
 extension SignUpViewModel: SignUpViewControllerOutput {
+    
     func validate(_ field: FloatingTextField?) -> AuthInteractorError? {
         guard let field = field else { return .none }
         return dependencies.interactor.validate(text: field.value).error
+    }
+    
+    func onSignUp() {
+        moduleOutput?.action(.onSignedUp)
     }
 }
