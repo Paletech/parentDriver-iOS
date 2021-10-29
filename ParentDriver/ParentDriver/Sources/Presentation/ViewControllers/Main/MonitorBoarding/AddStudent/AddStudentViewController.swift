@@ -18,12 +18,6 @@ class AddStudentViewController: BaseSearchViewController {
         setupTitles()
     }
     
-    // MARK: - Private
-
-    private func configureUI() {
-        view.backgroundColor = .white
-    }
-    
     // MARK: - Localisation
     
     private func setupTitles() {

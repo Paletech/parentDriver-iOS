@@ -61,6 +61,8 @@ class BaseSearchViewController: UIViewController, SearchView, SearchViewType, Se
     }
     
     private func configureUI() {
+        view.backgroundColor = .white
+
         configureEmptySearchLabel()
         configureTableView()
     }
