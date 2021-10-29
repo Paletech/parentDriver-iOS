@@ -16,6 +16,6 @@ class AddStudentConfigurator {
     }
     
     private class func createDependencies() -> AddStudentViewModel.Dependencies {
-        return AddStudentViewModel.Dependencies()
+        return AddStudentViewModel.Dependencies(interactor: inject())
     }
 }

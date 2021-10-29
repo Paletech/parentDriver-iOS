@@ -144,8 +144,6 @@ extension MonitorBoardingViewController: MonitorBoardingViewModelOutput {
             errorLabel.isHidden = false
             tableView.isHidden = true
             errorLabel.text = error.localizedDescription
-        } else {
-            showAlert(error.localizedDescription)
         }
     }
     

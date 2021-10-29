@@ -41,6 +41,9 @@ class DependencyProvider {
         
         let monitorBoardingRepository = MonitorBoardingRepository.default()
         registerService(service: monitorBoardingRepository)
+        
+        let studentRepository = StudentRepository.default()
+        registerService(service: studentRepository)
     }
 
     static private func configureInteractors() {
@@ -56,6 +59,9 @@ class DependencyProvider {
         let monitorBoardingInteractor = MonitorBoardingInteractor(dp: MonitorBoardingInteractor.Dependencies(repo: inject(),
                                                                                                              busStore: inject()))
         registerService(service: monitorBoardingInteractor)
+        
+        let studentInteractor = StudentInteractor(dp: StudentInteractor.Dependencies(repo: inject()))
+        registerService(service: studentInteractor)
     }
     
     static private func registerService<T>(service: T, name: String? = nil) {

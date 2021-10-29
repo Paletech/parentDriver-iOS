@@ -44,6 +44,10 @@ struct API {
     struct MonitorBoarding {
         static let get = "/boarding.php"
     }
+    
+    struct Student {
+        static let findStudent = "/findStudent.php"
+    }
 
     struct Device {
         private static let root = "/device"

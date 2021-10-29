@@ -1,7 +1,7 @@
 import Foundation
 import Combine
 
-protocol SelectBusViewModelOutput: ViewModelOutput {
+protocol SelectBusViewModelOutput: SearchViewModelOutput {
     func dataDidUpdate()
 }
 

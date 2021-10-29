@@ -1,19 +1,21 @@
 import UIKit
 
-protocol AddStudentViewControllerOutput: ViewControllerOutput {
+protocol AddStudentViewControllerOutput: SearchViewOutput {
 
 }
 
-class AddStudentViewController: UIViewController {
+class AddStudentViewController: BaseSearchViewController {
 
     var output: AddStudentViewControllerOutput!
+    override var searchViewOutput: SearchViewOutput! { output }
     
     // MARK: - View lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        output.start()
-        configureUI()
+        
+        baseSetup()
+        setupTitles()
     }
     
     // MARK: - Private
@@ -21,12 +23,15 @@ class AddStudentViewController: UIViewController {
     private func configureUI() {
         view.backgroundColor = .white
     }
+    
+    // MARK: - Localisation
+    
+    private func setupTitles() {
+        title = Localizable.title_add_student()
+        emptySearchLabel.text = Localizable.error_empty_search()
+        navigationItem.searchController?.searchBar.placeholder = Localizable.placeholder_search_student()
+    }
 }
 
 // MARK: - Private AddStudentViewModelOutput
-extension AddStudentViewController: AddStudentViewModelOutput {
-
-    func dataDidUpdate() {
-
-    }
-}
+extension AddStudentViewController: AddStudentViewModelOutput { }
