@@ -19,7 +19,7 @@ class AppCoordinator: WindowCoordinator {
                 self?.showMainFlow()
             }
         }))
-        
+
         setRoot(viewControler: splashVc)
     }
     
@@ -39,13 +39,27 @@ class AppCoordinator: WindowCoordinator {
     private func showBusSelectionFlow() {
         removeAllChilds()
         
-        let busSelectionVc = SelectBusConfigurator.configure()
+        let busSelectionVc = SelectBusConfigurator.configure(output: SelectBusViewModel.ModuleOutput(action: { [weak self] in
+            switch $0 {
+            case .busSelected:
+                self?.showMainFlow()
+            }
+        }))
         let navigationVc = UINavigationController(rootViewController: busSelectionVc)
         
         setRoot(viewControler: navigationVc)
     }
     
     private func showMainFlow() {
+        removeAllChilds()
+
+        let container = UIViewController()
+        container.view.backgroundColor = .white
         
+        let menuCoordinator = MenuCoordinator(container: container)
+        addChild(menuCoordinator)
+        menuCoordinator.start()
+        
+        setRoot(viewControler: menuCoordinator.container)
     }
 }

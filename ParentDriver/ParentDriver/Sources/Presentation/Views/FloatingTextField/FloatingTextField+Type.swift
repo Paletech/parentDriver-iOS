@@ -35,7 +35,7 @@ enum InputFieldType {
         case .password:
             return .default
         case .schoolId, .driverId:
-            return .decimalPad
+            return .numberPad
         }
     }
     

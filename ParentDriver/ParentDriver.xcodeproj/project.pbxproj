@@ -85,6 +85,19 @@
 		620C94F82721B8C8001EA349 /* SignInConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C94F42721B8C8001EA349 /* SignInConfigurator.swift */; };
 		620C94F92721B8C8001EA349 /* SignIn+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C94F52721B8C8001EA349 /* SignIn+Public.swift */; };
 		620C94FB2721B9FE001EA349 /* StateButtton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C94FA2721B9FE001EA349 /* StateButtton.swift */; };
+		621306852728986400FD5220 /* MonitorBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621306842728986400FD5220 /* MonitorBoarding.swift */; };
+		62130687272898E100FD5220 /* MonitorBoardingRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62130686272898E100FD5220 /* MonitorBoardingRequests.swift */; };
+		62130689272899A800FD5220 /* MonitorBoardingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62130688272899A800FD5220 /* MonitorBoardingRepository.swift */; };
+		6213068B27289A2F00FD5220 /* MonitorBoardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213068A27289A2F00FD5220 /* MonitorBoardingInteractor.swift */; };
+		62130693272931A200FD5220 /* AddStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213068F272931A200FD5220 /* AddStudentViewController.swift */; };
+		62130694272931A200FD5220 /* AddStudentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62130690272931A200FD5220 /* AddStudentViewModel.swift */; };
+		62130695272931A200FD5220 /* AddStudentConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62130691272931A200FD5220 /* AddStudentConfigurator.swift */; };
+		62130696272931A200FD5220 /* AddStudent+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62130692272931A200FD5220 /* AddStudent+Public.swift */; };
+		6213069927295BF500FD5220 /* MonitorBoardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213069827295BF500FD5220 /* MonitorBoardingCell.swift */; };
+		6213069C27295CF700FD5220 /* MonitorBoardingUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213069B27295CF700FD5220 /* MonitorBoardingUIModel.swift */; };
+		6213069E27297F1B00FD5220 /* TitleValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213069D27297F1B00FD5220 /* TitleValueView.swift */; };
+		621306A0272AF66400FD5220 /* MonitorBoardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213069F272AF66400FD5220 /* MonitorBoardingCoordinator.swift */; };
+		621306A4272AFC2D00FD5220 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621306A3272AFC2D00FD5220 /* SearchView.swift */; };
 		62C49EEF272527060008F239 /* AuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C49EEE272527060008F239 /* AuthInteractor.swift */; };
 		62DA6AA627252E660070C832 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62DA6AA527252E660070C832 /* GoogleService-Info.plist */; };
 		62DA6AA9272536620070C832 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AA8272536620070C832 /* AuthResponse.swift */; };
@@ -107,6 +120,31 @@
 		C70D377D2728A8080080A49A /* SignUpConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D377C2728A8080080A49A /* SignUpConfigurator.swift */; };
 		C70D377F2728A8170080A49A /* SignUp+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D377E2728A8170080A49A /* SignUp+Public.swift */; };
 		C70D3783272B2E260080A49A /* AuthViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D3782272B2E260080A49A /* AuthViewProtocol.swift */; };
+		62DA6ACA27267EA90070C832 /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 62DA6AC927267EA90070C832 /* SideMenu */; };
+		62DA6AD5272681F90070C832 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AD1272681F90070C832 /* MenuViewController.swift */; };
+		62DA6AD6272681F90070C832 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AD2272681F90070C832 /* MenuViewModel.swift */; };
+		62DA6AD7272681F90070C832 /* MenuConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AD3272681F90070C832 /* MenuConfigurator.swift */; };
+		62DA6AD8272681F90070C832 /* Menu+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AD4272681F90070C832 /* Menu+Public.swift */; };
+		62DA6ADA272682410070C832 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AD9272682410070C832 /* MenuItem.swift */; };
+		62DA6ADC2726884B0070C832 /* NavigationHolderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6ADB2726884B0070C832 /* NavigationHolderController.swift */; };
+		62DA6ADE27268D410070C832 /* ParentDriver+UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6ADD27268D410070C832 /* ParentDriver+UIBarButtonItem.swift */; };
+		62DA6AE027268F660070C832 /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6ADF27268F660070C832 /* MenuCoordinator.swift */; };
+		62DA6AE8272693B70070C832 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AE4272693B70070C832 /* DashboardViewController.swift */; };
+		62DA6AE9272693B70070C832 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AE5272693B70070C832 /* DashboardViewModel.swift */; };
+		62DA6AEA272693B70070C832 /* DashboardConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AE6272693B70070C832 /* DashboardConfigurator.swift */; };
+		62DA6AEB272693B70070C832 /* Dashboard+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AE7272693B70070C832 /* Dashboard+Public.swift */; };
+		62DA6AF0272693DD0070C832 /* BusInspectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AEC272693DD0070C832 /* BusInspectionViewController.swift */; };
+		62DA6AF1272693DD0070C832 /* BusInspectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AED272693DD0070C832 /* BusInspectionViewModel.swift */; };
+		62DA6AF2272693DD0070C832 /* BusInspectionConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AEE272693DD0070C832 /* BusInspectionConfigurator.swift */; };
+		62DA6AF3272693DD0070C832 /* BusInspection+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AEF272693DD0070C832 /* BusInspection+Public.swift */; };
+		62DA6AFA272694090070C832 /* MonitorBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AF6272694090070C832 /* MonitorBoardingViewController.swift */; };
+		62DA6AFB272694090070C832 /* MonitorBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AF7272694090070C832 /* MonitorBoardingViewModel.swift */; };
+		62DA6AFC272694090070C832 /* MonitorBoardingConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AF8272694090070C832 /* MonitorBoardingConfigurator.swift */; };
+		62DA6AFD272694090070C832 /* MonitorBoarding+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AF9272694090070C832 /* MonitorBoarding+Public.swift */; };
+		62DA6B022726941F0070C832 /* RidersheepChangesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AFE2726941F0070C832 /* RidersheepChangesViewController.swift */; };
+		62DA6B032726941F0070C832 /* RidersheepChangesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AFF2726941F0070C832 /* RidersheepChangesViewModel.swift */; };
+		62DA6B042726941F0070C832 /* RidersheepChangesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6B002726941F0070C832 /* RidersheepChangesConfigurator.swift */; };
+		62DA6B052726941F0070C832 /* RidersheepChanges+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6B012726941F0070C832 /* RidersheepChanges+Public.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -186,6 +224,19 @@
 		620C94F42721B8C8001EA349 /* SignInConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInConfigurator.swift; sourceTree = "<group>"; };
 		620C94F52721B8C8001EA349 /* SignIn+Public.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignIn+Public.swift"; sourceTree = "<group>"; };
 		620C94FA2721B9FE001EA349 /* StateButtton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateButtton.swift; sourceTree = "<group>"; };
+		621306842728986400FD5220 /* MonitorBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorBoarding.swift; sourceTree = "<group>"; };
+		62130686272898E100FD5220 /* MonitorBoardingRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorBoardingRequests.swift; sourceTree = "<group>"; };
+		62130688272899A800FD5220 /* MonitorBoardingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorBoardingRepository.swift; sourceTree = "<group>"; };
+		6213068A27289A2F00FD5220 /* MonitorBoardingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorBoardingInteractor.swift; sourceTree = "<group>"; };
+		6213068F272931A200FD5220 /* AddStudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStudentViewController.swift; sourceTree = "<group>"; };
+		62130690272931A200FD5220 /* AddStudentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStudentViewModel.swift; sourceTree = "<group>"; };
+		62130691272931A200FD5220 /* AddStudentConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStudentConfigurator.swift; sourceTree = "<group>"; };
+		62130692272931A200FD5220 /* AddStudent+Public.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddStudent+Public.swift"; sourceTree = "<group>"; };
+		6213069827295BF500FD5220 /* MonitorBoardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorBoardingCell.swift; sourceTree = "<group>"; };
+		6213069B27295CF700FD5220 /* MonitorBoardingUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorBoardingUIModel.swift; sourceTree = "<group>"; };
+		6213069D27297F1B00FD5220 /* TitleValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleValueView.swift; sourceTree = "<group>"; };
+		6213069F272AF66400FD5220 /* MonitorBoardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorBoardingCoordinator.swift; sourceTree = "<group>"; };
+		621306A3272AFC2D00FD5220 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		62C49EEE272527060008F239 /* AuthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInteractor.swift; sourceTree = "<group>"; };
 		62DA6AA527252E660070C832 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		62DA6AA8272536620070C832 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
@@ -203,6 +254,30 @@
 		62DA6AC227260E140070C832 /* BusRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRepository.swift; sourceTree = "<group>"; };
 		62DA6AC427260EEF0070C832 /* AppStateProvidable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateProvidable.swift; sourceTree = "<group>"; };
 		62DA6AC6272611380070C832 /* BusInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusInteractor.swift; sourceTree = "<group>"; };
+		62DA6AD1272681F90070C832 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		62DA6AD2272681F90070C832 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		62DA6AD3272681F90070C832 /* MenuConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuConfigurator.swift; sourceTree = "<group>"; };
+		62DA6AD4272681F90070C832 /* Menu+Public.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Menu+Public.swift"; sourceTree = "<group>"; };
+		62DA6AD9272682410070C832 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		62DA6ADB2726884B0070C832 /* NavigationHolderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHolderController.swift; sourceTree = "<group>"; };
+		62DA6ADD27268D410070C832 /* ParentDriver+UIBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ParentDriver+UIBarButtonItem.swift"; sourceTree = "<group>"; };
+		62DA6ADF27268F660070C832 /* MenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinator.swift; sourceTree = "<group>"; };
+		62DA6AE4272693B70070C832 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		62DA6AE5272693B70070C832 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		62DA6AE6272693B70070C832 /* DashboardConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardConfigurator.swift; sourceTree = "<group>"; };
+		62DA6AE7272693B70070C832 /* Dashboard+Public.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dashboard+Public.swift"; sourceTree = "<group>"; };
+		62DA6AEC272693DD0070C832 /* BusInspectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusInspectionViewController.swift; sourceTree = "<group>"; };
+		62DA6AED272693DD0070C832 /* BusInspectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusInspectionViewModel.swift; sourceTree = "<group>"; };
+		62DA6AEE272693DD0070C832 /* BusInspectionConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusInspectionConfigurator.swift; sourceTree = "<group>"; };
+		62DA6AEF272693DD0070C832 /* BusInspection+Public.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BusInspection+Public.swift"; sourceTree = "<group>"; };
+		62DA6AF6272694090070C832 /* MonitorBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorBoardingViewController.swift; sourceTree = "<group>"; };
+		62DA6AF7272694090070C832 /* MonitorBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorBoardingViewModel.swift; sourceTree = "<group>"; };
+		62DA6AF8272694090070C832 /* MonitorBoardingConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorBoardingConfigurator.swift; sourceTree = "<group>"; };
+		62DA6AF9272694090070C832 /* MonitorBoarding+Public.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MonitorBoarding+Public.swift"; sourceTree = "<group>"; };
+		62DA6AFE2726941F0070C832 /* RidersheepChangesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidersheepChangesViewController.swift; sourceTree = "<group>"; };
+		62DA6AFF2726941F0070C832 /* RidersheepChangesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidersheepChangesViewModel.swift; sourceTree = "<group>"; };
+		62DA6B002726941F0070C832 /* RidersheepChangesConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidersheepChangesConfigurator.swift; sourceTree = "<group>"; };
+		62DA6B012726941F0070C832 /* RidersheepChanges+Public.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RidersheepChanges+Public.swift"; sourceTree = "<group>"; };
 		A9571BF5AC97EA2851F683FB /* libPods-ParentDriver.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ParentDriver.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C70D37782728A7E40080A49A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C70D377A2728A7F50080A49A /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
@@ -221,6 +296,7 @@
 				620C94B82720AE40001EA349 /* SnapKit in Frameworks */,
 				620C94B22720AD62001EA349 /* Repository in Frameworks */,
 				620C94B52720AE1B001EA349 /* IQKeyboardManagerSwift in Frameworks */,
+				62DA6ACA27267EA90070C832 /* SideMenu in Frameworks */,
 				07C536E0DE68A89A22F85485 /* libPods-ParentDriver.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,6 +442,7 @@
 				620C944C2720A8FB001EA349 /* HapDay+ViewController.swift */,
 				620C944E2720A8FB001EA349 /* HappyHabits+MVVM.swift */,
 				620C944F2720A8FB001EA349 /* MyHappyHabbits+UIButton.swift */,
+				62DA6ADD27268D410070C832 /* ParentDriver+UIBarButtonItem.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -430,6 +507,8 @@
 				620C94922720AA2C001EA349 /* Core */,
 				620C949D2720AA6A001EA349 /* AppCoordinator.swift */,
 				620C94EE2721B123001EA349 /* AuthCoordinator.swift */,
+				62DA6ADF27268F660070C832 /* MenuCoordinator.swift */,
+				6213069F272AF66400FD5220 /* MonitorBoardingCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -445,6 +524,7 @@
 				620C94A12720AB84001EA349 /* PrimaryButton.swift */,
 				620C949F2720AB84001EA349 /* SelectableButton.swift */,
 				620C94A22720AB84001EA349 /* ShadowView.swift */,
+				6213069D27297F1B00FD5220 /* TitleValueView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -455,6 +535,7 @@
 				620C94E02721A9A3001EA349 /* Splash */,
 				620C94F02721B550001EA349 /* Auth */,
 				62DA6AB527260A890070C832 /* SelectBus */,
+				62DA6ACB27267EB20070C832 /* Main */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -467,6 +548,7 @@
 				620C94C82720B858001EA349 /* ValidationInteractor.swift */,
 				62C49EEE272527060008F239 /* AuthInteractor.swift */,
 				62DA6AC6272611380070C832 /* BusInteractor.swift */,
+				6213068A27289A2F00FD5220 /* MonitorBoardingInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -477,6 +559,7 @@
 				620C94EC2721ADED001EA349 /* Token.swift */,
 				62DA6AAA272537090070C832 /* User.swift */,
 				62DA6ABE27260D350070C832 /* Bus.swift */,
+				621306842728986400FD5220 /* MonitorBoarding.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -486,6 +569,7 @@
 			children = (
 				62DA6AB3272542C10070C832 /* AuthRepository.swift */,
 				62DA6AC227260E140070C832 /* BusRepository.swift */,
+				62130688272899A800FD5220 /* MonitorBoardingRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -495,6 +579,7 @@
 			children = (
 				62DA6AB1272541D60070C832 /* AuthRequests.swift */,
 				62DA6AC027260DC40070C832 /* BusRequests.swift */,
+				62130686272898E100FD5220 /* MonitorBoardingRequests.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -615,6 +700,62 @@
 			path = SignIn;
 			sourceTree = "<group>";
 		};
+		6213068D2729317600FD5220 /* MonitorBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				6213069A27295CE400FD5220 /* Models */,
+				6213069727295BE800FD5220 /* Cells */,
+				62DA6AF6272694090070C832 /* MonitorBoardingViewController.swift */,
+				62DA6AF7272694090070C832 /* MonitorBoardingViewModel.swift */,
+				62DA6AF8272694090070C832 /* MonitorBoardingConfigurator.swift */,
+				62DA6AF9272694090070C832 /* MonitorBoarding+Public.swift */,
+			);
+			path = MonitorBoarding;
+			sourceTree = "<group>";
+		};
+		6213068E2729318100FD5220 /* AddStudent */ = {
+			isa = PBXGroup;
+			children = (
+				6213068F272931A200FD5220 /* AddStudentViewController.swift */,
+				62130690272931A200FD5220 /* AddStudentViewModel.swift */,
+				62130691272931A200FD5220 /* AddStudentConfigurator.swift */,
+				62130692272931A200FD5220 /* AddStudent+Public.swift */,
+			);
+			path = AddStudent;
+			sourceTree = "<group>";
+		};
+		6213069727295BE800FD5220 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6213069827295BF500FD5220 /* MonitorBoardingCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		6213069A27295CE400FD5220 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6213069B27295CF700FD5220 /* MonitorBoardingUIModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		621306A1272AFC0E00FD5220 /* NavigationHolder */ = {
+			isa = PBXGroup;
+			children = (
+				62DA6ADB2726884B0070C832 /* NavigationHolderController.swift */,
+			);
+			path = NavigationHolder;
+			sourceTree = "<group>";
+		};
+		621306A2272AFC1F00FD5220 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				621306A3272AFC2D00FD5220 /* SearchView.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		62DA6AA7272536400070C832 /* Responses */ = {
 			isa = PBXGroup;
 			children = (
@@ -652,6 +793,82 @@
 				C70D377E2728A8170080A49A /* SignUp+Public.swift */,
 			);
 			path = SignUp;
+            sourceTree = "<group>";
+        };
+		62DA6ACB27267EB20070C832 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				62DA6ACF27267EF10070C832 /* Common */,
+				62DA6AD027267EF60070C832 /* Menu */,
+				62DA6AE12726923C0070C832 /* Dashboard */,
+				62DA6ACE27267EE30070C832 /* BusInspection */,
+				62DA6ACD27267EDC0070C832 /* MonitorBoarding */,
+				62DA6ACC27267ED30070C832 /* RidersheepChanges */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		62DA6ACC27267ED30070C832 /* RidersheepChanges */ = {
+			isa = PBXGroup;
+			children = (
+				62DA6AFE2726941F0070C832 /* RidersheepChangesViewController.swift */,
+				62DA6AFF2726941F0070C832 /* RidersheepChangesViewModel.swift */,
+				62DA6B002726941F0070C832 /* RidersheepChangesConfigurator.swift */,
+				62DA6B012726941F0070C832 /* RidersheepChanges+Public.swift */,
+			);
+			path = RidersheepChanges;
+			sourceTree = "<group>";
+		};
+		62DA6ACD27267EDC0070C832 /* MonitorBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				6213068E2729318100FD5220 /* AddStudent */,
+				6213068D2729317600FD5220 /* MonitorBoarding */,
+			);
+			path = MonitorBoarding;
+			sourceTree = "<group>";
+		};
+		62DA6ACE27267EE30070C832 /* BusInspection */ = {
+			isa = PBXGroup;
+			children = (
+				62DA6AEC272693DD0070C832 /* BusInspectionViewController.swift */,
+				62DA6AED272693DD0070C832 /* BusInspectionViewModel.swift */,
+				62DA6AEE272693DD0070C832 /* BusInspectionConfigurator.swift */,
+				62DA6AEF272693DD0070C832 /* BusInspection+Public.swift */,
+			);
+			path = BusInspection;
+			sourceTree = "<group>";
+		};
+		62DA6ACF27267EF10070C832 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				621306A2272AFC1F00FD5220 /* Search */,
+				621306A1272AFC0E00FD5220 /* NavigationHolder */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		62DA6AD027267EF60070C832 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				62DA6AD1272681F90070C832 /* MenuViewController.swift */,
+				62DA6AD2272681F90070C832 /* MenuViewModel.swift */,
+				62DA6AD3272681F90070C832 /* MenuConfigurator.swift */,
+				62DA6AD4272681F90070C832 /* Menu+Public.swift */,
+				62DA6AD9272682410070C832 /* MenuItem.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		62DA6AE12726923C0070C832 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				62DA6AE4272693B70070C832 /* DashboardViewController.swift */,
+				62DA6AE5272693B70070C832 /* DashboardViewModel.swift */,
+				62DA6AE6272693B70070C832 /* DashboardConfigurator.swift */,
+				62DA6AE7272693B70070C832 /* Dashboard+Public.swift */,
+			);
+			path = Dashboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -678,6 +895,7 @@
 				620C94B42720AE1B001EA349 /* IQKeyboardManagerSwift */,
 				620C94B72720AE40001EA349 /* SnapKit */,
 				620C94BF2720AF19001EA349 /* KeychainSwift */,
+				62DA6AC927267EA90070C832 /* SideMenu */,
 			);
 			productName = ParentDriver;
 			productReference = 620C94102720A401001EA349 /* ParentDriver.app */;
@@ -712,6 +930,7 @@
 				620C94B32720AE1B001EA349 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				620C94B62720AE40001EA349 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				620C94BE2720AF18001EA349 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				62DA6AC827267EA90070C832 /* XCRemoteSwiftPackageReference "SideMenu" */,
 			);
 			productRefGroup = 620C94112720A401001EA349 /* Products */;
 			projectDirPath = "";
@@ -805,6 +1024,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				620C94832720A94A001EA349 /* Handler.swift in Sources */,
+				62DA6AF3272693DD0070C832 /* BusInspection+Public.swift in Sources */,
 				620C94792720A8FB001EA349 /* HapDay+NSTimeInterval.swift in Sources */,
 				620C94F82721B8C8001EA349 /* SignInConfigurator.swift in Sources */,
 				62DA6ABC27260A9C0070C832 /* SelectBusConfigurator.swift in Sources */,
@@ -812,7 +1032,12 @@
 				C70D377D2728A8080080A49A /* SignUpConfigurator.swift in Sources */,
 				62DA6AC127260DC40070C832 /* BusRequests.swift in Sources */,
 				620C949B2720AA4F001EA349 /* ViewControllerCoordinator.swift in Sources */,
+				62DA6AD8272681F90070C832 /* Menu+Public.swift in Sources */,
+				62130695272931A200FD5220 /* AddStudentConfigurator.swift in Sources */,
+				621306A4272AFC2D00FD5220 /* SearchView.swift in Sources */,
 				620C949C2720AA4F001EA349 /* NavigationCoordinator.swift in Sources */,
+				62DA6AE027268F660070C832 /* MenuCoordinator.swift in Sources */,
+				621306852728986400FD5220 /* MonitorBoarding.swift in Sources */,
 				620C943B2720A5B2001EA349 /* AppTypealiases.swift in Sources */,
 				620C94E52721A9B0001EA349 /* SplashViewController.swift in Sources */,
 				620C94AE2720ABEC001EA349 /* FloatingTextField+Delegate.swift in Sources */,
@@ -821,15 +1046,20 @@
 				62DA6AC7272611380070C832 /* BusInteractor.swift in Sources */,
 				620C94692720A8FB001EA349 /* MyHappyHabbits+UIButton.swift in Sources */,
 				C70D3783272B2E260080A49A /* AuthViewProtocol.swift in Sources */,
+				621306A0272AF66400FD5220 /* MonitorBoardingCoordinator.swift in Sources */,
+				62DA6AFC272694090070C832 /* MonitorBoardingConfigurator.swift in Sources */,
 				620C94992720AA4F001EA349 /* TabBarCoordinator.swift in Sources */,
 				620C94842720A94A001EA349 /* MainRequestBuilder.swift in Sources */,
 				62DA6AC527260EEF0070C832 /* AppStateProvidable.swift in Sources */,
+				6213068B27289A2F00FD5220 /* MonitorBoardingInteractor.swift in Sources */,
 				620C94FB2721B9FE001EA349 /* StateButtton.swift in Sources */,
 				620C94762720A8FB001EA349 /* Hapday+NotificationName.swift in Sources */,
 				620C946B2720A8FB001EA349 /* Hapday+CGPoint.swift in Sources */,
 				620C94E62721A9B0001EA349 /* SplashViewModel.swift in Sources */,
+				6213069927295BF500FD5220 /* MonitorBoardingCell.swift in Sources */,
 				620C94722720A8FB001EA349 /* HapDay+View.swift in Sources */,
 				620C947E2720A922001EA349 /* UserDefaultsProperyWrapper.swift in Sources */,
+				62DA6AFB272694090070C832 /* MonitorBoardingViewModel.swift in Sources */,
 				620C94EB2721AB5F001EA349 /* KeychainStore.swift in Sources */,
 				62DA6ABB27260A9C0070C832 /* SelectBusViewModel.swift in Sources */,
 				620C94702720A8FB001EA349 /* HapDay+Collection.swift in Sources */,
@@ -843,13 +1073,24 @@
 				62DA6AC327260E140070C832 /* BusRepository.swift in Sources */,
 				62DA6AB02725388E0070C832 /* DefaultSessionManager.swift in Sources */,
 				620C949A2720AA4F001EA349 /* Coordinator.swift in Sources */,
+				62DA6AE9272693B70070C832 /* DashboardViewModel.swift in Sources */,
 				620C94872720A98F001EA349 /* Validator.swift in Sources */,
 				620C94F72721B8C8001EA349 /* SignInViewModel.swift in Sources */,
 				620C94662720A8FB001EA349 /* HapDay+ViewController.swift in Sources */,
+				62DA6B032726941F0070C832 /* RidersheepChangesViewModel.swift in Sources */,
+				62130696272931A200FD5220 /* AddStudent+Public.swift in Sources */,
+				62DA6B052726941F0070C832 /* RidersheepChanges+Public.swift in Sources */,
 				620C94A52720AB84001EA349 /* PrimaryButton.swift in Sources */,
+				62130689272899A800FD5220 /* MonitorBoardingRepository.swift in Sources */,
+				62DA6AEA272693B70070C832 /* DashboardConfigurator.swift in Sources */,
+				62DA6AF1272693DD0070C832 /* BusInspectionViewModel.swift in Sources */,
 				620C94742720A8FB001EA349 /* HapDay+TextView.swift in Sources */,
 				C70D377B2728A7F50080A49A /* SignUpViewModel.swift in Sources */,
 				620C94372720A59E001EA349 /* CustomErrorCodes.swift in Sources */,
+				6213069E27297F1B00FD5220 /* TitleValueView.swift in Sources */,
+				62130694272931A200FD5220 /* AddStudentViewModel.swift in Sources */,
+				62DA6ADE27268D410070C832 /* ParentDriver+UIBarButtonItem.swift in Sources */,
+				62DA6AF0272693DD0070C832 /* BusInspectionViewController.swift in Sources */,
 				620C947F2720A922001EA349 /* UserDefaultValues.swift in Sources */,
 				62DA6AAF2725388E0070C832 /* MainSessionManager.swift in Sources */,
 				C70D37792728A7E40080A49A /* SignUpViewController.swift in Sources */,
@@ -857,14 +1098,20 @@
 				620C94642720A8FB001EA349 /* Hapday+UIButton.swift in Sources */,
 				620C94D02720BC31001EA349 /* TextField.swift in Sources */,
 				620C94E72721A9B0001EA349 /* SplashConfigurator.swift in Sources */,
+				6213069C27295CF700FD5220 /* MonitorBoardingUIModel.swift in Sources */,
 				620C946F2720A8FB001EA349 /* Hapday+UIPangGetestureRecognizer.swift in Sources */,
 				620C94CF2720BC31001EA349 /* TextFieldWithPicker.swift in Sources */,
 				620C94ED2721ADED001EA349 /* Token.swift in Sources */,
 				620C94EF2721B123001EA349 /* AuthCoordinator.swift in Sources */,
 				620C94982720AA4F001EA349 /* WindowCoordinator.swift in Sources */,
+				62DA6B022726941F0070C832 /* RidersheepChangesViewController.swift in Sources */,
+				62DA6AE8272693B70070C832 /* DashboardViewController.swift in Sources */,
 				620C946E2720A8FB001EA349 /* HapDay+ActivityIndicator.swift in Sources */,
 				620C948B2720A9AB001EA349 /* DependencyProvider.swift in Sources */,
+				62DA6AF2272693DD0070C832 /* BusInspectionConfigurator.swift in Sources */,
+				62DA6AD7272681F90070C832 /* MenuConfigurator.swift in Sources */,
 				620C94F62721B8C8001EA349 /* SignInViewController.swift in Sources */,
+				62130693272931A200FD5220 /* AddStudentViewController.swift in Sources */,
 				620C946A2720A8FB001EA349 /* HapDay+String.swift in Sources */,
 				620C94392720A5A6001EA349 /* AppConfig.swift in Sources */,
 				620C94A62720AB84001EA349 /* ShadowView.swift in Sources */,
@@ -873,26 +1120,35 @@
 				62DA6ABF27260D350070C832 /* Bus.swift in Sources */,
 				620C94AF2720ABEC001EA349 /* FloatingTextField.swift in Sources */,
 				620C947B2720A8FB001EA349 /* HapDay+View+Animation.swift in Sources */,
+				62130687272898E100FD5220 /* MonitorBoardingRequests.swift in Sources */,
 				620C94A42720AB84001EA349 /* BaseView.swift in Sources */,
 				620C949E2720AA6A001EA349 /* AppCoordinator.swift in Sources */,
 				C70D377F2728A8170080A49A /* SignUp+Public.swift in Sources */,
+				62DA6AD5272681F90070C832 /* MenuViewController.swift in Sources */,
+				62DA6AFD272694090070C832 /* MonitorBoarding+Public.swift in Sources */,
 				62DA6ABA27260A9C0070C832 /* SelectBusViewController.swift in Sources */,
+				62DA6ADC2726884B0070C832 /* NavigationHolderController.swift in Sources */,
 				620C94CB2720B860001EA349 /* R.generated.swift in Sources */,
 				620C94632720A8FB001EA349 /* HapDay+Loadable.swift in Sources */,
+				62DA6AD6272681F90070C832 /* MenuViewModel.swift in Sources */,
 				620C94772720A8FB001EA349 /* HapDay+Date.swift in Sources */,
 				620C947A2720A8FB001EA349 /* HapDay+UIDevice.swift in Sources */,
 				62DA6AB2272541D60070C832 /* AuthRequests.swift in Sources */,
 				62DA6AAB272537090070C832 /* User.swift in Sources */,
 				620C94352720A591001EA349 /* Defines.swift in Sources */,
 				62C49EEF272527060008F239 /* AuthInteractor.swift in Sources */,
+				62DA6B042726941F0070C832 /* RidersheepChangesConfigurator.swift in Sources */,
 				62DA6AB4272542C10070C832 /* AuthRepository.swift in Sources */,
 				620C94AD2720ABEC001EA349 /* FloatingTextField+Extensions.swift in Sources */,
+				62DA6ADA272682410070C832 /* MenuItem.swift in Sources */,
+				62DA6AFA272694090070C832 /* MonitorBoardingViewController.swift in Sources */,
 				620C94C92720B858001EA349 /* ValidationInteractor.swift in Sources */,
 				620C946D2720A8FB001EA349 /* Hapday+Int.swift in Sources */,
 				620C948A2720A9AB001EA349 /* ServiceLocator.swift in Sources */,
 				620C94852720A94A001EA349 /* RemoteStore+Combine.swift in Sources */,
 				620C94AC2720ABEC001EA349 /* FloatingTextField+Type.swift in Sources */,
 				620C94652720A8FB001EA349 /* HapDay+View+Blur.swift in Sources */,
+				62DA6AEB272693B70070C832 /* Dashboard+Public.swift in Sources */,
 				620C94F92721B8C8001EA349 /* SignIn+Public.swift in Sources */,
 				620C94682720A8FB001EA349 /* HappyHabits+MVVM.swift in Sources */,
 			);
@@ -1152,6 +1408,14 @@
 				kind = branch;
 			};
 		};
+		62DA6AC827267EA90070C832 /* XCRemoteSwiftPackageReference "SideMenu" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jonkykong/SideMenu.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1174,6 +1438,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 620C94BE2720AF18001EA349 /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
+		};
+		62DA6AC927267EA90070C832 /* SideMenu */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62DA6AC827267EA90070C832 /* XCRemoteSwiftPackageReference "SideMenu" */;
+			productName = SideMenu;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
