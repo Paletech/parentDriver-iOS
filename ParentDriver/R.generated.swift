@@ -206,12 +206,16 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 27 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 30 localization keys.
     struct localizable {
       /// en translation: Add Student
       ///
       /// Locales: en
       static let title_add_student = Rswift.StringResource(key: "title_add_student", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Are you sure you want to log out?
+      ///
+      /// Locales: en
+      static let logout_alert_message = Rswift.StringResource(key: "logout_alert_message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Bus inspection
       ///
       /// Locales: en
@@ -240,6 +244,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let title_monitor_boarding = Rswift.StringResource(key: "title_monitor_boarding", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: No
+      ///
+      /// Locales: en
+      static let logout_alert_button_no = Rswift.StringResource(key: "logout_alert_button_no", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: No items were found for this query
       ///
       /// Locales: en
@@ -312,6 +320,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let label_time = Rswift.StringResource(key: "label_time", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Yes
+      ///
+      /// Locales: en
+      static let logout_alert_button_yes = Rswift.StringResource(key: "logout_alert_button_yes", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: You account will be verified within 72 hours
       ///
       /// Locales: en
@@ -330,6 +342,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("title_add_student", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Are you sure you want to log out?
+      ///
+      /// Locales: en
+      static func logout_alert_message(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("logout_alert_message", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "logout_alert_message"
+        }
+
+        return NSLocalizedString("logout_alert_message", bundle: bundle, comment: "")
       }
 
       /// en translation: Bus inspection
@@ -435,6 +462,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("title_monitor_boarding", bundle: bundle, comment: "")
+      }
+
+      /// en translation: No
+      ///
+      /// Locales: en
+      static func logout_alert_button_no(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("logout_alert_button_no", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "logout_alert_button_no"
+        }
+
+        return NSLocalizedString("logout_alert_button_no", bundle: bundle, comment: "")
       }
 
       /// en translation: No items were found for this query
@@ -705,6 +747,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("label_time", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Yes
+      ///
+      /// Locales: en
+      static func logout_alert_button_yes(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("logout_alert_button_yes", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "logout_alert_button_yes"
+        }
+
+        return NSLocalizedString("logout_alert_button_yes", bundle: bundle, comment: "")
       }
 
       /// en translation: You account will be verified within 72 hours

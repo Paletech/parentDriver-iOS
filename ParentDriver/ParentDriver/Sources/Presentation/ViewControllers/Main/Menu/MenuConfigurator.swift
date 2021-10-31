@@ -16,6 +16,6 @@ class MenuConfigurator {
     }
     
     private class func createDependencies() -> MenuViewModel.Dependencies {
-        return MenuViewModel.Dependencies()
+        return MenuViewModel.Dependencies(authInteractor: inject())
     }
 }

@@ -6,6 +6,7 @@ protocol SignInViewControllerOutput: ViewControllerOutput, TextFieldValidator {
 
     func onSignUp()
     func fetchSignUpVisibilityState()
+    func resetUserData()
 }
 
 class SignInViewController: UIViewController, AuthView {
@@ -42,10 +43,15 @@ class SignInViewController: UIViewController, AuthView {
         configureUI()
         configureConstraints()
         setupTitles()
+        resetUserIfNeeded()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         resetFields()
+    }
+
+    private func resetUserIfNeeded() {
+        output.resetUserData()
     }
 
     // MARK: - Private

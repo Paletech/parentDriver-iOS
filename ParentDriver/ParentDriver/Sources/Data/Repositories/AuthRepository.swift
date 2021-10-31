@@ -36,4 +36,9 @@ struct AuthRepository: Repository, Syncable {
         try? tokenStore.save(token, at: KeychainKeys.token.rawValue)
         try? userStore.save(user, at: KeychainKeys.user.rawValue)
     }
+
+    func removeSession() {
+        try? tokenStore.remove(from: KeychainKeys.token.rawValue)
+        try? userStore.remove(from: KeychainKeys.user.rawValue)
+    }
 }

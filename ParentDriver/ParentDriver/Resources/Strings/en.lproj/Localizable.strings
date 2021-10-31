@@ -86,3 +86,12 @@
 
 /* loco:617ac422b5e8e168e93aa052 */
 "placeholder_search_student" = "Search student";
+
+/* loco:617c2460860e8730d76696f2 */
+"logout_alert_message" = "Are you sure you want to log out?";
+
+/* loco:617c247877083c18184f57c2 */
+"logout_alert_button_yes" = "Yes";
+
+/* loco:617c248bfbc6ec64603138a2 */
+"logout_alert_button_no" = "No";

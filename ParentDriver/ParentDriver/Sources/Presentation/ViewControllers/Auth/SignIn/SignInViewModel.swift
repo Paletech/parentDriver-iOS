@@ -8,7 +8,8 @@ protocol SignInViewModelOutput: ViewModelOutput {
 class SignInViewModel {
 
     struct Dependencies {
-        let interactor: AuthInteractor
+        let authInteractor: AuthInteractor
+        let busInteractor: BusInteractor
     }
 
     let dependencies: Dependencies
@@ -34,7 +35,7 @@ class SignInViewModel {
 extension SignInViewModel: SignInViewControllerOutput {
     func signIn(driverID: String, password: String, schoolId: String) {
         output.startActivity()
-        dependencies.interactor.signIn(driverId: driverID,
+        dependencies.authInteractor.signIn(driverId: driverID,
                                        password: password,
                                        schoolId: schoolId)
             .sink(receiveCompletion: { [weak self] completion in
@@ -53,11 +54,16 @@ extension SignInViewModel: SignInViewControllerOutput {
     }
     
     func fetchSignUpVisibilityState() {
-        output.updateSignUpVisibility(value: dependencies.interactor.isSignUpAvailable())
+        output.updateSignUpVisibility(value: dependencies.authInteractor.isSignUpAvailable())
     }
     
     func validate(_ field: FloatingTextField?) -> AuthInteractorError? {
         guard let field = field else { return .none }
-        return dependencies.interactor.validate(text: field.value).error
+        return dependencies.authInteractor.validate(text: field.value).error
+    }
+
+    func resetUserData() {
+        dependencies.authInteractor.removeSession()
+        dependencies.busInteractor.removeBusSelection()
     }
 }

@@ -72,6 +72,10 @@ class AuthInteractor: Interactor, AppStateProvidable {
             dp.repo.saveSession(token: token, user: $0)
         }
     }
+
+    func removeSession() {
+        dp.repo.removeSession()
+    }
     
     // MARK: - Private
     

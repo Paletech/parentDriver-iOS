@@ -4,6 +4,7 @@ protocol MenuViewControllerOutput: ViewControllerOutput {
     func numberOfItems() -> Int
     func titleForItemAt(at indexPath: IndexPath) -> String?
     func selectItem(at indexPath: IndexPath)
+    func logout()
 }
 
 class MenuViewController: UIViewController {

@@ -7,7 +7,9 @@ protocol MenuViewModelOutput: ViewModelOutput {
 
 class MenuViewModel {
 
-    struct Dependencies { }
+    struct Dependencies {
+        let authInteractor: AuthInteractor
+    }
 
     let dependencies: Dependencies
     
@@ -36,5 +38,10 @@ extension MenuViewModel: MenuViewControllerOutput {
         MenuItem.sorted[safe: indexPath.row].flatMap {
             moduleOutput?.action(.onItemSelected($0))
         }
+    }
+
+    func logout() {
+        output.startActivity()
+        dependencies.authInteractor.removeSession()
     }
 }
