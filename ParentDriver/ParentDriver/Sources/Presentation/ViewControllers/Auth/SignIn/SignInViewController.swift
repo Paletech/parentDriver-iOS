@@ -40,17 +40,17 @@ class SignInViewController: UIViewController, AuthView {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        resetUser()
         configureUI()
         configureConstraints()
         setupTitles()
-        resetUserIfNeeded()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         resetFields()
     }
 
-    private func resetUserIfNeeded() {
+    private func resetUser() {
         output.resetUserData()
     }
 
