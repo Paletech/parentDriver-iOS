@@ -7,7 +7,7 @@ protocol MenuViewModelOutput: ViewModelOutput {
 
 class MenuViewModel {
 
-    struct Dependencies {}
+    struct Dependencies { }
 
     let dependencies: Dependencies
     

@@ -14,7 +14,7 @@ class MenuCoordinator: ViewControllerCoordinator {
         var logout: EmptyClosure
     }
 
-    var output: Output?
+    var output: Output
 
     // MARK: - Init/Deinit
 
@@ -80,7 +80,7 @@ class MenuCoordinator: ViewControllerCoordinator {
     private func onLogout() {
         let alert = UIAlertController(title: Localizable.logout_alert_message(), message: "", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: Localizable.logout_alert_button_yes(), style: .default, handler: { [weak self] _  in
-            self?.output?.logout()
+            self?.output.logout()
         }))
         alert.addAction(UIAlertAction(title: Localizable.logout_alert_button_no(), style: .default))
 
