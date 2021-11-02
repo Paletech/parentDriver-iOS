@@ -95,7 +95,25 @@ class RidersheepChangesViewController: UIViewController, NavigationHolderControl
 extension RidersheepChangesViewController: RidersheepChangesViewModelOutput {
 
     func dataDidUpdate() {
+        tableView.isHidden = output.numberOfItems() == 0
+        errorLabel.isHidden = output.numberOfItems() != 0
+        tableView.reloadData()
+    }
 
+    func catchError(_ error: Error) {
+        if error is ServerError {
+            errorLabel.isHidden = false
+            tableView.isHidden = true
+            errorLabel.text = error.localizedDescription
+        }
+    }
+
+    func startActivity() {
+        view.showActivityIndicator(style: .medium, tintColor: .gray)
+    }
+
+    func stopActivity() {
+        view.removeActivityIndicator()
     }
 }
 

@@ -16,12 +16,6 @@ struct RidersheepChangesUIModel {
     init(data: RidersheepChanges) {
         self.student = data.student
         self.address = data.address
-        self.campus = "123"
-    }
-
-    init(student: String, campus: String, address: String) {
-        self.student = "student"
-        self.address = "address"
-        self.campus = "123"
+        self.campus = data.campus
     }
 }

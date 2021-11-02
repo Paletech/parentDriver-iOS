@@ -27,16 +27,6 @@ class RidersheepChangesViewModel {
     init(dependencies: Dependencies, data: ModuleInput) {
         self.dependencies = dependencies
         self.moduleInput = data
-
-        let object1 = RidersheepChangesUIModel(student: "", campus: "", address: "")
-        items.append(object1)
-        items.append(object1)
-        items.append(object1)
-        items.append(object1)
-        items.append(object1)
-        items.append(object1)
-        items.append(object1)
-        items.append(object1)
     }
 }
 
@@ -61,17 +51,13 @@ extension RidersheepChangesViewModel: RidersheepChangesViewControllerOutput {
         output.dataDidUpdate()
     }
 
-    private func getRidersheepChanges(withActivity: Bool = true) {
-        if withActivity {
-            output.startActivity()
-        }
+    private func getRidersheepChanges() {
+        output.startActivity()
         dependencies.interactor.getAll().sink(receiveCompletion: { [weak self] completion in
             if case let .failure(error) = completion {
                 self?.output.catchError(error)
             }
-            if withActivity {
-                self?.output.stopActivity()
-            }
+            self?.output.stopActivity()
         }, receiveValue: { [weak self] items in
             self?.items = items.map { RidersheepChangesUIModel(data: $0) }
             self?.output.dataDidUpdate()
