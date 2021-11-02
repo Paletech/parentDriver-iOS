@@ -1,10 +1,3 @@
-//
-//  RidersheepChangesCell.swift
-//  ParentDriver
-//
-//  Created by Машенька on 31/10/2021.
-//
-
 import Foundation
 import UIKit
 import SnapKit
@@ -63,12 +56,14 @@ class RidersheepChangesCell: UITableViewCell {
         containerView.snp.makeConstraints { make in
             make.top.equalTo(Constants.spacing)
             make.left.equalTo(Constants.offset)
+            make.right.equalTo(-Constants.offset)
             make.center.equalToSuperview()
         }
 
         stackView.snp.makeConstraints { make in
             make.top.equalTo(Constants.spacing)
             make.left.equalTo(Constants.spacing)
+            make.right.equalTo(-Constants.spacing)
             make.center.equalToSuperview()
         }
     }
@@ -91,8 +86,7 @@ class RidersheepChangesCell: UITableViewCell {
         }
     }
 
-    private func configureView(label: String,
-                               value: String) -> UIView {
+    private func configureView(label: String, value: String) -> UIView {
         let view = UIView()
 
         let titleLabel = UILabel()
@@ -110,12 +104,17 @@ class RidersheepChangesCell: UITableViewCell {
         view.addSubview(valueLabel)
 
         titleLabel.snp.makeConstraints { make in
+            make.top.equalTo(view.snp.top)
+            make.bottom.equalTo(view.snp.bottom)
             make.width.equalTo(Constants.labelWidth)
             make.leading.equalTo(view.snp.leading).offset(Constants.offset)
         }
 
         valueLabel.snp.makeConstraints { make in
+            make.top.equalTo(view.snp.top)
+            make.bottom.equalTo(view.snp.bottom)
             make.leading.equalTo(titleLabel.snp.trailing).offset(Constants.offset)
+            make.trailing.equalTo(view.snp.trailing).offset(-Constants.offset)
         }
 
         view.snp.makeConstraints { make in

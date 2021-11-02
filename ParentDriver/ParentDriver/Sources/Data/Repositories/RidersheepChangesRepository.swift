@@ -1,10 +1,3 @@
-//
-//  RidersheepChangesRepository.swift
-//  ParentDriver
-//
-//  Created by Машенька on 01/11/2021.
-//
-
 import Repository
 import ObjectMapper
 import Foundation

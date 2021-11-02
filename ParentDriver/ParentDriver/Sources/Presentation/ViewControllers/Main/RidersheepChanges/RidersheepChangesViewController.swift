@@ -124,7 +124,6 @@ extension RidersheepChangesViewController: UITableViewDelegate, UITableViewDataS
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(output.numberOfItems())
         return output.numberOfItems()
     }
 

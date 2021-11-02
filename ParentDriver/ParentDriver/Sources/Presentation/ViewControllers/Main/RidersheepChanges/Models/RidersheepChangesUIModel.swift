@@ -1,10 +1,3 @@
-//
-//  RidersheepChangesUIModel.swift
-//  ParentDriver
-//
-//  Created by Машенька on 31/10/2021.
-//
-
 import Foundation
 
 struct RidersheepChangesUIModel {

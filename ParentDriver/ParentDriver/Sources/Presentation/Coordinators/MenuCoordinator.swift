@@ -56,6 +56,7 @@ class MenuCoordinator: ViewControllerCoordinator {
         }))
         addChild(monitorBoardingCoordinator)
 
+        monitorBoardingCoordinator.start()
         setController(monitorBoardingCoordinator.container)
     }
     

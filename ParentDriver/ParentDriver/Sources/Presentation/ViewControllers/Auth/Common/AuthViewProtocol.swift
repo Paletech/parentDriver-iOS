@@ -1,10 +1,3 @@
-//
-//  AuthViewProtocol.swift
-//  ParentDriver
-//
-//  Created by Машенька on 28/10/2021.
-//
-
 import UIKit
 
 protocol TextFieldValidator {
