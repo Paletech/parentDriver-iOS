@@ -95,3 +95,9 @@
 
 /* loco:617c248bfbc6ec64603138a2 */
 "logout_alert_button_no" = "No";
+
+/* loco:617ede3e4122067ae50a3652 */
+"label_campus" = "Campus:";
+
+/* loco:617ede51248b611a1e06d072 */
+"label_address" = "Address:";
