@@ -1,3 +1,5 @@
+import Combine
+import CoreFoundation
 import Foundation
 
 protocol RidersheepChangesViewModelOutput: ViewModelOutput {
@@ -7,13 +9,17 @@ protocol RidersheepChangesViewModelOutput: ViewModelOutput {
 
 class RidersheepChangesViewModel {
 
-    struct Dependencies { }
+    struct Dependencies {
+        let interactor: RidersheepChangesInteractor
+    }
 
     let dependencies: Dependencies
     
     let moduleInput: ModuleInput
     var moduleOutput: ModuleOutput?
-    
+
+    private var cancellables: [AnyCancellable] = []
+
     weak var output: RidersheepChangesViewModelOutput!
 
     private var items: [RidersheepChangesUIModel] = []
@@ -23,6 +29,13 @@ class RidersheepChangesViewModel {
         self.moduleInput = data
 
         let object1 = RidersheepChangesUIModel(student: "", campus: "", address: "")
+        items.append(object1)
+        items.append(object1)
+        items.append(object1)
+        items.append(object1)
+        items.append(object1)
+        items.append(object1)
+        items.append(object1)
         items.append(object1)
     }
 }
@@ -41,10 +54,28 @@ extension RidersheepChangesViewModel: RidersheepChangesViewControllerOutput {
     }
 
     func start() {
-        
+        getRidersheepChanges()
     }
 
     func update() {
         output.dataDidUpdate()
+    }
+
+    private func getRidersheepChanges(withActivity: Bool = true) {
+        if withActivity {
+            output.startActivity()
+        }
+        dependencies.interactor.getAll().sink(receiveCompletion: { [weak self] completion in
+            if case let .failure(error) = completion {
+                self?.output.catchError(error)
+            }
+            if withActivity {
+                self?.output.stopActivity()
+            }
+        }, receiveValue: { [weak self] items in
+            self?.items = items.map { RidersheepChangesUIModel(data: $0) }
+            self?.output.dataDidUpdate()
+        })
+        .store(in: &cancellables)
     }
 }

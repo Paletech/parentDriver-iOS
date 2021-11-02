@@ -44,6 +44,9 @@ class DependencyProvider {
         
         let studentRepository = StudentRepository.default()
         registerService(service: studentRepository)
+
+        let ridersheepChangesRepository = RidersheepChangesRepository.default()
+        registerService(service: ridersheepChangesRepository)
     }
 
     static private func configureInteractors() {
@@ -62,6 +65,10 @@ class DependencyProvider {
         
         let studentInteractor = StudentInteractor(dp: StudentInteractor.Dependencies(repo: inject()))
         registerService(service: studentInteractor)
+
+        let ridersheepChangesInteractor = RidersheepChangesInteractor(dp: RidersheepChangesInteractor.Dependencies(repo: inject()))
+        registerService(service: ridersheepChangesInteractor)
+
     }
     
     static private func registerService<T>(service: T, name: String? = nil) {
