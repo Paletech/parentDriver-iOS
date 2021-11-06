@@ -28,4 +28,20 @@ class AddStudentViewController: BaseSearchViewController {
 }
 
 // MARK: - Private AddStudentViewModelOutput
-extension AddStudentViewController: AddStudentViewModelOutput { }
+extension AddStudentViewController: AddStudentViewModelOutput {
+
+    func showSettingsAlert() {
+        let alert = UIAlertController(title: Localizable.title_location_permission_is_mandatory(),
+                                      message: Localizable.subtitle_location_permission_is_mandatory(), preferredStyle: .alert)
+        
+        let settingsAction = UIAlertAction(title: Localizable.button_settings(), style: .default) { _ in
+            URL(string: UIApplication.openSettingsURLString)
+                .flatMap { UIApplication.shared.open($0) }
+        }
+        let cancelAction = UIAlertAction(title: Localizable.button_cancel(), style: .cancel, handler: nil)
+        
+        [settingsAction, cancelAction].forEach { alert.addAction($0) }
+        
+        present(alert, animated: true, completion: nil)
+    }
+}

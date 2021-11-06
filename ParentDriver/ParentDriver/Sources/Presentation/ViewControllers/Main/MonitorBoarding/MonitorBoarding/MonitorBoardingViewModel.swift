@@ -64,7 +64,9 @@ extension MonitorBoardingViewModel: MonitorBoardingViewControllerOutput {
     }
     
     func onAdd() {
-        moduleOutput?.action(.onAdd)
+        moduleOutput?.action(.onAdd { [weak self] in
+            self?.getMonitorBoarding()
+        })
     }
     
     func onLeftMenuItemClick() {

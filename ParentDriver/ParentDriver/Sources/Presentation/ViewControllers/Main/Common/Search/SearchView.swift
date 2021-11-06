@@ -140,6 +140,7 @@ class BaseSearchViewController: UIViewController, SearchView, SearchViewType, Se
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         navigationItem.searchController?.searchBar.resignFirstResponder()
         searchViewOutput.selectItem(at: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     // MARK: - UISearchResultsUpdating

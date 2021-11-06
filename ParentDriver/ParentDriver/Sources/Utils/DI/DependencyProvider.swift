@@ -1,6 +1,7 @@
 import Foundation
 import Repository
 import KeychainSwift
+import CoreLocation
 
 class DependencyProvider {
     
@@ -44,6 +45,9 @@ class DependencyProvider {
         
         let studentRepository = StudentRepository.default()
         registerService(service: studentRepository)
+        
+        let locationRepository = LocationRepository(locationManager: CLLocationManager())
+        registerService(service: locationRepository)
     }
 
     static private func configureInteractors() {
@@ -62,6 +66,9 @@ class DependencyProvider {
         
         let studentInteractor = StudentInteractor(dp: StudentInteractor.Dependencies(repo: inject()))
         registerService(service: studentInteractor)
+        
+        let locationInteractor = LocationInteractor(dependencies: LocationInteractor.Dependencies(location: inject()))
+        registerService(service: locationInteractor)
     }
     
     static private func registerService<T>(service: T, name: String? = nil) {

@@ -86,3 +86,30 @@
 
 /* loco:617ac422b5e8e168e93aa052 */
 "placeholder_search_student" = "Search student";
+
+/* loco:617c2460860e8730d76696f2 */
+"logout_alert_message" = "Are you sure you want to log out?";
+
+/* loco:617c247877083c18184f57c2 */
+"logout_alert_button_yes" = "Yes";
+
+/* loco:617c248bfbc6ec64603138a2 */
+"logout_alert_button_no" = "No";
+
+/* loco:617ede3e4122067ae50a3652 */
+"label_campus" = "Campus:";
+
+/* loco:617ede51248b611a1e06d072 */
+"label_address" = "Address:";
+
+/* loco:618625a3c1d0f1197e792042 */
+"title_location_permission_is_mandatory" = "Location is not shared";
+
+/* loco:618625b1d0a6c22839724882 */
+"subtitle_location_permission_is_mandatory" = "Location permission is mandatory to complete your action. Seems you were denied access to it. You can enable it in settings.";
+
+/* loco:6186260f53594534307f2632 */
+"button_settings" = "Settings";
+
+/* loco:6186261a9058851e9712cda2 */
+"button_cancel" = "Cancel";
