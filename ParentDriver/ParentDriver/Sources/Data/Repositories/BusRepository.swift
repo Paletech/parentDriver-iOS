@@ -43,4 +43,8 @@ struct BusRepository: Repository, Syncable {
     func getBusSelection() -> Bus? {
         try? local.get(from: KeychainKeys.selectedBus.rawValue)
     }
+
+    func removeBusSelection() {
+        try? local.remove(from: KeychainKeys.selectedBus.rawValue)
+    }
 }

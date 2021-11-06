@@ -1,0 +1,130 @@
+/*
+ * Loco ios export: iOS Localizable.strings
+ * Project: ParentDriver-iOS
+ * Release: Working copy
+ * Locale: en-GB, English (UK)
+ * Exported by: pavelreva
+ */
+
+/* loco:617082a7b9fbf475430e1862 */
+"title_sign_in" = "Sign in";
+
+/* loco:6170840167c31d5e841eaa22 */
+"error_empty_field" = "This field can't be empty";
+
+/* loco:6170841fbef0ed67ca42c3d2 */
+"error_email" = "Double-check your email";
+
+/* loco:61708437709f3f148744b8b2 */
+"error_general" = "Something went wrong. Please, try again.";
+
+/* loco:617183d75425741e26043132 */
+"button_sign_in" = "Sign In";
+
+/* loco:61718438f244e4779c411fa2 */
+"placeholder_driver_id" = "Driver Id";
+
+/* loco:617184465425741e26043134 */
+"placeholder_password" = "Password";
+
+/* loco:61718452f35c162fbc7cf9f2 */
+"placeholder_school_id" = "School Id";
+
+/* loco:6174f4917a6c6e3ee47607e2 */
+"button_sign_up" = "Sign up";
+
+/* loco:6175d4631f325b76fb69ab32 */
+"title_select_bus" = "Select bus";
+
+/* loco:6175d47213537121964f60d2 */
+"placeholder_search_bus" = "Search bus";
+
+/* loco:6175d49cfa7e49425f7b4fb2 */
+"error_empty_search" = "No items were found for this query";
+
+/* loco:6176491ac6f1aa65485eb1c2 */
+"title_dashboard" = "Dashboard";
+
+/* loco:6176492ebc22587b1d2266e2 */
+"title_monitor_boarding" = "Monitor boarding";
+
+/* loco:617649afb686db0a375192b2 */
+"title_bus_inspection" = "Bus inspection";
+
+/* loco:617649c9aeaf544b2a63cc04 */
+"title_ridersheep_changes" = "Ridership changes";
+
+/* loco:61764a06aeaf544b2a63cc06 */
+"title_change_bus" = "Change bus";
+
+/* loco:61764a139f68ce12a96c81c2 */
+"title_logout" = "Logout";
+
+/* loco:61786025eb3ce309e46479e2 */
+"label_student" = "Student:";
+
+/* loco:617860320c487c193f4bdc32 */
+"label_time" = "Time:";
+
+/* loco:617860410cec1743b800b902 */
+"label_status" = "Status:";
+
+/* loco:61788103546f8a47d72b61a2 */
+"title_sign_up" = "Sign up";
+
+/* loco:617999a0be2e183c332e77f2 */
+"sign_up_alert_message" = "You account will be verified within 72 hours";
+
+/* loco:617999c94be2337395022092 */
+"sign_up_alert_button" = "Ok";
+
+/* loco:61799eabd360ca02125c1c82 */
+"sign_up_alert_error_message" = "Please fill in all fields";
+
+/* loco:617ac3fcbb9c614a0c310b02 */
+"title_add_student" = "Add Student";
+
+/* loco:617ac422b5e8e168e93aa052 */
+"placeholder_search_student" = "Search student";
+
+/* loco:617c2460860e8730d76696f2 */
+"logout_alert_message" = "Are you sure you want to log out?";
+
+/* loco:617c247877083c18184f57c2 */
+"logout_alert_button_yes" = "Yes";
+
+/* loco:617c248bfbc6ec64603138a2 */
+"logout_alert_button_no" = "No";
+
+/* loco:617ede3e4122067ae50a3652 */
+"label_campus" = "Campus:";
+
+/* loco:617ede51248b611a1e06d072 */
+"label_address" = "Address:";
+<<<<<<< HEAD
+=======
+
+/* loco:618625a3c1d0f1197e792042 */
+"title_location_permission_is_mandatory" = "Location is not shared";
+
+/* loco:618625b1d0a6c22839724882 */
+"subtitle_location_permission_is_mandatory" = "Location permission is mandatory to complete your action. Seems you were denied access to it. You can enable it in settings.";
+
+/* loco:6186260f53594534307f2632 */
+"button_settings" = "Settings";
+
+/* loco:6186261a9058851e9712cda2 */
+"button_cancel" = "Cancel";
+
+/* loco:6186972c5774d5539462ce22 */
+"label_inspection_type" = "Inspection type";
+
+/* loco:61869743f6400046b106a092 */
+"enum_inspection_type_pre" = "Pre";
+
+/* loco:618697514609b5682a5f7e72 */
+"enum_inspection_type_post" = "Post";
+
+/* loco:6186975a4609b5682a5f7e74 */
+"button_next" = "Next";
+>>>>>>> develop
