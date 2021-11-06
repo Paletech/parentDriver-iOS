@@ -3,7 +3,7 @@ import Foundation
 extension MonitorBoardingViewModel {
 
     enum ModuleOutputAction {
-        case onAdd
+        case onAdd(EmptyClosure)
         case onShowMenu
     }
 

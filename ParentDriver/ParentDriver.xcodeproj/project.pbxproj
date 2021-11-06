@@ -99,6 +99,9 @@
 		621306A0272AF66400FD5220 /* MonitorBoardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213069F272AF66400FD5220 /* MonitorBoardingCoordinator.swift */; };
 		621306A4272AFC2D00FD5220 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621306A3272AFC2D00FD5220 /* SearchView.swift */; };
 		621306AA272C1DCD00FD5220 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621306A9272C1DCD00FD5220 /* Action.swift */; };
+		628C0DCB2735612700954A88 /* LocationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628C0DCA2735612700954A88 /* LocationInteractor.swift */; };
+		628C0DCD2735615100954A88 /* LocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628C0DCC2735615100954A88 /* LocationRepository.swift */; };
+		628C0DCF273561A700954A88 /* WP+CLLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628C0DCE273561A700954A88 /* WP+CLLocation.swift */; };
 		62919019272C271E00C4C0DE /* StudentRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62919018272C271E00C4C0DE /* StudentRequests.swift */; };
 		6291901B272C27F200C4C0DE /* StudentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6291901A272C27F200C4C0DE /* StudentRepository.swift */; };
 		6291901D272C287200C4C0DE /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6291901C272C287200C4C0DE /* Student.swift */; };
@@ -150,6 +153,12 @@
 		C70D377D2728A8080080A49A /* SignUpConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D377C2728A8080080A49A /* SignUpConfigurator.swift */; };
 		C70D377F2728A8170080A49A /* SignUp+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D377E2728A8170080A49A /* SignUp+Public.swift */; };
 		C70D3783272B2E260080A49A /* AuthViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D3782272B2E260080A49A /* AuthViewProtocol.swift */; };
+		C70D3788272F14F50080A49A /* RidersheepChangesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D3787272F14F50080A49A /* RidersheepChangesCell.swift */; };
+		C70D378B272F16060080A49A /* RidersheepChangesUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D378A272F16060080A49A /* RidersheepChangesUIModel.swift */; };
+		C70D378D272F16710080A49A /* RidersheepChanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D378C272F16710080A49A /* RidersheepChanges.swift */; };
+		C70D379327309D6C0080A49A /* RidersheepChangesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D379227309D6C0080A49A /* RidersheepChangesInteractor.swift */; };
+		C70D379527309D840080A49A /* RidersheepChangesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D379427309D840080A49A /* RidersheepChangesRepository.swift */; };
+		C70D379727309E430080A49A /* RidersheepChangesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D379627309E430080A49A /* RidersheepChangesRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -243,6 +252,9 @@
 		6213069F272AF66400FD5220 /* MonitorBoardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorBoardingCoordinator.swift; sourceTree = "<group>"; };
 		621306A3272AFC2D00FD5220 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		621306A9272C1DCD00FD5220 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		628C0DCA2735612700954A88 /* LocationInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationInteractor.swift; sourceTree = "<group>"; };
+		628C0DCC2735615100954A88 /* LocationRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationRepository.swift; sourceTree = "<group>"; };
+		628C0DCE273561A700954A88 /* WP+CLLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WP+CLLocation.swift"; sourceTree = "<group>"; };
 		62919018272C271E00C4C0DE /* StudentRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentRequests.swift; sourceTree = "<group>"; };
 		6291901A272C27F200C4C0DE /* StudentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentRepository.swift; sourceTree = "<group>"; };
 		6291901C272C287200C4C0DE /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
@@ -294,6 +306,12 @@
 		C70D377C2728A8080080A49A /* SignUpConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpConfigurator.swift; sourceTree = "<group>"; };
 		C70D377E2728A8170080A49A /* SignUp+Public.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUp+Public.swift"; sourceTree = "<group>"; };
 		C70D3782272B2E260080A49A /* AuthViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewProtocol.swift; sourceTree = "<group>"; };
+		C70D3787272F14F50080A49A /* RidersheepChangesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidersheepChangesCell.swift; sourceTree = "<group>"; };
+		C70D378A272F16060080A49A /* RidersheepChangesUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidersheepChangesUIModel.swift; sourceTree = "<group>"; };
+		C70D378C272F16710080A49A /* RidersheepChanges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidersheepChanges.swift; sourceTree = "<group>"; };
+		C70D379227309D6C0080A49A /* RidersheepChangesInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RidersheepChangesInteractor.swift; sourceTree = "<group>"; };
+		C70D379427309D840080A49A /* RidersheepChangesRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RidersheepChangesRepository.swift; sourceTree = "<group>"; };
+		C70D379627309E430080A49A /* RidersheepChangesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidersheepChangesRequest.swift; sourceTree = "<group>"; };
 		EE443E0F431667697781C224 /* Pods-ParentDriver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParentDriver.debug.xcconfig"; path = "Target Support Files/Pods-ParentDriver/Pods-ParentDriver.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -428,6 +446,7 @@
 		620C942E2720A471001EA349 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				628C0DCE273561A700954A88 /* WP+CLLocation.swift */,
 				620C94542720A8FB001EA349 /* HapDay+ActivityIndicator.swift */,
 				620C94512720A8FB001EA349 /* Hapday+CGPoint.swift */,
 				620C94522720A8FB001EA349 /* Hapday+CGSize.swift */,
@@ -554,6 +573,7 @@
 		620C943F2720A5D0001EA349 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				628C0DCA2735612700954A88 /* LocationInteractor.swift */,
 				620C948F2720AA20001EA349 /* Interactor.swift */,
 				62DA6AC427260EEF0070C832 /* AppStateProvidable.swift */,
 				620C94C82720B858001EA349 /* ValidationInteractor.swift */,
@@ -561,6 +581,7 @@
 				62DA6AC6272611380070C832 /* BusInteractor.swift */,
 				6213068A27289A2F00FD5220 /* MonitorBoardingInteractor.swift */,
 				6291901E272C292500C4C0DE /* StudentInteractor.swift */,
+				C70D379227309D6C0080A49A /* RidersheepChangesInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -573,6 +594,7 @@
 				62DA6ABE27260D350070C832 /* Bus.swift */,
 				621306842728986400FD5220 /* MonitorBoarding.swift */,
 				6291901C272C287200C4C0DE /* Student.swift */,
+				C70D378C272F16710080A49A /* RidersheepChanges.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -580,10 +602,12 @@
 		620C94412720A5DC001EA349 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				628C0DCC2735615100954A88 /* LocationRepository.swift */,
 				62DA6AB3272542C10070C832 /* AuthRepository.swift */,
 				62DA6AC227260E140070C832 /* BusRepository.swift */,
 				62130688272899A800FD5220 /* MonitorBoardingRepository.swift */,
 				6291901A272C27F200C4C0DE /* StudentRepository.swift */,
+				C70D379427309D840080A49A /* RidersheepChangesRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -595,6 +619,7 @@
 				62DA6AC027260DC40070C832 /* BusRequests.swift */,
 				62130686272898E100FD5220 /* MonitorBoardingRequests.swift */,
 				62919018272C271E00C4C0DE /* StudentRequests.swift */,
+				C70D379627309E430080A49A /* RidersheepChangesRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -831,6 +856,8 @@
 		62DA6ACC27267ED30070C832 /* RidersheepChanges */ = {
 			isa = PBXGroup;
 			children = (
+				C70D3789272F15F10080A49A /* Models */,
+				C70D3786272F14DD0080A49A /* Cells */,
 				62DA6AFE2726941F0070C832 /* RidersheepChangesViewController.swift */,
 				62DA6AFF2726941F0070C832 /* RidersheepChangesViewModel.swift */,
 				62DA6B002726941F0070C832 /* RidersheepChangesConfigurator.swift */,
@@ -900,6 +927,22 @@
 				C70D377E2728A8170080A49A /* SignUp+Public.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		C70D3786272F14DD0080A49A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C70D3787272F14F50080A49A /* RidersheepChangesCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C70D3789272F15F10080A49A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C70D378A272F16060080A49A /* RidersheepChangesUIModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1060,7 +1103,9 @@
 				620C94F82721B8C8001EA349 /* SignInConfigurator.swift in Sources */,
 				62DA6ABC27260A9C0070C832 /* SelectBusConfigurator.swift in Sources */,
 				620C94142720A401001EA349 /* AppDelegate.swift in Sources */,
+				C70D378D272F16710080A49A /* RidersheepChanges.swift in Sources */,
 				C70D377D2728A8080080A49A /* SignUpConfigurator.swift in Sources */,
+				C70D379527309D840080A49A /* RidersheepChangesRepository.swift in Sources */,
 				62DA6AC127260DC40070C832 /* BusRequests.swift in Sources */,
 				620C949B2720AA4F001EA349 /* ViewControllerCoordinator.swift in Sources */,
 				62DA6AD8272681F90070C832 /* Menu+Public.swift in Sources */,
@@ -1078,6 +1123,7 @@
 				620C94692720A8FB001EA349 /* MyHappyHabbits+UIButton.swift in Sources */,
 				C70D3783272B2E260080A49A /* AuthViewProtocol.swift in Sources */,
 				621306A0272AF66400FD5220 /* MonitorBoardingCoordinator.swift in Sources */,
+				C70D3788272F14F50080A49A /* RidersheepChangesCell.swift in Sources */,
 				62DA6AFC272694090070C832 /* MonitorBoardingConfigurator.swift in Sources */,
 				62919019272C271E00C4C0DE /* StudentRequests.swift in Sources */,
 				620C94992720AA4F001EA349 /* TabBarCoordinator.swift in Sources */,
@@ -1120,11 +1166,14 @@
 				620C94742720A8FB001EA349 /* HapDay+TextView.swift in Sources */,
 				C70D377B2728A7F50080A49A /* SignUpViewModel.swift in Sources */,
 				620C94372720A59E001EA349 /* CustomErrorCodes.swift in Sources */,
+				628C0DCD2735615100954A88 /* LocationRepository.swift in Sources */,
 				6213069E27297F1B00FD5220 /* TitleValueView.swift in Sources */,
 				62130694272931A200FD5220 /* AddStudentViewModel.swift in Sources */,
+				C70D379327309D6C0080A49A /* RidersheepChangesInteractor.swift in Sources */,
 				62DA6ADE27268D410070C832 /* ParentDriver+UIBarButtonItem.swift in Sources */,
 				621306AA272C1DCD00FD5220 /* Action.swift in Sources */,
 				62DA6AF0272693DD0070C832 /* BusInspectionViewController.swift in Sources */,
+				628C0DCF273561A700954A88 /* WP+CLLocation.swift in Sources */,
 				620C947F2720A922001EA349 /* UserDefaultValues.swift in Sources */,
 				6291901F272C292500C4C0DE /* StudentInteractor.swift in Sources */,
 				62DA6AAF2725388E0070C832 /* MainSessionManager.swift in Sources */,
@@ -1144,6 +1193,7 @@
 				620C946E2720A8FB001EA349 /* HapDay+ActivityIndicator.swift in Sources */,
 				620C948B2720A9AB001EA349 /* DependencyProvider.swift in Sources */,
 				62DA6AF2272693DD0070C832 /* BusInspectionConfigurator.swift in Sources */,
+				C70D378B272F16060080A49A /* RidersheepChangesUIModel.swift in Sources */,
 				62DA6AD7272681F90070C832 /* MenuConfigurator.swift in Sources */,
 				620C94F62721B8C8001EA349 /* SignInViewController.swift in Sources */,
 				6291901D272C287200C4C0DE /* Student.swift in Sources */,
@@ -1165,6 +1215,7 @@
 				62DA6ABA27260A9C0070C832 /* SelectBusViewController.swift in Sources */,
 				62DA6ADC2726884B0070C832 /* NavigationHolderController.swift in Sources */,
 				620C94CB2720B860001EA349 /* R.generated.swift in Sources */,
+				628C0DCB2735612700954A88 /* LocationInteractor.swift in Sources */,
 				620C94632720A8FB001EA349 /* HapDay+Loadable.swift in Sources */,
 				62DA6AD6272681F90070C832 /* MenuViewModel.swift in Sources */,
 				620C94772720A8FB001EA349 /* HapDay+Date.swift in Sources */,
@@ -1176,6 +1227,7 @@
 				62DA6B042726941F0070C832 /* RidersheepChangesConfigurator.swift in Sources */,
 				62DA6AB4272542C10070C832 /* AuthRepository.swift in Sources */,
 				620C94AD2720ABEC001EA349 /* FloatingTextField+Extensions.swift in Sources */,
+				C70D379727309E430080A49A /* RidersheepChangesRequest.swift in Sources */,
 				62DA6ADA272682410070C832 /* MenuItem.swift in Sources */,
 				62DA6AFA272694090070C832 /* MonitorBoardingViewController.swift in Sources */,
 				620C94C92720B858001EA349 /* ValidationInteractor.swift in Sources */,

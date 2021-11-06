@@ -33,16 +33,25 @@ class MonitorBoardingCoordinator: NavigationCoordinator {
             switch $0 {
             case .onShowMenu:
                 self?.output.showMenu()
-            case .onAdd:
-                self?.showAddAStudent()
+            case .onAdd(let completion):
+                self?.showAddAStudent(completion: completion)
             }
         }))
         
         set([monitorBoardingVc])
     }
     
-    private func showAddAStudent() {
-        let addStudentVc = AddStudentConfigurator.configure()
+    private func showAddAStudent(completion: @escaping EmptyClosure) {
+        let output = AddStudentViewModel.ModuleOutput { [weak self] in
+            switch $0 {
+            case .added:
+                self?.pop()
+            }
+        }
+        
+        let data = AddStudentViewModel.ModuleInput(completion: completion)
+        
+        let addStudentVc = AddStudentConfigurator.configure(data: data, output: output)
         push(addStudentVc)
     }
 }

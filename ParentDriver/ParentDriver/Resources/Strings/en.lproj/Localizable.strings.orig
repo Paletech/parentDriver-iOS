@@ -101,6 +101,8 @@
 
 /* loco:617ede51248b611a1e06d072 */
 "label_address" = "Address:";
+<<<<<<< HEAD
+=======
 
 /* loco:618625a3c1d0f1197e792042 */
 "title_location_permission_is_mandatory" = "Location is not shared";
@@ -125,3 +127,4 @@
 
 /* loco:6186975a4609b5682a5f7e74 */
 "button_next" = "Next";
+>>>>>>> develop

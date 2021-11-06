@@ -206,7 +206,11 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
+<<<<<<< HEAD
+    /// This `R.string.localizable` struct is generated, and contains static references to 32 localization keys.
+=======
     /// This `R.string.localizable` struct is generated, and contains static references to 40 localization keys.
+>>>>>>> develop
     struct localizable {
       /// en translation: Add Student
       ///
@@ -228,10 +232,13 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let label_campus = Rswift.StringResource(key: "label_campus", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+<<<<<<< HEAD
+=======
       /// en translation: Cancel
       ///
       /// Locales: en
       static let button_cancel = Rswift.StringResource(key: "button_cancel", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+>>>>>>> develop
       /// en translation: Change bus
       ///
       /// Locales: en
@@ -268,10 +275,13 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let title_monitor_boarding = Rswift.StringResource(key: "title_monitor_boarding", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+<<<<<<< HEAD
+=======
       /// en translation: Next
       ///
       /// Locales: en
       static let button_next = Rswift.StringResource(key: "button_next", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+>>>>>>> develop
       /// en translation: No
       ///
       /// Locales: en
@@ -444,6 +454,8 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("label_campus", bundle: bundle, comment: "")
       }
 
+<<<<<<< HEAD
+=======
       /// en translation: Cancel
       ///
       /// Locales: en
@@ -459,6 +471,7 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("button_cancel", bundle: bundle, comment: "")
       }
 
+>>>>>>> develop
       /// en translation: Change bus
       ///
       /// Locales: en
@@ -594,6 +607,8 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("title_monitor_boarding", bundle: bundle, comment: "")
       }
 
+<<<<<<< HEAD
+=======
       /// en translation: Next
       ///
       /// Locales: en
@@ -609,6 +624,7 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("button_next", bundle: bundle, comment: "")
       }
 
+>>>>>>> develop
       /// en translation: No
       ///
       /// Locales: en

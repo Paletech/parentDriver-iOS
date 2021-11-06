@@ -45,7 +45,16 @@ class MenuCoordinator: ViewControllerCoordinator {
     }
     
     private func setRidersheepChanges() {
-        
+        childs.removeAll()
+
+        let ridersheepChangesCoordinator = RidersheepChangesConfigurator.configure(output: RidersheepChangesViewModel.ModuleOutput(action: { [weak self] in
+            switch $0 {
+            case .showMenu:
+                self?.showMenu()
+            }
+        }))
+
+        setController(ridersheepChangesCoordinator)
     }
     
     private func setBusInspection() {
@@ -59,7 +68,7 @@ class MenuCoordinator: ViewControllerCoordinator {
             self?.showMenu()
         }))
         addChild(monitorBoardingCoordinator)
-        
+
         monitorBoardingCoordinator.start()
         setController(monitorBoardingCoordinator.container)
     }
