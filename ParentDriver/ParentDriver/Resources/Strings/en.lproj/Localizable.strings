@@ -101,3 +101,27 @@
 
 /* loco:617ede51248b611a1e06d072 */
 "label_address" = "Address:";
+
+/* loco:618625a3c1d0f1197e792042 */
+"title_location_permission_is_mandatory" = "Location is not shared";
+
+/* loco:618625b1d0a6c22839724882 */
+"subtitle_location_permission_is_mandatory" = "Location permission is mandatory to complete your action. Seems you were denied access to it. You can enable it in settings.";
+
+/* loco:6186260f53594534307f2632 */
+"button_settings" = "Settings";
+
+/* loco:6186261a9058851e9712cda2 */
+"button_cancel" = "Cancel";
+
+/* loco:6186972c5774d5539462ce22 */
+"label_inspection_type" = "Inspection type";
+
+/* loco:61869743f6400046b106a092 */
+"enum_inspection_type_pre" = "Pre";
+
+/* loco:618697514609b5682a5f7e72 */
+"enum_inspection_type_post" = "Post";
+
+/* loco:6186975a4609b5682a5f7e74 */
+"button_next" = "Next";

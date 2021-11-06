@@ -26,4 +26,9 @@ class StudentInteractor: Interactor {
     func findStudent(studentName: String) -> AnyPublisher<[Student], Error> {
         dp.repo.findStudent(studentName: studentName)
     }
+    
+    func addStudent(studentId: String,
+                    coordinates: String) -> AnyPublisher<Any, Error> {
+        dp.repo.addStudent(studentId: studentId, coordinates: coordinates)
+    }
 }

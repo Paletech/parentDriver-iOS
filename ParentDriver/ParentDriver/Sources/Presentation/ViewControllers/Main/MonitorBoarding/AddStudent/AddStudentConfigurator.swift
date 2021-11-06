@@ -2,7 +2,7 @@ import UIKit
 
 class AddStudentConfigurator {
 
-    class func configure(data: AddStudentViewModel.ModuleInput = AddStudentViewModel.ModuleInput(),
+    class func configure(data: AddStudentViewModel.ModuleInput,
                          output: AddStudentViewModel.ModuleOutput? = nil) -> UIViewController
     {
         let viewController = AddStudentViewController()
@@ -16,6 +16,7 @@ class AddStudentConfigurator {
     }
     
     private class func createDependencies() -> AddStudentViewModel.Dependencies {
-        return AddStudentViewModel.Dependencies(interactor: inject())
+        return AddStudentViewModel.Dependencies(interactor: inject(),
+                                                locationInteractor: inject())
     }
 }

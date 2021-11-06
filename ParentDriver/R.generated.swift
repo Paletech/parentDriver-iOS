@@ -206,7 +206,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 32 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 40 localization keys.
     struct localizable {
       /// en translation: Add Student
       ///
@@ -228,6 +228,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let label_campus = Rswift.StringResource(key: "label_campus", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Cancel
+      ///
+      /// Locales: en
+      static let button_cancel = Rswift.StringResource(key: "button_cancel", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Change bus
       ///
       /// Locales: en
@@ -244,6 +248,18 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let placeholder_driver_id = Rswift.StringResource(key: "placeholder_driver_id", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Inspection type
+      ///
+      /// Locales: en
+      static let label_inspection_type = Rswift.StringResource(key: "label_inspection_type", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Location is not shared
+      ///
+      /// Locales: en
+      static let title_location_permission_is_mandatory = Rswift.StringResource(key: "title_location_permission_is_mandatory", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Location permission is mandatory to complete your action. Seems you were denied access to it. You can enable it in settings.
+      ///
+      /// Locales: en
+      static let subtitle_location_permission_is_mandatory = Rswift.StringResource(key: "subtitle_location_permission_is_mandatory", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Logout
       ///
       /// Locales: en
@@ -252,6 +268,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let title_monitor_boarding = Rswift.StringResource(key: "title_monitor_boarding", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Next
+      ///
+      /// Locales: en
+      static let button_next = Rswift.StringResource(key: "button_next", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: No
       ///
       /// Locales: en
@@ -272,6 +292,14 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let sign_up_alert_error_message = Rswift.StringResource(key: "sign_up_alert_error_message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Post
+      ///
+      /// Locales: en
+      static let enum_inspection_type_post = Rswift.StringResource(key: "enum_inspection_type_post", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Pre
+      ///
+      /// Locales: en
+      static let enum_inspection_type_pre = Rswift.StringResource(key: "enum_inspection_type_pre", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Ridership changes
       ///
       /// Locales: en
@@ -292,6 +320,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let title_select_bus = Rswift.StringResource(key: "title_select_bus", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Settings
+      ///
+      /// Locales: en
+      static let button_settings = Rswift.StringResource(key: "button_settings", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Sign In
       ///
       /// Locales: en
@@ -412,6 +444,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("label_campus", bundle: bundle, comment: "")
       }
 
+      /// en translation: Cancel
+      ///
+      /// Locales: en
+      static func button_cancel(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("button_cancel", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "button_cancel"
+        }
+
+        return NSLocalizedString("button_cancel", bundle: bundle, comment: "")
+      }
+
       /// en translation: Change bus
       ///
       /// Locales: en
@@ -472,6 +519,51 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("placeholder_driver_id", bundle: bundle, comment: "")
       }
 
+      /// en translation: Inspection type
+      ///
+      /// Locales: en
+      static func label_inspection_type(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("label_inspection_type", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "label_inspection_type"
+        }
+
+        return NSLocalizedString("label_inspection_type", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Location is not shared
+      ///
+      /// Locales: en
+      static func title_location_permission_is_mandatory(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("title_location_permission_is_mandatory", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "title_location_permission_is_mandatory"
+        }
+
+        return NSLocalizedString("title_location_permission_is_mandatory", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Location permission is mandatory to complete your action. Seems you were denied access to it. You can enable it in settings.
+      ///
+      /// Locales: en
+      static func subtitle_location_permission_is_mandatory(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("subtitle_location_permission_is_mandatory", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "subtitle_location_permission_is_mandatory"
+        }
+
+        return NSLocalizedString("subtitle_location_permission_is_mandatory", bundle: bundle, comment: "")
+      }
+
       /// en translation: Logout
       ///
       /// Locales: en
@@ -500,6 +592,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("title_monitor_boarding", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Next
+      ///
+      /// Locales: en
+      static func button_next(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("button_next", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "button_next"
+        }
+
+        return NSLocalizedString("button_next", bundle: bundle, comment: "")
       }
 
       /// en translation: No
@@ -577,6 +684,36 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("sign_up_alert_error_message", bundle: bundle, comment: "")
       }
 
+      /// en translation: Post
+      ///
+      /// Locales: en
+      static func enum_inspection_type_post(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("enum_inspection_type_post", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "enum_inspection_type_post"
+        }
+
+        return NSLocalizedString("enum_inspection_type_post", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Pre
+      ///
+      /// Locales: en
+      static func enum_inspection_type_pre(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("enum_inspection_type_pre", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "enum_inspection_type_pre"
+        }
+
+        return NSLocalizedString("enum_inspection_type_pre", bundle: bundle, comment: "")
+      }
+
       /// en translation: Ridership changes
       ///
       /// Locales: en
@@ -650,6 +787,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("title_select_bus", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Settings
+      ///
+      /// Locales: en
+      static func button_settings(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("button_settings", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "button_settings"
+        }
+
+        return NSLocalizedString("button_settings", bundle: bundle, comment: "")
       }
 
       /// en translation: Sign In

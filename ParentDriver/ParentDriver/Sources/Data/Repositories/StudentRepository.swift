@@ -10,6 +10,10 @@ import ObjectMapper
 import Foundation
 import Combine
 
+enum StudentErrors: Error {
+    case noBusSelected
+}
+
 struct StudentRepository: Repository {
 
     private struct Keys {
@@ -17,13 +21,14 @@ struct StudentRepository: Repository {
     }
     
     let remote: RemoteStoreMappable<Student>
+    let local: KeycheinStore<Bus>
 
     // MARK: - Fabric method
     
     static func `default`() -> StudentRepository {
         let session: MainSessionManager = inject()
         let handler: Handler = inject()
-        return StudentRepository(remote: RemoteStoreMappable(session: session, handler: handler))
+        return StudentRepository(remote: RemoteStoreMappable(session: session, handler: handler), local: inject())
     }
 
     // MARK: - Network
@@ -34,10 +39,11 @@ struct StudentRepository: Repository {
     }
     
     func addStudent(studentId: String,
-                    busId: String,
                     coordinates: String) -> AnyPublisher<Any, Error> {
-        remote.requestJSON(request: StudentRequests.addStudent(studentId: studentId,
-                                                               busId: busId,
+        guard let bus = try? self.local.get(from: KeychainKeys.selectedBus.rawValue) else { return Fail<Any, Error>(error: StudentErrors.noBusSelected).eraseToAnyPublisher() }
+
+        return remote.requestJSON(request: StudentRequests.addStudent(studentId: studentId,
+                                                                      busId: bus.trackerId,
                                                                coordinates: coordinates))
     }
 }

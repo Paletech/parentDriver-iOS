@@ -1,8 +1,9 @@
 import Foundation
 import Combine
+import CoreLocation
 
 protocol AddStudentViewModelOutput: ViewModelOutput {
-    func dataDidUpdate()
+    func showSettingsAlert()
 }
 
 class AddStudentViewModel {
@@ -13,6 +14,7 @@ class AddStudentViewModel {
 
     struct Dependencies {
         let interactor: StudentInteractor
+        let locationInteractor: LocationInteractor
     }
 
     let dependencies: Dependencies
@@ -85,6 +87,32 @@ extension AddStudentViewModel: AddStudentViewControllerOutput {
     
     func selectItem(at indexPath: IndexPath) {
         let student = filteredItems[indexPath.row]
-        print(student)
+        
+        output.startActivity()
+        
+        dependencies.locationInteractor.getAccess()
+        .map {
+            self.dependencies.locationInteractor.getLocation()
+        }
+        .switchToLatest()
+        .map {
+            self.dependencies.interactor.addStudent(studentId: student.id, coordinates: $0.coordinate.toString)
+        }
+        .switchToLatest()
+        .eraseToAnyPublisher()
+        .sink(receiveCompletion: { [weak self] completion in
+                if case let .failure(error) = completion {
+                    if error is LocationError {
+                        self?.output.showSettingsAlert()
+                    } else {
+                        self?.output.catchError(error)
+                    }
+                }
+                self?.output.stopActivity()
+            }, receiveValue: { [weak self] _ in
+                self?.moduleOutput?.action(.added)
+                self?.moduleInput.completion()
+            })
+        .store(in: &cancellables)
     }
 }

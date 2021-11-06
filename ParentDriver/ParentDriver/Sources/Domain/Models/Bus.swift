@@ -20,7 +20,7 @@ import ObjectMapper
     required init?(map: Map) { }
     
     func mapping(map: Map) {
-        trackerId <- map["trackerId"]
+        trackerId <- map["trackerID"]
         trackerName <- map["trackerName"]
         imei <- map["IMEI"]
         seat <- map["Seat"]
