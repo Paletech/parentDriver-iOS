@@ -113,3 +113,15 @@
 
 /* loco:6186261a9058851e9712cda2 */
 "button_cancel" = "Cancel";
+
+/* loco:6186972c5774d5539462ce22 */
+"label_inspection_type" = "Inspection type";
+
+/* loco:61869743f6400046b106a092 */
+"enum_inspection_type_pre" = "Pre";
+
+/* loco:618697514609b5682a5f7e72 */
+"enum_inspection_type_post" = "Post";
+
+/* loco:6186975a4609b5682a5f7e74 */
+"button_next" = "Next";

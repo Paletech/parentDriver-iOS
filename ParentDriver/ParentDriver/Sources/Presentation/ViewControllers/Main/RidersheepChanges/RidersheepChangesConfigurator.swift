@@ -16,6 +16,6 @@ class RidersheepChangesConfigurator {
     }
     
     private class func createDependencies() -> RidersheepChangesViewModel.Dependencies {
-        return RidersheepChangesViewModel.Dependencies()
+        return RidersheepChangesViewModel.Dependencies(interactor: inject())
     }
 }

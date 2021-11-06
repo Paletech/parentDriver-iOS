@@ -48,6 +48,9 @@ class DependencyProvider {
         
         let locationRepository = LocationRepository(locationManager: CLLocationManager())
         registerService(service: locationRepository)
+
+let ridersheepChangesRepository = RidersheepChangesRepository.default()
+registerService(service: ridersheepChangesRepository)
     }
 
     static private func configureInteractors() {
@@ -69,8 +72,11 @@ class DependencyProvider {
         
         let locationInteractor = LocationInteractor(dependencies: LocationInteractor.Dependencies(location: inject()))
         registerService(service: locationInteractor)
+
+let ridersheepChangesInteractor = RidersheepChangesInteractor(dp: RidersheepChangesInteractor.Dependencies(repo: inject()))
+registerService(service: ridersheepChangesInteractor)
     }
-    
+
     static private func registerService<T>(service: T, name: String? = nil) {
         ServiceLocator.shared.register(service: service)
    }
