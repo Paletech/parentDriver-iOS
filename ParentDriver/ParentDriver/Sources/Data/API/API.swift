@@ -49,6 +49,11 @@ struct API {
         static let findStudent = "/findStudent.php"
         static let addStudent = "/addStudent.php"
     }
+    
+    struct Inspection {
+        static let get = "/getDVIR.php"
+        static let submit = "/addInspection.php"
+    }
 
     struct Device {
         private static let root = "/device"

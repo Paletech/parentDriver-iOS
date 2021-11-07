@@ -48,6 +48,9 @@ class DependencyProvider {
         
         let locationRepository = LocationRepository(locationManager: CLLocationManager())
         registerService(service: locationRepository)
+        
+        let inspectionRepository = InspectionRepository.default()
+        registerService(service: inspectionRepository)
     }
 
     static private func configureInteractors() {
@@ -69,6 +72,11 @@ class DependencyProvider {
         
         let locationInteractor = LocationInteractor(dependencies: LocationInteractor.Dependencies(location: inject()))
         registerService(service: locationInteractor)
+        
+        let inspectionInteractor = InspectionInteractor(dp: InspectionInteractor.Dependencies(repo: inject(),
+                                                                                              locationInteractor: locationInteractor
+                                                                                             ))
+        registerService(service: inspectionInteractor)
     }
     
     static private func registerService<T>(service: T, name: String? = nil) {

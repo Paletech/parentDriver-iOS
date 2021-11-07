@@ -36,13 +36,23 @@ class MenuCoordinator: ViewControllerCoordinator {
     }
     
     private func setBusInspection() {
+        childs.removeAll()
         
+        let busInspectionCoordinator = InspectionCoordinator(container: UINavigationController(),
+                                                             output: InspectionCoordinator.Output(showMenu: { [weak self] in
+            self?.showMenu()
+        }))
+        addChild(busInspectionCoordinator)
+        
+        busInspectionCoordinator.start()
+        setController(busInspectionCoordinator.container)
     }
     
     private func setMonitorBoarding() {
         childs.removeAll()
 
-        let monitorBoardingCoordinator = MonitorBoardingCoordinator(container: UINavigationController(), output: MonitorBoardingCoordinator.Output(showMenu: { [weak self] in
+        let monitorBoardingCoordinator = MonitorBoardingCoordinator(container: UINavigationController(),
+                                                                    output: MonitorBoardingCoordinator.Output(showMenu: { [weak self] in
             self?.showMenu()
         }))
         addChild(monitorBoardingCoordinator)
