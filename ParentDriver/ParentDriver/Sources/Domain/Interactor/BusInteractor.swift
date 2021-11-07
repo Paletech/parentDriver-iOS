@@ -36,4 +36,8 @@ class BusInteractor: Interactor {
     func getBusSelection() -> Bus? {
         dp.repo.getBusSelection()
     }
+
+    func removeBusSelection() {
+        dp.repo.removeBusSelection()
+    }
 }

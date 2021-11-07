@@ -15,6 +15,6 @@ class SignInConfigurator {
     }
     
     private class func createDependencies() -> SignInViewModel.Dependencies {
-        return SignInViewModel.Dependencies(interactor: inject())
+        return SignInViewModel.Dependencies(authInteractor: inject(), busInteractor: inject())
     }
 }

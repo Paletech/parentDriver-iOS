@@ -23,7 +23,7 @@ class DependencyProvider {
         
         let busStore: KeycheinStore<Bus> = KeycheinStore(store)
         registerService(service: busStore)
-
+        
         let loger: Log = DEBUGLog()
         let handler: Handler = Handler(loger)
         let sessionManager = MainSessionManager.default()
@@ -51,8 +51,11 @@ class DependencyProvider {
         
         let inspectionRepository = InspectionRepository.default()
         registerService(service: inspectionRepository)
-    }
 
+        let ridersheepChangesRepository = RidersheepChangesRepository.default()
+        registerService(service: ridersheepChangesRepository)
+    }
+    
     static private func configureInteractors() {
         let validationInteractor = ValidationInteractor()
         registerService(service: validationInteractor)
@@ -77,11 +80,14 @@ class DependencyProvider {
                                                                                               locationInteractor: locationInteractor
                                                                                              ))
         registerService(service: inspectionInteractor)
+
+        let ridersheepChangesInteractor = RidersheepChangesInteractor(dp: RidersheepChangesInteractor.Dependencies(repo: inject()))
+        registerService(service: ridersheepChangesInteractor)
     }
     
     static private func registerService<T>(service: T, name: String? = nil) {
         ServiceLocator.shared.register(service: service)
-   }
+    }
     
     static private  func register<T>(service: @escaping () -> T, name: String? = nil) {
         ServiceLocator.shared.register(service: service)

@@ -44,6 +44,10 @@ struct API {
     struct MonitorBoarding {
         static let get = "/boarding.php"
     }
+
+    struct RidersheepChanges {
+        static let get = "/getChange.php"
+    }
     
     struct Student {
         static let findStudent = "/findStudent.php"

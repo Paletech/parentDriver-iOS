@@ -10,6 +10,19 @@ import UIKit
 
 class MenuCoordinator: ViewControllerCoordinator {
         
+    struct Output {
+        var logout: EmptyClosure
+    }
+
+    var output: Output
+
+    // MARK: - Init/Deinit
+
+    init(container: UIViewController, output: Output) {
+        self.output = output
+        super.init(container: container)
+    }
+
     override func start() {
         setDashboard()
     }
@@ -32,7 +45,16 @@ class MenuCoordinator: ViewControllerCoordinator {
     }
     
     private func setRidersheepChanges() {
-        
+        childs.removeAll()
+
+        let ridersheepChangesCoordinator = RidersheepChangesConfigurator.configure(output: RidersheepChangesViewModel.ModuleOutput(action: { [weak self] in
+            switch $0 {
+            case .showMenu:
+                self?.showMenu()
+            }
+        }))
+
+        setController(ridersheepChangesCoordinator)
     }
     
     private func setBusInspection() {
@@ -56,7 +78,7 @@ class MenuCoordinator: ViewControllerCoordinator {
             self?.showMenu()
         }))
         addChild(monitorBoardingCoordinator)
-        
+
         monitorBoardingCoordinator.start()
         setController(monitorBoardingCoordinator.container)
     }
@@ -75,9 +97,16 @@ class MenuCoordinator: ViewControllerCoordinator {
     }
     
     private func onLogout() {
-        
+        let alert = UIAlertController(title: Localizable.logout_alert_message(), message: "", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: Localizable.logout_alert_button_yes(), style: .default, handler: { [weak self] _  in
+            self?.output.logout()
+        }))
+        alert.addAction(UIAlertAction(title: Localizable.logout_alert_button_no(), style: .default))
+
+        self.container.dismiss(animated: true, completion: nil)
+        self.container.present(alert, animated: true)
     }
-    
+
     private func setController(_ controller: UIViewController) {
         removeChildren()
         

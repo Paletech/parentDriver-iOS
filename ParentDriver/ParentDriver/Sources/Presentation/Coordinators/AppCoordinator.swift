@@ -56,7 +56,9 @@ class AppCoordinator: WindowCoordinator {
         let container = UIViewController()
         container.view.backgroundColor = .white
         
-        let menuCoordinator = MenuCoordinator(container: container)
+        let menuCoordinator = MenuCoordinator(container: container, output: MenuCoordinator.Output(logout: { [weak self] in
+            self?.showAuthFlow()
+        }))
         addChild(menuCoordinator)
         menuCoordinator.start()
         
