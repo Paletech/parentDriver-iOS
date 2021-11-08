@@ -77,8 +77,7 @@ class DependencyProvider {
         registerService(service: locationInteractor)
         
         let inspectionInteractor = InspectionInteractor(dp: InspectionInteractor.Dependencies(repo: inject(),
-                                                                                              locationInteractor: locationInteractor
-                                                                                             ))
+                                                                                              locationInteractor: inject()))
         registerService(service: inspectionInteractor)
 
         let ridersheepChangesInteractor = RidersheepChangesInteractor(dp: RidersheepChangesInteractor.Dependencies(repo: inject()))

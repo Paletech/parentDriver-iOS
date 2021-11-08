@@ -105,7 +105,7 @@ class RidersheepChangesCell: UITableViewCell {
 
         titleLabel.snp.makeConstraints { make in
             make.top.equalTo(view.snp.top)
-            make.bottom.equalTo(view.snp.bottom)
+            make.bottom.lessThanOrEqualTo(view.snp.bottom)
             make.width.equalTo(Constants.labelWidth)
             make.leading.equalTo(view.snp.leading).offset(Constants.offset)
         }
@@ -118,7 +118,7 @@ class RidersheepChangesCell: UITableViewCell {
         }
 
         view.snp.makeConstraints { make in
-            make.height.equalTo(20)
+            make.height.greaterThanOrEqualTo(20)
         }
 
         return view
