@@ -47,6 +47,8 @@ extension BusInspectionTypeViewModel: BusInspectionTypeViewControllerOutput {
     }
     
     func onNext() {
+        guard let inspectionType = selectedType else { return }
+        
         output.startActivity()
         dependencies.inspectionInteractor.getInspection().sink(receiveCompletion: { [weak self] completion in
             if case let .failure(error) = completion {
@@ -54,7 +56,7 @@ extension BusInspectionTypeViewModel: BusInspectionTypeViewControllerOutput {
             }
             self?.output.stopActivity()
         }, receiveValue: { [weak self] pages in
-            self?.moduleOutput?.action(.onNext(pages))
+            self?.moduleOutput?.action(.onNext(inspectionType, pages))
         })
     .store(in: &cancellables)
     }

@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>The app required location for showing the locations of inspections and when a student gets on or off the bus</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>The app required location for showing the locations of inspections and when a student gets on or off the bus</string>
-</dict>
+<dict/>
 </plist>

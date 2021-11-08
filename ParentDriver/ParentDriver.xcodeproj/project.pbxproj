@@ -111,6 +111,21 @@
 		6213ADF42738402C007F3E3D /* InspectionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213ADF32738402C007F3E3D /* InspectionRepository.swift */; };
 		6213ADF62738429A007F3E3D /* InspectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213ADF52738429A007F3E3D /* InspectionInteractor.swift */; };
 		6213ADF827384358007F3E3D /* InspectionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213ADF727384358007F3E3D /* InspectionPage.swift */; };
+		6213ADFE27385BA6007F3E3D /* BusInspectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213ADFA27385BA6007F3E3D /* BusInspectionViewController.swift */; };
+		6213ADFF27385BA6007F3E3D /* BusInspectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213ADFB27385BA6007F3E3D /* BusInspectionViewModel.swift */; };
+		6213AE0027385BA6007F3E3D /* BusInspectionConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213ADFC27385BA6007F3E3D /* BusInspectionConfigurator.swift */; };
+		6213AE0127385BA6007F3E3D /* BusInspection+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213ADFD27385BA6007F3E3D /* BusInspection+Public.swift */; };
+		6213AE05273904C4007F3E3D /* ScrollableStackDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213AE03273904C4007F3E3D /* ScrollableStackDataSource.swift */; };
+		6213AE06273904C4007F3E3D /* ScrollableStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213AE04273904C4007F3E3D /* ScrollableStack.swift */; };
+		6213AE0E27390599007F3E3D /* CheckboxDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213AE0A27390599007F3E3D /* CheckboxDataSource.swift */; };
+		6213AE0F27390599007F3E3D /* CheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213AE0B27390599007F3E3D /* CheckboxView.swift */; };
+		6213AE1027390599007F3E3D /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213AE0C27390599007F3E3D /* Checkbox.swift */; };
+		6213AE15273905C6007F3E3D /* TitleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213AE12273905C6007F3E3D /* TitleTextView.swift */; };
+		6213AE16273905C6007F3E3D /* TitleTextConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213AE13273905C6007F3E3D /* TitleTextConfig.swift */; };
+		6213AE17273905C7007F3E3D /* TitleTextDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213AE14273905C6007F3E3D /* TitleTextDataSource.swift */; };
+		6213AE1A27390868007F3E3D /* InspectionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213AE1927390868007F3E3D /* InspectionBuilder.swift */; };
+		6213AE1E27390D75007F3E3D /* StackContainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213AE1C27390D74007F3E3D /* StackContainable.swift */; };
+		6213AE1F27390D75007F3E3D /* ScrollableContrainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6213AE1D27390D75007F3E3D /* ScrollableContrainer.swift */; };
 		628C0DCB2735612700954A88 /* LocationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628C0DCA2735612700954A88 /* LocationInteractor.swift */; };
 		628C0DCD2735615100954A88 /* LocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628C0DCC2735615100954A88 /* LocationRepository.swift */; };
 		628C0DCF273561A700954A88 /* WP+CLLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628C0DCE273561A700954A88 /* WP+CLLocation.swift */; };
@@ -272,6 +287,21 @@
 		6213ADF32738402C007F3E3D /* InspectionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectionRepository.swift; sourceTree = "<group>"; };
 		6213ADF52738429A007F3E3D /* InspectionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectionInteractor.swift; sourceTree = "<group>"; };
 		6213ADF727384358007F3E3D /* InspectionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectionPage.swift; sourceTree = "<group>"; };
+		6213ADFA27385BA6007F3E3D /* BusInspectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusInspectionViewController.swift; sourceTree = "<group>"; };
+		6213ADFB27385BA6007F3E3D /* BusInspectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusInspectionViewModel.swift; sourceTree = "<group>"; };
+		6213ADFC27385BA6007F3E3D /* BusInspectionConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusInspectionConfigurator.swift; sourceTree = "<group>"; };
+		6213ADFD27385BA6007F3E3D /* BusInspection+Public.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BusInspection+Public.swift"; sourceTree = "<group>"; };
+		6213AE03273904C4007F3E3D /* ScrollableStackDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableStackDataSource.swift; sourceTree = "<group>"; };
+		6213AE04273904C4007F3E3D /* ScrollableStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableStack.swift; sourceTree = "<group>"; };
+		6213AE0A27390599007F3E3D /* CheckboxDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckboxDataSource.swift; sourceTree = "<group>"; };
+		6213AE0B27390599007F3E3D /* CheckboxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckboxView.swift; sourceTree = "<group>"; };
+		6213AE0C27390599007F3E3D /* Checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
+		6213AE12273905C6007F3E3D /* TitleTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleTextView.swift; sourceTree = "<group>"; };
+		6213AE13273905C6007F3E3D /* TitleTextConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleTextConfig.swift; sourceTree = "<group>"; };
+		6213AE14273905C6007F3E3D /* TitleTextDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleTextDataSource.swift; sourceTree = "<group>"; };
+		6213AE1927390868007F3E3D /* InspectionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectionBuilder.swift; sourceTree = "<group>"; };
+		6213AE1C27390D74007F3E3D /* StackContainable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackContainable.swift; sourceTree = "<group>"; };
+		6213AE1D27390D75007F3E3D /* ScrollableContrainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableContrainer.swift; sourceTree = "<group>"; };
 		628C0DCA2735612700954A88 /* LocationInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationInteractor.swift; sourceTree = "<group>"; };
 		628C0DCC2735615100954A88 /* LocationRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationRepository.swift; sourceTree = "<group>"; };
 		628C0DCE273561A700954A88 /* WP+CLLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WP+CLLocation.swift"; sourceTree = "<group>"; };
@@ -564,6 +594,8 @@
 		620C943D2720A5C3001EA349 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6213AE072739056E007F3E3D /* DataSources */,
+				6213AE02273904AE007F3E3D /* ScrollableStack */,
 				620C94CC2720BC1E001EA349 /* TextField */,
 				620C94A72720ABDA001EA349 /* FloatingTextField */,
 				620C94FA2721B9FE001EA349 /* StateButtton.swift */,
@@ -862,6 +894,73 @@
 			path = RequestModels;
 			sourceTree = "<group>";
 		};
+		6213ADF927385B84007F3E3D /* Inspection */ = {
+			isa = PBXGroup;
+			children = (
+				6213AE1827390859007F3E3D /* Builder */,
+				6213ADFA27385BA6007F3E3D /* BusInspectionViewController.swift */,
+				6213ADFB27385BA6007F3E3D /* BusInspectionViewModel.swift */,
+				6213ADFC27385BA6007F3E3D /* BusInspectionConfigurator.swift */,
+				6213ADFD27385BA6007F3E3D /* BusInspection+Public.swift */,
+			);
+			path = Inspection;
+			sourceTree = "<group>";
+		};
+		6213AE02273904AE007F3E3D /* ScrollableStack */ = {
+			isa = PBXGroup;
+			children = (
+				6213AE04273904C4007F3E3D /* ScrollableStack.swift */,
+				6213AE03273904C4007F3E3D /* ScrollableStackDataSource.swift */,
+			);
+			path = ScrollableStack;
+			sourceTree = "<group>";
+		};
+		6213AE072739056E007F3E3D /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				6213AE112739059D007F3E3D /* Title */,
+				6213AE082739057B007F3E3D /* Checkbox */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		6213AE082739057B007F3E3D /* Checkbox */ = {
+			isa = PBXGroup;
+			children = (
+				6213AE0C27390599007F3E3D /* Checkbox.swift */,
+				6213AE0A27390599007F3E3D /* CheckboxDataSource.swift */,
+				6213AE0B27390599007F3E3D /* CheckboxView.swift */,
+			);
+			path = Checkbox;
+			sourceTree = "<group>";
+		};
+		6213AE112739059D007F3E3D /* Title */ = {
+			isa = PBXGroup;
+			children = (
+				6213AE13273905C6007F3E3D /* TitleTextConfig.swift */,
+				6213AE14273905C6007F3E3D /* TitleTextDataSource.swift */,
+				6213AE12273905C6007F3E3D /* TitleTextView.swift */,
+			);
+			path = Title;
+			sourceTree = "<group>";
+		};
+		6213AE1827390859007F3E3D /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				6213AE1927390868007F3E3D /* InspectionBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		6213AE1B27390D56007F3E3D /* ScrollableStack */ = {
+			isa = PBXGroup;
+			children = (
+				6213AE1D27390D75007F3E3D /* ScrollableContrainer.swift */,
+				6213AE1C27390D74007F3E3D /* StackContainable.swift */,
+			);
+			path = ScrollableStack;
+			sourceTree = "<group>";
+		};
 		62DA6AA7272536400070C832 /* Responses */ = {
 			isa = PBXGroup;
 			children = (
@@ -929,6 +1028,7 @@
 		62DA6ACE27267EE30070C832 /* BusInspection */ = {
 			isa = PBXGroup;
 			children = (
+				6213ADF927385B84007F3E3D /* Inspection */,
 				6213ADDE2736CD2C007F3E3D /* Type */,
 			);
 			path = BusInspection;
@@ -937,6 +1037,7 @@
 		62DA6ACF27267EF10070C832 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				6213AE1B27390D56007F3E3D /* ScrollableStack */,
 				621306A2272AFC1F00FD5220 /* Search */,
 				621306A1272AFC0E00FD5220 /* NavigationHolder */,
 			);
@@ -1147,11 +1248,14 @@
 			files = (
 				620C94832720A94A001EA349 /* Handler.swift in Sources */,
 				620C94792720A8FB001EA349 /* HapDay+NSTimeInterval.swift in Sources */,
+				6213AE1A27390868007F3E3D /* InspectionBuilder.swift in Sources */,
 				620C94F82721B8C8001EA349 /* SignInConfigurator.swift in Sources */,
+				6213ADFE27385BA6007F3E3D /* BusInspectionViewController.swift in Sources */,
 				62DA6ABC27260A9C0070C832 /* SelectBusConfigurator.swift in Sources */,
 				620C94142720A401001EA349 /* AppDelegate.swift in Sources */,
 				C70D378D272F16710080A49A /* RidersheepChanges.swift in Sources */,
 				C70D377D2728A8080080A49A /* SignUpConfigurator.swift in Sources */,
+				6213AE0E27390599007F3E3D /* CheckboxDataSource.swift in Sources */,
 				C70D379527309D840080A49A /* RidersheepChangesRepository.swift in Sources */,
 				62DA6AC127260DC40070C832 /* BusRequests.swift in Sources */,
 				620C949B2720AA4F001EA349 /* ViewControllerCoordinator.swift in Sources */,
@@ -1159,6 +1263,7 @@
 				62130695272931A200FD5220 /* AddStudentConfigurator.swift in Sources */,
 				621306A4272AFC2D00FD5220 /* SearchView.swift in Sources */,
 				620C949C2720AA4F001EA349 /* NavigationCoordinator.swift in Sources */,
+				6213AE05273904C4007F3E3D /* ScrollableStackDataSource.swift in Sources */,
 				62DA6AE027268F660070C832 /* MenuCoordinator.swift in Sources */,
 				621306852728986400FD5220 /* MonitorBoarding.swift in Sources */,
 				620C943B2720A5B2001EA349 /* AppTypealiases.swift in Sources */,
@@ -1189,11 +1294,13 @@
 				62DA6AFB272694090070C832 /* MonitorBoardingViewModel.swift in Sources */,
 				620C94EB2721AB5F001EA349 /* KeychainStore.swift in Sources */,
 				6291901B272C27F200C4C0DE /* StudentRepository.swift in Sources */,
+				6213AE0027385BA6007F3E3D /* BusInspectionConfigurator.swift in Sources */,
 				62DA6ABB27260A9C0070C832 /* SelectBusViewModel.swift in Sources */,
 				620C94702720A8FB001EA349 /* HapDay+Collection.swift in Sources */,
 				62DA6AA9272536620070C832 /* AuthResponse.swift in Sources */,
 				620C94912720AA20001EA349 /* Interactor.swift in Sources */,
 				6213ADEB2736CF7E007F3E3D /* BusInspectionType.swift in Sources */,
+				6213AE0F27390599007F3E3D /* CheckboxView.swift in Sources */,
 				620C94D22720BC7B001EA349 /* OvertouchButtom.swift in Sources */,
 				620C94E82721A9B0001EA349 /* Splash+Public.swift in Sources */,
 				620C94622720A8FB001EA349 /* Hapday+UITableView+Init.swift in Sources */,
@@ -1209,6 +1316,7 @@
 				620C94662720A8FB001EA349 /* HapDay+ViewController.swift in Sources */,
 				62DA6B032726941F0070C832 /* RidersheepChangesViewModel.swift in Sources */,
 				62130696272931A200FD5220 /* AddStudent+Public.swift in Sources */,
+				6213ADFF27385BA6007F3E3D /* BusInspectionViewModel.swift in Sources */,
 				62DA6B052726941F0070C832 /* RidersheepChanges+Public.swift in Sources */,
 				620C94A52720AB84001EA349 /* PrimaryButton.swift in Sources */,
 				62130689272899A800FD5220 /* MonitorBoardingRepository.swift in Sources */,
@@ -1218,6 +1326,7 @@
 				620C94372720A59E001EA349 /* CustomErrorCodes.swift in Sources */,
 				628C0DCD2735615100954A88 /* LocationRepository.swift in Sources */,
 				6213069E27297F1B00FD5220 /* TitleValueView.swift in Sources */,
+				6213AE06273904C4007F3E3D /* ScrollableStack.swift in Sources */,
 				62130694272931A200FD5220 /* AddStudentViewModel.swift in Sources */,
 				C70D379327309D6C0080A49A /* RidersheepChangesInteractor.swift in Sources */,
 				62DA6ADE27268D410070C832 /* ParentDriver+UIBarButtonItem.swift in Sources */,
@@ -1244,7 +1353,6 @@
 				62DA6AE8272693B70070C832 /* DashboardViewController.swift in Sources */,
 				620C946E2720A8FB001EA349 /* HapDay+ActivityIndicator.swift in Sources */,
 				620C948B2720A9AB001EA349 /* DependencyProvider.swift in Sources */,
-				62DA6AF2272693DD0070C832 /* BusInspectionConfigurator.swift in Sources */,
 				C70D378B272F16060080A49A /* RidersheepChangesUIModel.swift in Sources */,
 				62DA6AD7272681F90070C832 /* MenuConfigurator.swift in Sources */,
 				620C94F62721B8C8001EA349 /* SignInViewController.swift in Sources */,
@@ -1253,14 +1361,17 @@
 				620C946A2720A8FB001EA349 /* HapDay+String.swift in Sources */,
 				620C94392720A5A6001EA349 /* AppConfig.swift in Sources */,
 				620C94A62720AB84001EA349 /* ShadowView.swift in Sources */,
+				6213AE1E27390D75007F3E3D /* StackContainable.swift in Sources */,
 				620C94732720A8FB001EA349 /* Hapday+Optional.swift in Sources */,
 				62DA6ABD27260A9C0070C832 /* SelectBus+Public.swift in Sources */,
 				62DA6ABF27260D350070C832 /* Bus.swift in Sources */,
+				6213AE1F27390D75007F3E3D /* ScrollableContrainer.swift in Sources */,
 				620C94AF2720ABEC001EA349 /* FloatingTextField.swift in Sources */,
 				620C947B2720A8FB001EA349 /* HapDay+View+Animation.swift in Sources */,
 				62130687272898E100FD5220 /* MonitorBoardingRequests.swift in Sources */,
 				620C94A42720AB84001EA349 /* BaseView.swift in Sources */,
 				620C949E2720AA6A001EA349 /* AppCoordinator.swift in Sources */,
+				6213AE15273905C6007F3E3D /* TitleTextView.swift in Sources */,
 				C70D377F2728A8170080A49A /* SignUp+Public.swift in Sources */,
 				62DA6AD5272681F90070C832 /* MenuViewController.swift in Sources */,
 				6213ADE62736CD41007F3E3D /* BusInspectionType+Public.swift in Sources */,
@@ -1282,13 +1393,17 @@
 				62DA6B042726941F0070C832 /* RidersheepChangesConfigurator.swift in Sources */,
 				62DA6AB4272542C10070C832 /* AuthRepository.swift in Sources */,
 				620C94AD2720ABEC001EA349 /* FloatingTextField+Extensions.swift in Sources */,
+				6213AE1027390599007F3E3D /* Checkbox.swift in Sources */,
 				6213ADF42738402C007F3E3D /* InspectionRepository.swift in Sources */,
+				6213AE16273905C6007F3E3D /* TitleTextConfig.swift in Sources */,
 				C70D379727309E430080A49A /* RidersheepChangesRequest.swift in Sources */,
 				62DA6ADA272682410070C832 /* MenuItem.swift in Sources */,
 				62DA6AFA272694090070C832 /* MonitorBoardingViewController.swift in Sources */,
 				620C94C92720B858001EA349 /* ValidationInteractor.swift in Sources */,
 				620C946D2720A8FB001EA349 /* Hapday+Int.swift in Sources */,
+				6213AE0127385BA6007F3E3D /* BusInspection+Public.swift in Sources */,
 				620C948A2720A9AB001EA349 /* ServiceLocator.swift in Sources */,
+				6213AE17273905C7007F3E3D /* TitleTextDataSource.swift in Sources */,
 				620C94852720A94A001EA349 /* RemoteStore+Combine.swift in Sources */,
 				620C94AC2720ABEC001EA349 /* FloatingTextField+Type.swift in Sources */,
 				6213ADEF27383DD9007F3E3D /* InspectionRequests.swift in Sources */,
@@ -1448,6 +1563,9 @@
 				DEVELOPMENT_TEAM = 67CX2SU34L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ParentDriver/Resources/Plists/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "DriverView LT";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "The app required location for showing the locations of inspections and when a student gets on or off the bus";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The app required location for showing the locations of inspections and when a student gets on or off the bus";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -1478,6 +1596,9 @@
 				DEVELOPMENT_TEAM = 67CX2SU34L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ParentDriver/Resources/Plists/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "DriverView LT";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "The app required location for showing the locations of inspections and when a student gets on or off the bus";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The app required location for showing the locations of inspections and when a student gets on or off the bus";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

@@ -144,8 +144,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 6 images.
+  /// This `R.image` struct is generated, and contains static references to 8 images.
   struct image {
+    /// Image `ic_checkbox_checked`.
+    static let ic_checkbox_checked = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_checkbox_checked")
+    /// Image `ic_checkbox`.
+    static let ic_checkbox = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_checkbox")
     /// Image `ic_eye_off`.
     static let ic_eye_off = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_eye_off")
     /// Image `ic_eye_on`.
@@ -158,6 +162,20 @@ struct R: Rswift.Validatable {
     static let ic_status_good = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_status_good")
     /// Image `ic_status_processing`.
     static let ic_status_processing = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_status_processing")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "ic_checkbox", bundle: ..., traitCollection: ...)`
+    static func ic_checkbox(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ic_checkbox, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "ic_checkbox_checked", bundle: ..., traitCollection: ...)`
+    static func ic_checkbox_checked(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ic_checkbox_checked, compatibleWith: traitCollection)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "ic_eye_off", bundle: ..., traitCollection: ...)`

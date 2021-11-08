@@ -1,14 +1,13 @@
 import Foundation
 
-extension BusInspectionTypeViewModel {
+extension BusInspectionViewModel {
 
     enum ModuleOutputAction {
-        case onNext(BusInspectionType, [InspectionPage])
-        case showMenu
+        case next([String])
     }
 
     struct ModuleInput {
-        
+        let page: InspectionPage
     }
 
     struct ModuleOutput {
