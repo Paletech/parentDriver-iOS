@@ -125,3 +125,24 @@
 
 /* loco:6186975a4609b5682a5f7e74 */
 "button_next" = "Next";
+
+/* loco:618900b74a03bd6638208604 */
+"title_finalize_bus_inspection" = "Finalize bus inspection";
+
+/* loco:618900c4a5bdeb58f866f472 */
+"placeholder_comments" = "Comments...";
+
+/* loco:618900ee1adce66789440eb3 */
+"labe_is_vechile_safe" = "Is vehicle safe to operate?";
+
+/* loco:618901115dce10541c7ddff5 */
+"label_have_all_seats_been_checked" = "Have all seats been checked?";
+
+/* loco:6189011a4a03bd6638208606 */
+"label_yes" = "Yes";
+
+/* loco:618901258963a965fd258be3 */
+"label_no" = "No";
+
+/* loco:618901302f498d5c02065007 */
+"button_submit" = "Submit";

@@ -133,6 +133,10 @@
 		6291901B272C27F200C4C0DE /* StudentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6291901A272C27F200C4C0DE /* StudentRepository.swift */; };
 		6291901D272C287200C4C0DE /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6291901C272C287200C4C0DE /* Student.swift */; };
 		6291901F272C292500C4C0DE /* StudentInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6291901E272C292500C4C0DE /* StudentInteractor.swift */; };
+		62C4554F273936C8005CBF38 /* InspectionSubmitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C4554B273936C8005CBF38 /* InspectionSubmitionViewController.swift */; };
+		62C45550273936C8005CBF38 /* InspectionSubmitionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C4554C273936C8005CBF38 /* InspectionSubmitionViewModel.swift */; };
+		62C45551273936C8005CBF38 /* InspectionSubmitionConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C4554D273936C8005CBF38 /* InspectionSubmitionConfigurator.swift */; };
+		62C45552273936C8005CBF38 /* InspectionSubmition+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C4554E273936C8005CBF38 /* InspectionSubmition+Public.swift */; };
 		62C49EEF272527060008F239 /* AuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C49EEE272527060008F239 /* AuthInteractor.swift */; };
 		62DA6AA627252E660070C832 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62DA6AA527252E660070C832 /* GoogleService-Info.plist */; };
 		62DA6AA9272536620070C832 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DA6AA8272536620070C832 /* AuthResponse.swift */; };
@@ -309,6 +313,10 @@
 		6291901A272C27F200C4C0DE /* StudentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentRepository.swift; sourceTree = "<group>"; };
 		6291901C272C287200C4C0DE /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		6291901E272C292500C4C0DE /* StudentInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentInteractor.swift; sourceTree = "<group>"; };
+		62C4554B273936C8005CBF38 /* InspectionSubmitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectionSubmitionViewController.swift; sourceTree = "<group>"; };
+		62C4554C273936C8005CBF38 /* InspectionSubmitionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectionSubmitionViewModel.swift; sourceTree = "<group>"; };
+		62C4554D273936C8005CBF38 /* InspectionSubmitionConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectionSubmitionConfigurator.swift; sourceTree = "<group>"; };
+		62C4554E273936C8005CBF38 /* InspectionSubmition+Public.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InspectionSubmition+Public.swift"; sourceTree = "<group>"; };
 		62C49EEE272527060008F239 /* AuthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInteractor.swift; sourceTree = "<group>"; };
 		62DA6AA527252E660070C832 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		62DA6AA8272536620070C832 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
@@ -961,6 +969,17 @@
 			path = ScrollableStack;
 			sourceTree = "<group>";
 		};
+		62C4554A273936AB005CBF38 /* Submition */ = {
+			isa = PBXGroup;
+			children = (
+				62C4554B273936C8005CBF38 /* InspectionSubmitionViewController.swift */,
+				62C4554C273936C8005CBF38 /* InspectionSubmitionViewModel.swift */,
+				62C4554D273936C8005CBF38 /* InspectionSubmitionConfigurator.swift */,
+				62C4554E273936C8005CBF38 /* InspectionSubmition+Public.swift */,
+			);
+			path = Submition;
+			sourceTree = "<group>";
+		};
 		62DA6AA7272536400070C832 /* Responses */ = {
 			isa = PBXGroup;
 			children = (
@@ -1028,6 +1047,7 @@
 		62DA6ACE27267EE30070C832 /* BusInspection */ = {
 			isa = PBXGroup;
 			children = (
+				62C4554A273936AB005CBF38 /* Submition */,
 				6213ADF927385B84007F3E3D /* Inspection */,
 				6213ADDE2736CD2C007F3E3D /* Type */,
 			);
@@ -1272,6 +1292,7 @@
 				620C94A32720AB84001EA349 /* SelectableButton.swift in Sources */,
 				620C94712720A8FB001EA349 /* Hapday+FloatingPoint.swift in Sources */,
 				6213ADF62738429A007F3E3D /* InspectionInteractor.swift in Sources */,
+				62C45552273936C8005CBF38 /* InspectionSubmition+Public.swift in Sources */,
 				62DA6AC7272611380070C832 /* BusInteractor.swift in Sources */,
 				620C94692720A8FB001EA349 /* MyHappyHabbits+UIButton.swift in Sources */,
 				C70D3783272B2E260080A49A /* AuthViewProtocol.swift in Sources */,
@@ -1279,6 +1300,7 @@
 				C70D3788272F14F50080A49A /* RidersheepChangesCell.swift in Sources */,
 				62DA6AFC272694090070C832 /* MonitorBoardingConfigurator.swift in Sources */,
 				62919019272C271E00C4C0DE /* StudentRequests.swift in Sources */,
+				62C45551273936C8005CBF38 /* InspectionSubmitionConfigurator.swift in Sources */,
 				620C94992720AA4F001EA349 /* TabBarCoordinator.swift in Sources */,
 				620C94842720A94A001EA349 /* MainRequestBuilder.swift in Sources */,
 				62DA6AC527260EEF0070C832 /* AppStateProvidable.swift in Sources */,
@@ -1313,6 +1335,7 @@
 				62DA6AE9272693B70070C832 /* DashboardViewModel.swift in Sources */,
 				620C94872720A98F001EA349 /* Validator.swift in Sources */,
 				620C94F72721B8C8001EA349 /* SignInViewModel.swift in Sources */,
+				62C4554F273936C8005CBF38 /* InspectionSubmitionViewController.swift in Sources */,
 				620C94662720A8FB001EA349 /* HapDay+ViewController.swift in Sources */,
 				62DA6B032726941F0070C832 /* RidersheepChangesViewModel.swift in Sources */,
 				62130696272931A200FD5220 /* AddStudent+Public.swift in Sources */,
@@ -1368,6 +1391,7 @@
 				6213AE1F27390D75007F3E3D /* ScrollableContrainer.swift in Sources */,
 				620C94AF2720ABEC001EA349 /* FloatingTextField.swift in Sources */,
 				620C947B2720A8FB001EA349 /* HapDay+View+Animation.swift in Sources */,
+				62C45550273936C8005CBF38 /* InspectionSubmitionViewModel.swift in Sources */,
 				62130687272898E100FD5220 /* MonitorBoardingRequests.swift in Sources */,
 				620C94A42720AB84001EA349 /* BaseView.swift in Sources */,
 				620C949E2720AA6A001EA349 /* AppCoordinator.swift in Sources */,

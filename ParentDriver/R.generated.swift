@@ -224,7 +224,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 40 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 47 localization keys.
     struct localizable {
       /// en translation: Add Student
       ///
@@ -254,6 +254,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let title_change_bus = Rswift.StringResource(key: "title_change_bus", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Comments...
+      ///
+      /// Locales: en
+      static let placeholder_comments = Rswift.StringResource(key: "placeholder_comments", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Dashboard
       ///
       /// Locales: en
@@ -266,10 +270,22 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let placeholder_driver_id = Rswift.StringResource(key: "placeholder_driver_id", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Finalize bus inspection
+      ///
+      /// Locales: en
+      static let title_finalize_bus_inspection = Rswift.StringResource(key: "title_finalize_bus_inspection", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Have all seats been checked?
+      ///
+      /// Locales: en
+      static let label_have_all_seats_been_checked = Rswift.StringResource(key: "label_have_all_seats_been_checked", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Inspection type
       ///
       /// Locales: en
       static let label_inspection_type = Rswift.StringResource(key: "label_inspection_type", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Is vehicle safe to operate?
+      ///
+      /// Locales: en
+      static let labe_is_vechile_safe = Rswift.StringResource(key: "labe_is_vechile_safe", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Location is not shared
       ///
       /// Locales: en
@@ -290,6 +306,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let button_next = Rswift.StringResource(key: "button_next", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: No
+      ///
+      /// Locales: en
+      static let label_no = Rswift.StringResource(key: "label_no", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: No
       ///
       /// Locales: en
@@ -370,6 +390,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let label_student = Rswift.StringResource(key: "label_student", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Submit
+      ///
+      /// Locales: en
+      static let button_submit = Rswift.StringResource(key: "button_submit", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: This field can't be empty
       ///
       /// Locales: en
@@ -378,6 +402,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let label_time = Rswift.StringResource(key: "label_time", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Yes
+      ///
+      /// Locales: en
+      static let label_yes = Rswift.StringResource(key: "label_yes", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Yes
       ///
       /// Locales: en
@@ -492,6 +520,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("title_change_bus", bundle: bundle, comment: "")
       }
 
+      /// en translation: Comments...
+      ///
+      /// Locales: en
+      static func placeholder_comments(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("placeholder_comments", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "placeholder_comments"
+        }
+
+        return NSLocalizedString("placeholder_comments", bundle: bundle, comment: "")
+      }
+
       /// en translation: Dashboard
       ///
       /// Locales: en
@@ -537,6 +580,36 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("placeholder_driver_id", bundle: bundle, comment: "")
       }
 
+      /// en translation: Finalize bus inspection
+      ///
+      /// Locales: en
+      static func title_finalize_bus_inspection(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("title_finalize_bus_inspection", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "title_finalize_bus_inspection"
+        }
+
+        return NSLocalizedString("title_finalize_bus_inspection", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Have all seats been checked?
+      ///
+      /// Locales: en
+      static func label_have_all_seats_been_checked(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("label_have_all_seats_been_checked", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "label_have_all_seats_been_checked"
+        }
+
+        return NSLocalizedString("label_have_all_seats_been_checked", bundle: bundle, comment: "")
+      }
+
       /// en translation: Inspection type
       ///
       /// Locales: en
@@ -550,6 +623,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("label_inspection_type", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Is vehicle safe to operate?
+      ///
+      /// Locales: en
+      static func labe_is_vechile_safe(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("labe_is_vechile_safe", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "labe_is_vechile_safe"
+        }
+
+        return NSLocalizedString("labe_is_vechile_safe", bundle: bundle, comment: "")
       }
 
       /// en translation: Location is not shared
@@ -625,6 +713,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("button_next", bundle: bundle, comment: "")
+      }
+
+      /// en translation: No
+      ///
+      /// Locales: en
+      static func label_no(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("label_no", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "label_no"
+        }
+
+        return NSLocalizedString("label_no", bundle: bundle, comment: "")
       }
 
       /// en translation: No
@@ -927,6 +1030,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("label_student", bundle: bundle, comment: "")
       }
 
+      /// en translation: Submit
+      ///
+      /// Locales: en
+      static func button_submit(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("button_submit", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "button_submit"
+        }
+
+        return NSLocalizedString("button_submit", bundle: bundle, comment: "")
+      }
+
       /// en translation: This field can't be empty
       ///
       /// Locales: en
@@ -955,6 +1073,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("label_time", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Yes
+      ///
+      /// Locales: en
+      static func label_yes(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("label_yes", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "label_yes"
+        }
+
+        return NSLocalizedString("label_yes", bundle: bundle, comment: "")
       }
 
       /// en translation: Yes
