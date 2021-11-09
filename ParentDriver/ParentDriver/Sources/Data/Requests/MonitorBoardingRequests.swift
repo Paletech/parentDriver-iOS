@@ -10,7 +10,7 @@ import Repository
 
 struct MonitorBoardingRequests {
     static func getAll(trackerId: String, interval: String) -> RequestProvider {
-        let query = ["trackerID": trackerId, "Interval": interval]
+        let query = ["trackerID": trackerId, "interval": interval]
         return Request(method: .post, path: API.MonitorBoarding.get, query: query)
     }
 }

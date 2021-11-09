@@ -22,13 +22,16 @@ struct InspectionRepository: Repository {
     
     let remote: RemoteStoreMappable<InspectionItemResponse>
     let busLocalStore: KeycheinStore<Bus>
+    let tokenLocalStore: KeycheinStore<Token>
 
     // MARK: - Fabric method
     
     static func `default`() -> InspectionRepository {
         let session: MainSessionManager = inject()
         let handler: Handler = inject()
-        return InspectionRepository(remote: RemoteStoreMappable(session: session, handler: handler), busLocalStore: inject())
+        return InspectionRepository(remote: RemoteStoreMappable(session: session, handler: handler),
+                                    busLocalStore: inject(),
+                                    tokenLocalStore: inject())
     }
 
     // MARK: - Network
@@ -46,5 +49,9 @@ struct InspectionRepository: Repository {
     
     func getSelectedBus() -> Bus? {
         try? busLocalStore.get(from: KeychainKeys.selectedBus.rawValue)
+    }
+    
+    func getLocalDbId() -> String? {
+        try? tokenLocalStore.get(from: KeychainKeys.token.rawValue).dbId
     }
 }

@@ -28,7 +28,7 @@ extension CLLocationCoordinate2D {
         return region.contains(location)
     }
     
-    var toString: String { "\(latitude).\(longitude)" }
+    var toString: String { "\(latitude),\(longitude)" }
 }
 
 extension Array where Element == CLLocationCoordinate2D {

@@ -9,6 +9,7 @@ import Combine
 
 enum InspectionError: Error {
     case noBusSelected
+    case noDbId
 }
 
 class InspectionInteractor {
@@ -56,9 +57,13 @@ class InspectionInteractor {
         guard let bus = dp.repo.getSelectedBus()
         else { return Fail(error: InspectionError.noBusSelected).eraseToAnyPublisher() }
         
+        guard let dbId = dp.repo.getLocalDbId()
+        else { return Fail(error: InspectionError.noDbId).eraseToAnyPublisher() }
+        
         var inspectionSubmition = InspectionSubmitionModel(trackerImei: bus.imei,
                                                            inspectionType: inspectionType,
                                                            failedItems: failedItems,
+                                                           dbId: dbId,
                                                            inspectionStatus: inspectionStatus,
                                                            comments: comments)
     

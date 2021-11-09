@@ -45,6 +45,20 @@ class Request: RequestProvider {
         self.headers = headers
         self.body = body.encoder
     }
+    
+    init(url: String = API.Configuration.current.baseURL,
+         method: HTTPMethod = .get,
+         path: URLComposer = "",
+         query: URLComposer,
+         headers: [String: String] = [:],
+         body: BodyEncode = .none) {
+        self.url = url
+        self.method = method
+        self.path = path
+        self.query = query
+        self.headers = headers
+        self.body = body.encoder
+    }
 }
 
 public struct BodyConverter: RequestComposer {

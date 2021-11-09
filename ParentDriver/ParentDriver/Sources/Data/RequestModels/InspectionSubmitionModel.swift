@@ -31,18 +31,20 @@ struct InspectionSubmitionModel {
     let inspectionType: BusInspectionType
     let failedItems: [String]
     let kidCheck: String = "1"
+    let dbId: String
     let inspectionStatus: InspectionStatus
     let comments: String?
     var location: String = ""
     
-    var toQuery: [String: String] {
-        var data = ["trackerIMEI": trackerImei,
-                "inspType": inspectionType.title.uppercased(),
-                "failedItem": failedItems.joined(separator: ","),
-                "kidCheck": kidCheck,
-                "inspStatus": inspectionStatus.requestValue,
-                "inspLatLng": location]
+    var toQuery: [String: Any] {
+        var data: [String: Any] = ["trackerIMEI": trackerImei,
+                                   "inspType": inspectionType.title.uppercased(),
+                                   "kidCheck": kidCheck,
+                                   "inspStatus": inspectionStatus.requestValue,
+                                   "inspLatLng": location,
+                                   "driverDBID": dbId]
         
+        data["failedItem[]"] = failedItems
         comments.flatMap {
             data["comments"] = $0
         }

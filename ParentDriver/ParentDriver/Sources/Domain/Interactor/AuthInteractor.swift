@@ -67,6 +67,7 @@ class AuthInteractor: Interactor, AppStateProvidable {
         
         let token = Token()
         token.accessToken = response.token
+        token.dbId = response.user?.dbId
         
         user.flatMap {
             dp.repo.saveSession(token: token, user: $0)

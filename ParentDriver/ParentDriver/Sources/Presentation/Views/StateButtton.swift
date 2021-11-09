@@ -31,7 +31,6 @@ class StateButtton: UIButton {
     private func prepareUI() {
         let color = isEnabled ? mainColor : disabledColor
         backgroundColor = color
-        applyShadow(color: color, alpha: 0.4, x: 0, y: 4, blur: 30)
         titleLabel?.adjustsFontSizeToFitWidth = true
         titleLabel?.numberOfLines = 2
         titleLabel?.textAlignment = .center
@@ -52,11 +51,9 @@ class StateButtton: UIButton {
 
         if !animated {
             backgroundColor = newColor
-            layer.shadowOpacity = isEnabled ? 0.4 : 0.0
         } else {
             UIView.animate(withDuration: 0.3) {
                 self.backgroundColor = newColor
-                self.layer.shadowOpacity = self.isEnabled ? 0.4 : 0.0
             }
         }
     }
@@ -94,7 +91,6 @@ class CommonButtton: UIButton {
     // MARK: - UI
     private func prepareUI() {
         backgroundColor = .blue
-        applyShadow(color: UIColor.blue, alpha: 0.4, x: 0, y: 4, blur: 30)
         setTitleColor(.white, for: .normal)
         titleLabel?.font = .systemFont(ofSize: 16, weight: .semibold)
     }
