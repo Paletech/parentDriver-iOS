@@ -24,7 +24,7 @@ class DependencyProvider {
         let busStore: KeycheinStore<Bus> = KeycheinStore(store)
         registerService(service: busStore)
         
-        let loger: Log = DEBUGLog()
+        let loger: Log = RELEASELog()
         let handler: Handler = Handler(loger)
         let sessionManager = MainSessionManager.default()
         

@@ -22,7 +22,7 @@ struct API {
 
         var loger: Log {
             switch self {
-            default: return DEBUGLog()
+            default: return RELEASELog()
             }
         }
         
