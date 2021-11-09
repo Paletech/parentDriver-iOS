@@ -11,6 +11,7 @@ class InspectionCoordinator: NavigationCoordinator {
     
     struct Output {
         let showMenu: EmptyClosure
+        let finished: EmptyClosure
     }
     
     let output: Output
@@ -75,6 +76,16 @@ class InspectionCoordinator: NavigationCoordinator {
     }
     
     private func showInspectionSubmition() {
+        let data = InspectionSubmitionViewModel.ModuleInput(builder: inspectionBuilder)
+        let output = InspectionSubmitionViewModel.ModuleOutput { [weak self] in
+            switch $0 {
+            case .submitted:
+                self?.output.finished()
+            }
+        }
         
+        let vc = InspectionSubmitionConfigurator.configure(data: data,
+                                                           output: output)
+        push(vc)
     }
 }

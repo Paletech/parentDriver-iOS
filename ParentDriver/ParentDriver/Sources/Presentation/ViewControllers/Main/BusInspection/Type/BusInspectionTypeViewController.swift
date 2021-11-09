@@ -82,6 +82,8 @@ class BusInspectionTypeViewController: UIViewController, NavigationHolderControl
         nextButton.addAction { [weak self] in
             self?.output.onNext()
         }
+        
+        nextButton.titleLabel?.font = .systemFont(ofSize: 16, weight: .semibold)
     }
     
     private func configureConstraints() {
@@ -100,7 +102,7 @@ class BusInspectionTypeViewController: UIViewController, NavigationHolderControl
         postButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.left.equalTo(Constants.offset)
-            make.top.equalTo(preButton.snp.bottom).offset(Constants.offset)
+            make.top.equalTo(preButton.snp.bottom).offset(Constants.offset / 2)
         }
         
         nextButton.snp.makeConstraints { make in

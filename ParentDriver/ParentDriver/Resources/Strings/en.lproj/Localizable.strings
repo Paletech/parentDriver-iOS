@@ -146,3 +146,6 @@
 
 /* loco:618901302f498d5c02065007 */
 "button_submit" = "Submit";
+
+/* loco:618a62499f2919607b2a9293 */
+"error_comments_required" = "You marked so items as failed, the comments with a minimum size of 3 symbols are required.";

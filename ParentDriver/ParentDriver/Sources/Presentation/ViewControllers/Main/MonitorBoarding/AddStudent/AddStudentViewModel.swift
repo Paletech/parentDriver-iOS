@@ -2,9 +2,7 @@ import Foundation
 import Combine
 import CoreLocation
 
-protocol AddStudentViewModelOutput: ViewModelOutput {
-    func showSettingsAlert()
-}
+protocol AddStudentViewModelOutput: ViewModelOutput { }
 
 class AddStudentViewModel {
 

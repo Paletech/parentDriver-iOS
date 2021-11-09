@@ -63,6 +63,8 @@ class MenuCoordinator: ViewControllerCoordinator {
         let busInspectionCoordinator = InspectionCoordinator(container: UINavigationController(),
                                                              output: InspectionCoordinator.Output(showMenu: { [weak self] in
             self?.showMenu()
+        }, finished: { [weak self] in
+            self?.setDashboard()
         }))
         addChild(busInspectionCoordinator)
         

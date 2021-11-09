@@ -50,7 +50,7 @@ class InspectionInteractor {
     }
     
     func submitInspection(inspectionType: BusInspectionType,
-                          failedItems: [InspectionItem],
+                          failedItems: [String],
                           inspectionStatus: InspectionStatus,
                           comments: String? = nil) -> AnyPublisher<Void, Error> {
         guard let bus = dp.repo.getSelectedBus()
@@ -58,11 +58,15 @@ class InspectionInteractor {
         
         var inspectionSubmition = InspectionSubmitionModel(trackerImei: bus.imei,
                                                            inspectionType: inspectionType,
-                                                           failedItems: failedItems.compactMap { $0.id },
+                                                           failedItems: failedItems,
                                                            inspectionStatus: inspectionStatus,
                                                            comments: comments)
     
-        return dp.locationInteractor.getLocation()
+        return dp.locationInteractor.getAccess()
+        .map {
+            self.dp.locationInteractor.getLocation()
+        }
+        .switchToLatest()
         .map { coordinates -> AnyPublisher<Any, Error> in
             inspectionSubmition.location = coordinates.coordinate.toString
             return self.dp.repo.submitInspection(inspectionSubmition: inspectionSubmition)

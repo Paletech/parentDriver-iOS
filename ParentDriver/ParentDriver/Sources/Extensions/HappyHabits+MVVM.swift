@@ -21,6 +21,8 @@ protocol ViewModelOutput: AnyObject {
     
     func catchError(_ error: Error)
     func showMessage(_ message: String?)
+    
+    func showSettingsAlert()
 }
 
 extension ViewControllerOutput {
@@ -36,6 +38,10 @@ extension ViewControllerOutput {
     func updateData() {
         
     }
+}
+
+extension ViewModelOutput {
+    func showSettingsAlert() { }
 }
 
 extension ViewModelOutput where Self: UIViewController {
@@ -79,6 +85,21 @@ extension ViewModelOutput where Self: UIViewController {
         alertController.addAction(defaultAction)
 
         present(alertController, animated: true, completion: nil)
+    }
+    
+    func showSettingsAlert() {
+        let alert = UIAlertController(title: Localizable.title_location_permission_is_mandatory(),
+                                      message: Localizable.subtitle_location_permission_is_mandatory(), preferredStyle: .alert)
+        
+        let settingsAction = UIAlertAction(title: Localizable.button_settings(), style: .default) { _ in
+            URL(string: UIApplication.openSettingsURLString)
+                .flatMap { UIApplication.shared.open($0) }
+        }
+        let cancelAction = UIAlertAction(title: Localizable.button_cancel(), style: .cancel, handler: nil)
+        
+        [settingsAction, cancelAction].forEach { alert.addAction($0) }
+        
+        present(alert, animated: true, completion: nil)
     }
 }
 

@@ -224,7 +224,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 47 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 48 localization keys.
     struct localizable {
       /// en translation: Add Student
       ///
@@ -414,6 +414,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let sign_up_alert_message = Rswift.StringResource(key: "sign_up_alert_message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: You marked so items as failed, the comments with a minimum size of 3 symbols are required.
+      ///
+      /// Locales: en
+      static let error_comments_required = Rswift.StringResource(key: "error_comments_required", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
 
       /// en translation: Add Student
       ///
@@ -1118,6 +1122,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("sign_up_alert_message", bundle: bundle, comment: "")
+      }
+
+      /// en translation: You marked so items as failed, the comments with a minimum size of 3 symbols are required.
+      ///
+      /// Locales: en
+      static func error_comments_required(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("error_comments_required", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "error_comments_required"
+        }
+
+        return NSLocalizedString("error_comments_required", bundle: bundle, comment: "")
       }
 
       fileprivate init() {}

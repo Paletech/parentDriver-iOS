@@ -58,6 +58,7 @@ class BusInspectionViewController: UIViewController,
         nextButton.addAction { [weak self] in
             self?.output.onNext()
         }
+        nextButton.titleLabel?.font = .systemFont(ofSize: 16, weight: .semibold)
     }
     
     private func configureConstraints() {

@@ -14,6 +14,6 @@ struct InspectionRequests {
     }
     
     static func submitInspection(inspectionSubmition: InspectionSubmitionModel) -> Request {
-        return Request(method: .post, path: API.Inspection.get, query: inspectionSubmition.toQuery)
+        return Request(method: .post, path: API.Inspection.submit, query: inspectionSubmition.toQuery)
     }
 }
